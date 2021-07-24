@@ -11,11 +11,11 @@
         <script src="/js/vendor/prism.min.js"></script>
         <script src="/js/vendor/katex.min.js"></script>
         <script src="/js/vendor/katex-auto-render.min.js"></script>
-	<script src="/js/vendor/notebook.js?_=2021-07-23 17:56:05"></script>
+	<script src="/js/vendor/notebook.js?_=2021-07-23 18:01:05"></script>
         <link rel="stylesheet" href="/css/vendor/katex.min.css" />
         <link rel="stylesheet" href="/css/vendor/prism.css" />
-	<link rel="stylesheet" href="/css/notebook.css?2021-07-23 17:56:05" />
-	<link rel="stylesheet" href="/css/nbpreview.css?2021-07-23 17:56:05" />
+	<link rel="stylesheet" href="/css/notebook.css?2021-07-23 18:01:05" />
+	<link rel="stylesheet" href="/css/nbpreview.css?2021-07-23 18:01:05" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
         <script type="application/text" id="source">
           {"cells": [{"cell_type": "raw", "id": "2b9f6f37", "metadata": {}, "source": ["title: \"Stock price data pattern matching\"\n", "date: 2021-07-22\n", "description: \"Using pattern matching to predict stock directions\"\n", "tags: [\"life\", \"review\"]\n", "draft: true"]}, {"cell_type": "markdown", "id": "9ed9c157", "metadata": {}, "source": ["Playing around with stock data is always fun. _I think using any of the methods you see around here are a good way to lose money so only use for your self education or entertainment._ \n", "\n", "So the basic idea around this a pattern matching approach is that history will repeat itself. That means for the stock we want to predict at time T, let's get all the data points from T-x and try to match the pattern that this produces against the history of other stock and then for all the matches at a point in time, say T' (which is before T) we can look at T'+1, T'+2, ... to see what that stock did. Is this a good way to trade? Probably not, but it's a fun little project for learning about vector similarities. \n", "\n"]}], "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}, "language_info": {"codemirror_mode": {"name": "ipython", "version": 3}, "file_extension": ".py", "mimetype": "text/x-python", "name": "python", "nbconvert_exporter": "python", "pygments_lexer": "ipython3", "version": "3.9.4"}}, "nbformat": 4, "nbformat_minor": 5}
@@ -58,7 +58,7 @@
             <div id="notebook-holder"></div>
             <hr/>
             <div>
-              <em>Generated on 2021-07-23 17:56:05</em>
+              <em>Generated on 2021-07-23 18:01:05</em>
             </div>
             <p>
               Questions or comments? Please take the time to compose an email and send it to <a href="mailto:deniz.dizman@gmail.com?subject=Question/Comment">me</a>.
