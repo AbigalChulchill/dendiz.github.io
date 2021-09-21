@@ -1,0 +1,36 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.233256">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.233256">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Epic4x DevLog</h1>
+        <div id="date"><em> 2018-03-18</em></div>
+        <p>If you don’t take good care of your populations on your planets, e.g starve them by not building farms or harvesting crops you will condemn them to die. But they won’t die immediately but instead after there has been starvation on the planet for long enough their chances of dying will increase with each turn. If you stop the starvation their chances of perishing will start to decrement once again.</p>
+<p>The ships have crews and now need a life support component. It’s options to install one but if you don’t the ship’s crew will start losing health points and eventually die. Life support replenishes the health of every crew member.</p>
+<p>ships are almost ready to travel between star systems. They now have FTL engines. FTL engines require a certain period to spin up and cool down before and after travel. Travel between stars can only be done through the warp lanes that connect the systems. The move command with ships equipped with an FTL drive will display the total time it takes to get to other systems.</p>
+<p>The calculator system that processes galaxy events and calculates pretty much everything each turn now operates based on a dependency mechanism. Previously it was operating based on a priority system where higher priority tasks were being executed first. But this is not scalable as I don’t want to manually keep track of which task should execute before which task, so having each calculator declare its dependencies makes much more sense. This was also a fun exercise in implementing topological sorting (first time I’ve done this).</p>
+<p>Planets have received a new property: Radius. It determines how long the planet survey takes for science ships. I also implemented various checks for planet information revealed to players. The most important one is that a player has to survey a planet before they can see any resource information.</p>
+<p>The client also got some love and now is displaying the resources in colors, check the attached images. I’ve also added notices for unemployed populations and idle buildings.</p>
+<p>We now have a new initial ship: The construction MkI. This ship can go to planets and build mining stations after the science MkI has surveyed them to exploit their orbital resources. Also, the concept of a mining station is something that is new. They are used to mine resources from planets without having to colonize them. Of course, only the orbital resources are gathered this way which is way less than the resources on the surface.</p>
+<p><img src="/img/e4x-1.png" alt="" />
+<img src="/img/e4x-2.png" alt="" /></p>
+
+        </div>
+    </body>
+</html>

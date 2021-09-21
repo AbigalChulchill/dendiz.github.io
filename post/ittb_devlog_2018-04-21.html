@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.239346">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.239346">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> ITTB DevLog 2018-04-21</h1>
+        <div id="date"><em> 2018-04-21</em></div>
+        <h2>summary</h2>
+<ul>
+<li>enemy spawns</li>
+<li>game mechanics</li>
+<li>turns</li>
+<li>targeting</li>
+<li>game difficulty</li>
+</ul>
+<p>A tactical feature that was missing after the enemy spawns was an indication of
+the tile of the spawn and the time.  Enemies suddenly appearing on the map and
+random places doesn’t benefit the strategical and tactical aspect of the game
+as the player has no chance to plan and prepare for the new wave of enemies.</p>
+<p>I implemented this ETA and location indication on the map. If the player can
+get a unit on the tile for the new spawn, it will void.  This is a nice way for
+the player to prevent new enemies and gives to opportunity for a trade-off.
+Should I defend a building or prevent a new spawn?</p>
+<p><img src="/img/ittb4.png" alt="" /></p>
+<p>The turn mechanics for enemies started out as alternating between movement and
+attack. This made the game a bit static, but it was the basis for the push
+strategy to save buildings. If an enemy was next to a target at the end of the
+movement phase, the next turn would mean a damage to a building, so it was wise
+to push the enemy away from the building.</p>
+<p>But during the movement turns towards the targets, the attack phase made the
+game progression slow. Turns were wasted doing nothing as there wasn’t anything
+to attack. I changed this around to the following structure: A turn for an
+enemy is either attack or move. If the enemy reaches it’s target after a
+movement turn, then it is committed to attacking that target even it’s pushed
+away and will not move for that turn. Currently this means doing nothing as the
+target is not in range, but I have a 2 ideas on how to stop this attack turn
+being wasted. Either store the direction the attack would have been and do an
+attack in that direction. If there is anything (un)lucky enough to be on that
+tile, it will receive the damage (maybe including friendlies?) Or select a
+target in range and just attack that target. I will have to discuss these
+options and get some feedback on them.</p>
+<p>The game is suffering from being to easy. Go up to the enemies and hit them on
+the head. Or even don’t go up to them and attack them from range.  Well
+attacking from a distance is nice and realistic but infinite ammo for range
+attacks is not. That’s why I implemented a feature to limit the number of
+ranged attacks per unit per level. This makes the level progressively harder as
+you have to start walking around to hit the enemies after a while.</p>
+<p>Also the chunk level generator wasn’t paying attention to the number of
+buildings placed on the level. Having 9 buildings on a level makes it easier to
+survive (think of buildings as player units). I added a pretty simple function
+that tries to adjust the number of buildings on the level based on the current
+level the player is at.</p>
+
+        </div>
+    </body>
+</html>

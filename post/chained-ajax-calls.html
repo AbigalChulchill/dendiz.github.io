@@ -1,0 +1,55 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.228364">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.228364">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Chained ajax calls</h1>
+        <div id="date"><em> 2018-05-09T21:00:00-07:00</em></div>
+        <p>Sometimes you want to make successive calls to multiple urls one after another - not in parallel. With the programming model for javascript using callbacks this can be a bit confusing to implement properly. Here is a neat trick to do it.
+say you have a list of urls [url1, url2, url3] if you could transform this list to</p>
+<pre><code>[
+  function() {
+    XHR.send();
+    XHR.onload = next_fn_in_list
+  },
+  function() {
+    XHR.send();
+    XHR.onload = next_fn_in_list
+  }, ...
+]
+</code></pre>
+<p>you actually dont even need this be a list, because the onload will reference the next function to call. This is exactly what reduce does for arrays.</p>
+<pre><code>var chainedAjaxCalls = myList.reduceRight(function(previousValue, currentValue) {
+        return function() {
+            var xhr = new XMLHttpRequest();
+            xhr.onload = previousValue;
+            xhr.open(&quot;GET&quot;, 'http://url?param=' + currentValue);
+            xhr.send()
+        }
+    }, function() {});
+    chainedAjaxCalls();
+
+</code></pre>
+<p>we iterate over the array with the initial NOP function, and return a function that sets the onload to the previous function. We start from the right so the last requests onload is the nop. then n-1 functions onload is n, etc. 
+this will create a chain of ajax calls for the url list.
+very nice.</p>
+
+        </div>
+    </body>
+</html>

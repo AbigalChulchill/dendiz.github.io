@@ -1,0 +1,103 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.2056668">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.2056668">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Using Kruskal's MST algorithm for warp lane generation</h1>
+        <div id="date"><em> 2018-05-09</em></div>
+        <p>Almost every sci-fi / space themed game has warp lanes connecting the star systems in the game. I've come across this quite often so here is a small piece of code that implements a Minimum spanning tree between the stars to guarantee all of them are reachable.</p>
+<pre><code>public class WarpLaneBuilder
+    {
+        List&lt;HashSet&lt;StarSystem&gt;&gt; sets = new List&lt;HashSet&lt;StarSystem&gt;&gt;();
+        public void GenerateWarpLanes(List&lt;StarSystem&gt; stars)
+        {
+            foreach (var star in stars)
+            {
+                var set = new HashSet&lt;StarSystem&gt;();
+                set.Add(star);
+                sets.Add(set);
+            }
+
+            var edges = BuildEdges(stars);
+            var results = new HashSet&lt;Edge&gt;();
+            foreach (var edge in edges)
+            {
+                var set1 = Find(edge.Source);
+                var set2 = Find(edge.Target);
+                if (!set1.Equals(set2))
+                {
+                    results.Add(edge);
+                    Union(set1, set2);
+                }
+            }
+
+            foreach (var result in results)
+            {
+                result.Source.WarpLanes.Add(result.Target);
+                result.Target.WarpLanes.Add(result.Source);
+            }
+
+        }
+
+        private List&lt;Edge&gt; BuildEdges(List&lt;StarSystem&gt; stars)
+        {
+            List&lt;Edge&gt; edges = new List&lt;Edge&gt;();
+            for (int i = 0; i &lt; stars.Count - 1; i++)
+            {
+                for (int j = i + 1; j &lt; stars.Count; j++)
+                {
+                    edges.Add(new Edge(stars[i], stars[j], stars[i].DistanceTo(stars[j])));
+                }
+            }
+            edges.Sort((x,y) =&gt; x.Weight.CompareTo(y.Weight));
+            return edges;
+        }
+
+        private HashSet&lt;StarSystem&gt; Find(StarSystem star)
+        {
+            return sets.First(x =&gt; x.Contains(star));
+        }
+
+        private void Union(HashSet&lt;StarSystem&gt; set1, HashSet&lt;StarSystem&gt; set2 )
+        {
+            sets.Remove(set1);
+            sets.Remove(set2);
+            set1.UnionWith(set2);
+            sets.Add(set1);
+        }
+
+        private class Edge
+        {
+            public StarSystem Source;
+            public StarSystem Target;
+            public double Weight;
+
+            public Edge(StarSystem source, StarSystem target, double weight)
+            {
+                Source = source;
+                Target = target;
+                Weight = weight;
+            }
+        }
+    }
+</code></pre>
+
+        </div>
+    </body>
+</html>

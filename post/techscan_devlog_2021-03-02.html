@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.2519174">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.2519174">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> TechScan DevLog 2021-03-02</h1>
+        <div id="date"><em> 2021-03-02</em></div>
+        <p>Ok, more work tonight went into improving the data synchronizer. I thought it would make sense to precompute the resampled values for tickers instead of computing them on-the-fly for an indicator because the most common resampled periods are known beforehand.  Pandas provides a convenient resampling function that supports aggregation to OHLC. I had always used the closing value of the most granular period when resampling say a 1 day OHLC to 1 week. But today I found out that using the following configuration makes much more sense</p>
+<pre><code>+        config = {'open': 'first',
++            'high': 'max',
++            'low': 'min',
++            'close': 'last',
++            &quot;volume&quot;: &quot;sum&quot;
++        }
+</code></pre>
+<p>I also refactored some of the persistence layer code and added support for providing the sample rate when saving CSV files. On the topic of CSV files I had to combat my way through DataFrames because of my ignorance. I was manually assigning the date field as the index when loading the CSV but there is a convenience method in the API that can make the reader parse the dates and also specify an index column. That’s neat. But then I had some other bugs when merging the data frame from the existing file with any new data from the APIs. Took a while to figure out exactly what was happening but got it working in the end.</p>
+<p>I also was plagued by bugs in Pandas DataReader. When I make a request that starts on current day and ends some date in the future the return data contains a duplicate.</p>
+<p><img src="attachment:Screen%20Shot%202021-03-06%20at%202.52.53%20PM.png" alt="Screen%20Shot%202021-03-06%20at%202.52.53%20PM.png" /></p>
+<p>Took a while to narrow this down but having a Jupyter notebook came in handy. So to fix this I decided to make sure the end date is always on the us/eastern time zone and if the last row’s date is the same as the end date, no request needs to be made. This should prune any unnecessary requests and avoid this pandas bug.</p>
+<p>And last item for today was the implementing the data loader. This class will allow the backtester and signal generator to load the ticker data for a given date. The tricky part here was that weekends and holidays don’t exist in the index. So any request made with that date should return the data up to that date. This can be done easily with a binary search to get the insertion index and then calculate the slice of the data frame to return.</p>
+<pre><code>
+</code></pre>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.2208164">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.2208164">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Hibernate batch statements</h1>
+        <div id="date"><em> 2018-09-05</em></div>
+        <p>Here is a working way to do bulk inserts for hibernate:</p>
+<p>First make sure that your entity id generation is not AUTO. I use UUID/GUID generation</p>
+<pre><code>    @Id
+    @GeneratedValue(generator = &quot;uuid&quot;)
+    @GenericGenerator(name = &quot;uuid&quot;, strategy = &quot;uuid&quot;)
+    @Column(columnDefinition = &quot;CHAR(32)&quot;)
+    private String id;
+
+</code></pre>
+<p>add the following to your configuration (this is for spring boot)</p>
+<pre><code>spring.jpa.properties.hibernate.jdbc.batch_size=400
+spring.jpa.properties.hibernate.order_inserts=true
+spring.jpa.properties.hibernate.order_updates=true
+spring.jpa.properties.hibernate.jdbc.batch_versioned_data=true
+</code></pre>
+<p>the following code will batch the statements for a great performance increase:</p>
+<pre><code>        List&lt;SurfaceTile&gt; tiles = new ArrayList&lt;&gt;();
+        for (Star star : stars) {
+            for (Planet planet : star.getPlanets()) {
+                tiles.addAll(planet.getTiles());
+            }
+        }
+        tiles.removeAll(Collections.singleton(null));
+        surfaceTileRepository.save(tiles);
+
+</code></pre>
+<p>you can check that it's being batched using the following spy driver:</p>
+<p>add <code>compile 'p6spy:p6spy:2.1.4'</code> to your build file and set the following for your datasource url and driver</p>
+<pre><code>#spring.datasource.url=jdbc:p6spy:mysql://host:3306/db?rewriteBatchedStatements=true
+#spring.datasource.driverClassName=com.p6spy.engine.spy.P6SpyDriver
+</code></pre>
+<p>download the properties file in the attachment and put it in your resources directory and you will see the following in the logs</p>
+<p><a href="spy.properties.txt">spy.properties</a></p>
+<pre><code>p6spy  : 1450114684813|0|batch|connection 7|insert into ...
+p6spy  : 1450114684814|1|statement|connection 7|insert into ...
+p6spy  : 1450114684817|2|commit|connection 7||
+</code></pre>
+<p>the 3rd column (batch) means that the statements are getting batched and if the 3rd column reads 'statement' that means the query was sent to the server.</p>
+
+        </div>
+    </body>
+</html>

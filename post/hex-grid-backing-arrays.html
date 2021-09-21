@@ -1,0 +1,58 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.229109">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.229109">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Hex grid backing arrays</h1>
+        <div id="date"><em> 2018-05-09</em></div>
+        <p>Programming game worlds with square grids is pretty straight forward. You just use a 2D array, and calculations are quite easy. 
+To go up you subtract from the Y coordinate, to go left you add 1 to the X coordinate. But when you are dealing with hex grids 
+life gets a bit more complicated. Representing a backing array for a hex grid can be done in the following way</p>
+<pre><code>[
+  [null,null,null,{},{},{},{}],
+  [null,null,{},{},{},{},{}],
+  [null,{},{},{},{},{},{}],
+  [{},{},{},{},{},{},{}],
+  [{},{},{},{},{},{},null],
+  [{},{},{},{},{},null,null],
+  [{},{},{},{},null,null,null]]
+</code></pre>
+<p>this would be the representation array for the following grid</p>
+<p>the row 3 in the array is the row in the center of the grid. If you go up one row the row becomes an element shorter (represented by a null element). 
+You could also skip adding the null element and use different length elements for each row, but that brings it own advantages and disadvantages. 
+The radius of the grid is defined as the length on the longest row for the hex shaped grid. Now for a given radius of N how could we generate 
+the backing array for that grid?</p>
+<p>The property to notice here is that the number of nulls increases from the middle out by one. So you would have abs(i - mid) number of null 
+elements for a given row i where mid is floor(radius) /2. You would place these null elements in the beginning of the array if i &lt; mid 
+and at the end of the array if i &gt; mid.
+Here is some coffeescript code that does this:</p>
+<pre><code>createMatrix: (radius) -&gt;
+        mid = Math.floor(radius/2)
+        matrix = [1..radius].map (it, i) -&gt;;
+            count = Math.abs(i - mid)
+            head = [0 ... count].map -&gt; null
+            tail = [count + 1 .. radius].map (it) -&gt; {}
+            if  i &gt; 3 then head.concat tail else tail.concat head
+        matrix
+
+</code></pre>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.236201">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.236201">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Spring controller parameter injection</h1>
+        <div id="date"><em> 2015-01-01</em></div>
+        <p>For most applications that have some sort of login feature, you need the logged in user in your controllers or else where. If you are using an authorization/authentication framework they probably provide a nice way of doing this. If you are managing your sessions with spring there are probably different ways of doing this but for the sake of an example this is the scenario I'm going with. I want to pass the current user as a parameter to a controller method and have it populated with the current user by spring. This is done with a component that implement <code>HandlerMethodArgumentResolver</code></p>
+<pre><code>@Component
+public class CurrentPlayerParameterResolver implements HandlerMethodArgumentResolver {
+    @Resource
+    PlayerSessionRepository playerSessionRepository;
+    @Override
+    public boolean supportsParameter(MethodParameter parameter) {
+        return parameter.getParameterType().equals(Player.class);
+    }
+
+    @Override
+    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+        HttpServletRequest req = webRequest.getNativeRequest(HttpServletRequest.class);
+        Cookie[] cookies = req.getCookies();
+        if(cookies == null) return null;
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals(Const.COOKIE_SID)) {
+                return playerSessionRepository.findBySessionId(cookie.getValue());
+            }
+        }
+        return null;
+    }
+}
+</code></pre>
+<p>install the resolver</p>
+<pre><code>@Configuration
+public class WebConfigurationAdapter extends WebMvcConfigurerAdapter {
+    @Resource
+    CurrentPlayerParameterResolver currentPlayerParameterResolver;
+
+    @Override
+    public void addArgumentResolvers(List&lt;HandlerMethodArgumentResolver&gt; argumentResolvers) {
+        argumentResolvers.add(currentPlayerParameterResolver);
+        super.addArgumentResolvers(argumentResolvers);
+    }
+
+}
+</code></pre>
+<p>and use it in your controllers</p>
+<pre><code>@GetMapping(value = &quot;/galaxies&quot;)
+public String galaxy(Map&lt;String,Object&gt; model, Player currentPlayer) {
+//currentPlayer is populated
+...
+}
+</code></pre>
+
+        </div>
+    </body>
+</html>

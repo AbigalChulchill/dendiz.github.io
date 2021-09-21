@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.2504566">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.2504566">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Build order in a parallel maven build</h1>
+        <div id="date"><em> 2014-10-19</em></div>
+        <p>After completing the development of a grails application for a client, they asked me to integrate the grails app with the current build-test-deploy cycle which is using maven. The grails application depends on a few artifacts from the java project. Grails does have maven support, but you will run into all sorts of classpath problems when you try to integrate with a multi-module complicated parent project. So the solution was to execute the grails build after the parent project was done. The problem is that the parent project artifacts were not being published to a maven repository and the grails app needs to find the artifacts in the local repository before it can do anything. For a multi-module maven project, it is not a problem for the individual modules as they recognize each other as dependencies but the grails project is not a module of this parent project. So the initial solution was to create a pom for the grails project with the exec-maven-plugin running grailsw test-app -unit after the install phase. The relevant pom part looks like this</p>
+<pre><code class="language-xml">&lt;plugin&gt;
+    &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+    &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;1.2.1&lt;/version&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;phase&gt;install&lt;/phase&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;exec&lt;/goal&gt;
+            &lt;/goals&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+    &lt;configuration&gt;
+        &lt;executable&gt;./build.sh&lt;/executable&gt;
+        &lt;workingDirectory&gt;.&lt;/workingDirectory&gt;
+        &lt;skip&gt;false&lt;/skip&gt;
+        &lt;arguments&gt;
+            &lt;argument&gt;-e&lt;/argument&gt;
+        &lt;/arguments&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;
+</code></pre>
+<p>Add this to the parent pom as a module, and you are set to go, except that you are not. If the builds run sequentially all is fine, because the dependencies all get installed and the grails app is the last module to run and grails can locate the artifacts in the local repository. But this is a relatively large code base and running parallel builds really cuts down the build time. The trick to solve this problem is to go back to the roots of maven: Maven is a dependency management application, and it will make sure that if a build depends on A, A will be present to continue. So adding the artifacts as dependencies to the pom makes sure that they are present in the local repository even when doing parallel builds. Using this you can actually serialize a parallel build, making sure that the required artifacts for a module that is not built with maven are present. The downside is that you have to add the dependencies to both <code>BuildConfig.groovy</code> and the <code>pom.xml</code></p>
+
+        </div>
+    </body>
+</html>

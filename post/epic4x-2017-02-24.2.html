@@ -1,0 +1,44 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.208433">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.208433">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Epic4x: Devlog #2</h1>
+        <div id="date"><em> 2017-02-24</em></div>
+        <p>If you don’t have a population on a surface tile with resources then who will harvest them? 
+Well, today I implemented a feature that will allow you to move populations from one tile another.
+If there is another population on the target tile, then they will swap places with the guys coming in.
+Moving a population to another tile will affect their happiness in a bad way, I don’t know how bad just yet.
+Another issue was the growth of populations on the planet surface. It works in the following way:</p>
+<ul>
+<li>each planet has a population point</li>
+<li>this point is increased/decreased based on food surplus on the planet</li>
+<li>there is a population score that is calculated based on the number of existing populations on the planet</li>
+<li>if the population points of a planet are &gt; then the population score a new population is born.</li>
+</ul>
+<p>The exact formula (each day the population point is adjusted like this):
+x = food surplus (production – consumption)
+image was lost
+the result is added to the current planet population points. if (population points &gt; nextScore) grow new population on an empty tile nextScore is calculated as 1.65p + p^1.12 where p is the current population If a new population spawns it prefers a tile with resources. If none exists then they will settle for an empty tile.
+Another improvement(!) was in the UI. I added some simple drop down boxes to relocate a population from one tile to another. Yes drag and drop of populations would be nice, but that sort of UI niceness is low priority until the game mechanics are in place.
+image was lost</p>
+
+        </div>
+    </body>
+</html>

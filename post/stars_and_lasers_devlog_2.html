@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.223222">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.223222">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Stars and Lasers: DevLog #2</h1>
+        <div id="date"><em> 2020-12-04T00:00:00-07:00</em></div>
+        <p>Ok I made some progress in getting adding the correct player activation method. 
+I was locked in on just selecting a random ship from the available ships in the 
+grid but the correct thing was to have a weighted probability from the existing 
+ships for each side to decide the winner of the roll and have the player choose 
+which ship to activate. This also lead the way to start a new turn 
+(if the weight total is 0 all ships have played).</p>
+<p>I added a stupid AI class as a place holder so that I could complete the turn 
+sequence related work. The rule book actually has a simple rule based AI 
+description which I could add and have semi-playable game.</p>
+<p>No changes with regards to the UI so I’m not adding any new screenshots or 
+videos.</p>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.21085">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.21085">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Turn processing and economy</h1>
+        <div id="date"><em> 2017-12-24</em></div>
+        <p>2 easy parts don’t require much on the 3D side, but are a pain on the GUI part. The unity GUI is quite inferior compared to the browser that I can say. As far as I can guess it was even worse in 4.x and this is the revamped GUI system in unity 5 which still not that good. So the turn system. Turns are conducted in phases.</p>
+<ol>
+<li>Movement/exploration/combat turn</li>
+<li>Economical phase</li>
+</ol>
+<p>Every 4 turns there is an economy return the others are for moving around, colonizing etc. During the movement phase the player still collects income from the colonies and pays ship maintenance costs but cannot buy ships or do research. In the economy phase the player cannot do the things done in the movement phase, but does the things not allowed in the movement phase. Every turn the ships also generate power and burn fuel.</p>
+<p>At the beginning of the economy turn the player collects the income and pays the maintenance costs and whatever is left over he can use to purchase ships or technology. There is a nice report that displays what happened economy wise at the beginning of the turn like this</p>
+<p><img src="/img/tpae1.png" alt="" /></p>
+<p>One thing to mention is that if there is an enemy ship in the neighbor cells of a colony then it will not produce any income. All the colonist are fearing for their lives and will not work.</p>
+<p>I’ve also added a nice bar at the top that displays the current star date and the credit points the player has and a button to confirm that the turn has ended.</p>
+<p><img src="/img/tpae2.png" alt="" /></p>
+
+        </div>
+    </body>
+</html>

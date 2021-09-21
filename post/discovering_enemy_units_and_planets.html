@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+      <title>Deniz's personal pages</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <!--script src="/js/vendor/es5-shim.min.js"></script>
+      <script src="/js/vendor/ansi_up.min.js"></script>
+      <script src="/js/vendor/prism.min.js"></script>
+      <script src="/js/vendor/katex.min.js"></script>
+      <script src="/js/vendor/katex-auto-render.min.js"></script>
+      <link rel="stylesheet" href="/css/vendor/katex.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900|Roboto+Mono:300,300i,400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"-->
+    </head>
+    <body>
+        <div>
+        <a href="/micro/micro-index.html?_=1632182678.2192209">Micro</a> | 
+        <a href="/post/index.html?_=1632182678.2192209">Macro</a> | 
+        <a href="/post/about.html">About</a>
+        </div>
+        <hr />
+        <div id="main">
+        <h1 id="title"> Discovering enemy units and planets</h1>
+        <div id="date"><em> 2017-12-24</em></div>
+        <p>At first I though that the game could be a game of perfect information where you know where all the planets are and where your enemies are based. But then first I made the planets invisible so you have to explore around to find planets to colonize. Then I though well I’ll also make the enemies invisible until you scan them. The procedure is quite simple: Every ship and planet has a set property called exploredBy. When creating the units you add yourself to the set. Then during the Update() call of every ship in transit you scan the neighboring cells with a radius of N and if there is anything on that cell you add yourself to their explored list and make them visible. Setting a sight line of 1 is okay for planets but could be dangerous for enemy ships as you would end up right in the middle if you go the max distance. So setting this to 2 or 3 is going to better I guess. But this is also a tactical choice: Do you spend all your power on the engines and have nothing attack/defense when you end up in the attacking range of an enemy ship, or do you travel less but have your guard up?</p>
+<p>Here is the new stuff in action on a very small map for testing purposes</p>
+<p><img src="/img/h9.gif" alt="" /></p>
+
+        </div>
+    </body>
+</html>
