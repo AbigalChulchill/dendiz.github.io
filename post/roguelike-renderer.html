@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> A renderer for roguelike games on iOS/macOS</h1>
         <div id="date"><em> 2020-07-25 16:43:00-07:00</em></div>
+        <div class="content">
         <h1>Renderer</h1>
 <p>22nd June 2020 at 9:47pm</p>
 <p><strong>This code is taken from the brogue <a href="https://github.com/tmewett/BrogueCE">source code</a> and slightly modified.</strong></p>
@@ -151,6 +152,7 @@ for x in 0..&lt;cols {
 <p>After starting work on the animations I realized that using the illumination system to render explosion effects with alpha channel was going to be a pain because of the transparency required. I would need to find the glyphs for the tiles that have the explosion effect and adjust illumination to give a transparency / lighting effect. Even with this approach I still wouldn't get exactly what I wanted as the effects that illumination provide even when applied to the background is not really what an explosion or laser charing effect look like. So I decided to add another NxM array of cells to the scene as the overlay. This is where all the animation rendering happens and it sits at a higher Z index than the tile cells. Now when the animation is rendered on this layer I can adjust the transparency of the background for the cell to get great effects.</p>
 <p><img src="/img/5.gif" alt="" /></p>
 
+        </div>
         </div>
     </body>
 </html>

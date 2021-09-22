@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Ubuntu power saving on Asus Zenbook prime UX31A</h1>
         <div id="date"><em> 2014-10-17</em></div>
+        <div class="content">
         <p>my primary laptop has been running a flavor of windows for the last couple of months and I was getting really good battery juice (upto 6 hours). I decided to install the lastest ubuntu gnome 14.04 to checkout what the gnome guys were doing mainly, and because I missed the native bash stuff. But to my surprise the battery / power saving out of the box is terrible. I got a measly 2.5~3 hours with the default settings. So to enable longer battery life you need to do these:</p>
 <h3>enable ASPM during boot</h3>
 <p>This will stop the machine from electrically communicting with the PCI-E slots and save some watts. You need to edit /etc/default/grub and replace the line with the following</p>
@@ -80,6 +81,7 @@ Summary:
 <pre><code>
 </code></pre>
 
+        </div>
         </div>
     </body>
 </html>

@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> N-Gram sentence splitting</h1>
         <div id="date"><em> 2019-06-29 15:22:00</em></div>
+        <div class="content">
         <p><strong>The Idea</strong></p>
 <p>one of the biggest annoyences in adding items to reminder app using voice is that the agent can't figure out if there are multiple items in that utterance. Here is an example:</p>
 <p>&quot;add bananas oranges and lemons to my list&quot;</p>
@@ -55,6 +56,7 @@ and added it to the result list.</p>
 <p>First thing is that when creating the N-grams we are using a sliding window of decreasing lengths. So instead of creating the N-grams for each index from scratch each time, adding the next word to the window and removing the first will yield a linear time algorithm for constructing the list.</p>
 <p>Second thing is that there is no need to keep the whole dictionary in memory. Using a bloom filter will be enough because we can make our decision based on failure to be contained in the set.</p>
 
+        </div>
         </div>
     </body>
 </html>

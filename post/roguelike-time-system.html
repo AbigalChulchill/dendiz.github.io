@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Roguelike time system</h1>
         <div id="date"><em> 2020-07-11T21:48:34-07:00</em></div>
+        <div class="content">
         <p><em>This post contains a series of updates to an algorithm that show the evaluation and rationale. You don't end up with what you started.</em></p>
 <p>The most naive scheduler in a rogue like is just assuming that every character moves at the same speed and iterating over the list to make them move. But that is boring and diminishes the tactics in the game. A huge slug should be slower than the player and a vampire bat should be faster.</p>
 <p>A simple way of accomplishing this is to use a priority queue. Each character in the world has a plan function that calculates the move it will make and enqueues it with the scheduler to be executed at a certain time. This time should be the current time + the cost to execute the action. For the human player this plan function is partly when the human is thinking what to do and partly in the input handler for the (when the action is sent to the queue).</p>
@@ -105,6 +106,7 @@ I came up with an alternate model where all the actors in the world are added to
 <p>The credits system is working pretty good except for a couple of conditions that arisen due to the position of the player in the queue and animations. This was mainly related to the displacement mechanic that I wanted to implement and how I could have the user perceive that displacement. The player has to be in first position in the queue because when they do a ranged target, I want to calculate if the shot hit the target first. If the player is not first to go, then the monsters could change their location and the shot would miss. This could be accomplished by a preemptive scheduler that queue the shot as a <code>Schedulable</code> then the player could go last but I have to think about that a bit more. A side from that I also changed the implementation to a round robin traversal instead of consuming all the credits of the current actor. I put all the <code>schedulables</code> in to a local queue in the tick function and process that queue. If the current actor has any credits left after their action they get put back in the queue in last position and the processing continues until the queue is empty.</p>
 <p>My initial design for the time system was running on the main thread sequentially and the game would render the level at the end of a scheduler tick. This seemed to work well but if an actor gets more than 1 movement action per tick it would look like they jumped around. I decided that this can get hard to judge and predict the next monster location for fast monsters. One turn the monster is far away the next turn it jumped right next to the player. So I wanted to animate the monster movements so it's clear how the enemies are moving. This seems to be a bit more fair in terms of time sharing for all the actors and makes the queue position a bit less important.</p>
 
+        </div>
         </div>
     </body>
 </html>

@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> TechScan DevLog 2021-03-03</h1>
         <div id="date"><em> 2021-03-03</em></div>
+        <div class="content">
         <p>So today I took some time to add type annotation to the code. Python is cool and all but untyped languages can get out of hand very very easily when the code base gets larger so I just went ahead and got that out of the way.</p>
 <p>Now that the core of the data sync is completed I started on the other components that will consume the data: The backtester and the engine. The back tester is responsible for invoking the engine with the correct data for each day of the back testing range and then consolidating the results from the engine with the wallet. The engine is just loading the strategies and executing them. I wanted the flexibility of writing the strategies with Jupyter so that I can debug and plot etc. while developing. I had put together a simple script called <code>jupdev</code> that extracts the python code cells from a notebook and writes them as a python file, so that came in handy. One issue that I’m pondering is should the strategies be executed against each symbol one by one and their results applied to a wallet that’s dedicated to that symbol/strategy pair or would it make sense to have strategies return an action for multiple symbols and have a global wallet. The former option is a nice way of gauging how each strategy performs on a symbol but doesn’t support portfolio type strategies. Still exploring the differences on this.</p>
 <p>When the data syncer makes a request and gets back an error, it’s usually because Yahoo doesn’t track that symbol. I didn’t want the syncer making the same request over and over again for non-existent symbols so I added a black list. Everytime a symbol errors a counter is incremented in the list. When the counter reaches a certain value the symbol is blacklisted.</p>
@@ -29,6 +30,7 @@
 <pre><code>
 </code></pre>
 
+        </div>
         </div>
     </body>
 </html>

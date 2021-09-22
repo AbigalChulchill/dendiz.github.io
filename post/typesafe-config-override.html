@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> TypeSafe config override</h1>
         <div id="date"><em> 2017-03-28</em></div>
+        <div class="content">
         <p>Every now and then you need to be able to define some default value in your configuration and be able to override them based on the environment you are running in. TypeSafe Config has a nice way of allowing this:</p>
 <pre><code>production {
   service1: 172.0.0.1
@@ -31,6 +32,7 @@
 </code></pre>
 <p>when you define you config like this if your application start with <code>-DSERV1=10.0.0.1</code> then the command line value will override the default in the configuration file.</p>
 
+        </div>
         </div>
     </body>
 </html>

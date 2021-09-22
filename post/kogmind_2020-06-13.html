@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Kogmind: Devlog #3</h1>
         <div id="date"><em> 2020-06-13</em></div>
+        <div class="content">
         <p>With the new animation layer now in place I thought that I’d tweak the animations a bit more. The object explosion animation was not fading out properly so I added a color lerping function that fades the background from the explosion color to black. This makes for a better, more realistic effect.</p>
 <p><img src="/img/km9.gif" alt="" /></p>
 <p>All the animation related code was living in the BeamBlaster class as it was convenient to modify stuff, I moved those to their respective classes. Not much problems since no refactoring really required for this reorganization.</p>
@@ -37,6 +38,7 @@
 <p>I also came across another issue where a cell that was illuminated could not be picked as a target because it was reported to not be in the LOS. Thid was happening because LOS is calculated using Bresenham and in some cases the line would need to pass through a neighboring wall tile and that was not considered to be in LOS. I solved this by changing the definition of LOS to be a cell in the FOV. With the the targeting line can sometimes appear to cross walls but that’s okay.</p>
 <p><img src="/img/km10.gif" alt="" /></p>
 
+        </div>
         </div>
     </body>
 </html>

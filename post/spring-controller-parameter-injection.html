@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Spring controller parameter injection</h1>
         <div id="date"><em> 2015-01-01</em></div>
+        <div class="content">
         <p>For most applications that have some sort of login feature, you need the logged in user in your controllers or else where. If you are using an authorization/authentication framework they probably provide a nice way of doing this. If you are managing your sessions with spring there are probably different ways of doing this but for the sake of an example this is the scenario I'm going with. I want to pass the current user as a parameter to a controller method and have it populated with the current user by spring. This is done with a component that implement <code>HandlerMethodArgumentResolver</code></p>
 <pre><code>@Component
 public class CurrentPlayerParameterResolver implements HandlerMethodArgumentResolver {
@@ -68,6 +69,7 @@ public String galaxy(Map&lt;String,Object&gt; model, Player currentPlayer) {
 }
 </code></pre>
 
+        </div>
         </div>
     </body>
 </html>

@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Groovy - picking keys from a map based on a list</h1>
         <div id="date"><em> 2014-10-21</em></div>
+        <div class="content">
         <p>one of the most common things you do when programming is transforming one representation of data to another.
 here is a very common example:
 say you have a map, say a result of a database query</p>
@@ -44,6 +45,7 @@ keys.inject([:]) {acc,it-&amp;gt; return acc + [ (it.value) : report[it.key] ] }
 <p>whats going on here is that we are starting off with an empty map, and iterating the keys
 map/array. For every iteration we add the map to the accumulated map and move on.</p>
 
+        </div>
         </div>
     </body>
 </html>

@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Sitemap generation with Spring</h1>
         <div id="date"><em> 2014-10-07</em></div>
+        <div class="content">
         <p>The <code>sitemap.xml</code> file defines all the url that a search engine should crawl on your site and is vital to SEO. After some research on how people did this using Spring mvc, I was quite baffled to see that no one actually used freemarker (or any other template engine) to achieve this and chose the path of cumbersome path of XML marshaling and programming. So I thought I'd write a short tutorial on how to accomplish this task really fast and clean. I'm going to assume that you have spring mvc and freemarker already configured and running, if you don't there are plenty of resources showing how to do that so just go ahead and use them, there is no need to repeat that stuff here. I'll also assume that your freemarker configuration bean <code>org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer</code> is called <code>freemarkerConfig</code>.</p>
 <p>So what we need to do is this</p>
 <p>in your controller create a request mapping that maps to <code>/sitemap.xml</code> and produces xml
@@ -59,6 +60,7 @@ simple. Here's the code to accomplish this:</p>
 <pre><code>
 </code></pre>
 
+        </div>
         </div>
     </body>
 </html>

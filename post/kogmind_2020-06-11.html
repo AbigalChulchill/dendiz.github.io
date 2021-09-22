@@ -22,10 +22,12 @@
         <div id="main">
         <h1 id="title"> Kogmind: Devlog #2</h1>
         <div id="date"><em> 2020-06-11</em></div>
+        <div class="content">
         <p>I realized today that the animation pipeline that I have doesn’t support animations that need to overlap. Shooting a beam into a wall should trigger the wall destruction animation as soon as it hits the wall and fade out for the beam should play in parallel with the explosion animation. This meant rearchitecting the pipeline code into a daisy chain of animations triggering each other.</p>
 <p>I tried to get rid of the beep that happens when I press a key to move the player but had no luck. It’s happening because the view doesn’t support the key being pressed and is not registered as the first responder but I could not get it teamwork even after setting it to be the the first responder. Will look into this a bit more.</p>
 <p>Object destruction is now live👌 I also downloaded the animated gifs of some of the cogmind effect and will try to model the animations after those. I also want to look into sqaure aspect ratios for the textures as they seem to look a lot better.</p>
 
+        </div>
         </div>
     </body>
 </html>

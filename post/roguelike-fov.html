@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Roguelike FOV</h1>
         <div id="date"><em> 2020-07-18T12:47:00-07:00</em></div>
+        <div class="content">
         <h1>Field of vision</h1>
 <p>FOV is the area that is visible to the player. Making the whole level visible would lead to boring games so the area is limited to a certain radius. There are a couple of different algorithms that can be used to implement FoV. I choose to go with the simplest which is ray casting from the player position towards the outer rim of a circle that is defined by the how far the player can see.</p>
 <p><img src="/img/fov1.jpg" alt="image" /></p>
@@ -123,6 +124,7 @@
 <p>This is a rather inefficient way in terms of complexity as it processes the same tiles over and over but in practice is fast enough. There are other more sophisticated ways of determining FoV with different permissiveness properties like shadow casting which I will explore in the future.</p>
 <p>The code here only calculates the coordinates that fall in the FoV but doesn't do any highlighting. Thats part of a different post.</p>
 
+        </div>
         </div>
     </body>
 </html>

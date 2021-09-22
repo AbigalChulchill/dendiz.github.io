@@ -22,11 +22,13 @@
         <div id="main">
         <h1 id="title"> Kogmind: Devlog #1</h1>
         <div id="date"><em> 2020-06-10</em></div>
+        <div class="content">
         <p>Today I decided that a roguelike on an iPad doesn’t really work when it’s ascii based. Just because the symbols are too small to accurately touch on the screen and buttons on the touch screen are annoying to tap continously. You need a keyboard, period. I had the game working with Mac Catalyst but that just seemed weird, so I ported the code base to macos. I tried modifying the existing project in place but that lead to weird configuration errors so I just started a new macos project and copied over most of the code.</p>
 <p>I ran into issues with setting color on the tile textures due to NSColor not liking the color space when I used SKColor built in enum values so I had to create and instance for the coloring. Resizing the window was also much harder than I would have imagined but I got it working with some research. The rest was pretty straightforward substituting UIKit stuff with NS stuff. I had to do the keyboard input handling code again as that was also not compatible.</p>
 <p>I discovered some unfairness issues with the scheduler so I rewrote that part to use a credit based system instead of the future scheduling time line system. It looks to be a lot better now.</p>
 <p>I also had the chance to dive into the animation pipeline that runs async code sequentially. The trick was to use a dispatch group and a semaphore to coordinate the queued animations. I still feel like there is an issue with the delay timing in the animations like the sleep calls aren’t waiting the correct amount of time that I need to look into.</p>
 
+        </div>
         </div>
     </body>
 </html>

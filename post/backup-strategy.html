@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> My backup strategy</h1>
         <div id="date"><em> 2020-07-21T16:34:00-07:00</em></div>
+        <div class="content">
         <p>I've always backuped my files and folders for as long as I can remember. But up until a couple of months ago my backup strategy was ad-hoc. I would manually copy important files to a networked computer, cloud storage or before those existed to a USB drive. It was mostly not automated or very poorly automated by a couple of lines of bash scripts creating zip/tar.gz archives of directories and copying them over. This is kind of works but is very inefficient and not really sustainable as the data you need to backup accumulates over time. So about 2-3 months ago I decided to invest the time to look into some existing solutions in this area. My requirements were pretty simple:</p>
 <ul>
 <li>Support incremental backups</li>
@@ -62,6 +63,7 @@ sudo BORG_PASSPHRASE=&lt;password&gt; borg create -v --stats --compression zlib 
 <p>There are multiple hosts that need backups so I need a Jenkins runner on each host that has access to the directories on that machine so I also need a plugin that makes sure that a job can only run on a host that I specify.</p>
 <p>This works pretty well for data that's residing on my servers but for files on laptops etc it's not really convenient. I still copy documents and files manually from client to the NAS when I want to keep a backup of those. But as I'm moving my apps to self hosted web app based solutions I find that the need to do this manual copying is pretty minimal.</p>
 
+        </div>
         </div>
     </body>
 </html>

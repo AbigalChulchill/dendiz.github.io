@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> 3 different approaches to the same problem</h1>
         <div id="date"><em> 2018-05-09T23:08:34-07:00</em></div>
+        <div class="content">
         <p>I came a across a seemingly simple problem today that turned out to have multiple solutions with varying efficiency. These type of problems are very well suited for step by step iterative solutions where each step you improve upon the existing solution. 
 The problem is the simple matter of find the first unique character in a string. 
 I'm skipping the obvious solution of starting at the beginning of the string and scanning through the string comparing the current charater with every other. This type of solution will lead to an N^2 solution which is usually unacceptable. Think that you are searching a DNA sequence of 10 million nucleotides. No way exponential solutions are going to work. 
@@ -145,6 +146,7 @@ instead of keeping the position of the character, keep a pointer to a linked lis
     }
 </code></pre>
 
+        </div>
         </div>
     </body>
 </html>

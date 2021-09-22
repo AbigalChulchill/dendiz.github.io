@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> How to Pokebot</h1>
         <div id="date"><em> 2007-01-01</em></div>
+        <div class="content">
         <p><em>This a historic document that I found somewhere on my hard drive. It's incomplete
 and the quality is very poor at best</em></p>
 <h2>The devil: win32 API</h2>
@@ -359,6 +360,7 @@ If you watch the terminal log, you'll see messages flying by with every little p
 <p>Multi-thread is a core requirement, because we'll be serving a lot of requests and clients</p>
 <p>Cheating and using a application container such as tomcat doesn't help because HTTP is a stateless protocol, and poker is a statefull game. The state will have to be carried out by URL parameters or session/cookies which means that the agent will need to implement a HTTP client, which is not worth the effort. Instead we designed our own text based communication protocol. The protocol is TCP and Text based. Very simple, clients send commands and the server threads act accordingly.</p>
 
+        </div>
         </div>
     </body>
 </html>

@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Image hoster</h1>
         <div id="date"><em> 2014-10-20</em></div>
+        <div class="content">
         <p>one of the things I've been missing since I switched to a static site generator for hosting these page is the ability to upload images that wordpress or other publishing platforms offer by default.
 I've tried several ways of overcoming this. I've uploaded files via FTP, which is very cumbersome. You have to launch an ftp client, find the directory you want to copy the files to, launch a browser to that directory and have apache list the files there, CTRL+F and search for the file, copy the link address and finally paste it back to the markdown document, only to see that the image is way too big for the post. Now you have to resize the damn image and do that stuff all over again. I’d rather not upload an image at all! An easier way was just copying the file to my Dropbox folder. But you still have to go to the dropbox web site to get a public link and the sizing issues are still there. So I thought that I’d address this issue of having problems hosting images. This also gave me a nice opportunity to test out go lang and martini. To my surprise go was a very pleasant language to work with and martini is just the right micro framework to build a go web application with. So imagehoster was born. You can check it out at my repository. The process is much more simple now</p>
 <p>go to the imagehoster web app
@@ -35,6 +36,7 @@ Here are a few images dynamically sized</p>
 <pre><code>
 </code></pre>
 
+        </div>
         </div>
     </body>
 </html>

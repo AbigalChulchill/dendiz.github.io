@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Local dns server</h1>
         <div id="date"><em> 2020-04-01</em></div>
+        <div class="content">
         <p>I have a bunch of self hosted services running in containers on my docker host and it was getting pretty hard to keep track of which port was assigned to what. I wanted to setup an nginx proxy that would be the front end to all these services and also wanted to use human friendly addresses. The simple option would be to add all the hostnames to my <code>etc/resolv.conf</code> file but I use 5 different devices daily and some of them don't even allow me to change that file. So I needed to run my own DNS server. The idea was to capture requests made to <code>*.dendiz.lan</code> and resolve them to my docker host and forward all other requests to my usual DNS servers.</p>
 <p>DNS configs can be tricky but a project called coredns makes it very simple. The DNS itself is also a docker container which keeps things even cleaner. So I spun up a coredns container with following dns records file</p>
 <pre><code>$ORIGIN dendiz.lan.
@@ -58,6 +59,7 @@
 </code></pre>
 <p>and got back an answer section. Nice! Next up creating the proxies... I found a nice project called nginx proxy manager that provides a web interface for creating proxy configs which also runs in a container. I installed that and created proxy hosts for all the services that I use and everything was looking good. one caveat with this setup is that I had manually set the DNS servers in the network settings on my devices. The solution to this issue was to configure my routers internet settings and put in my DNS server as the first server to use. Now all the devices that use DHCP can resolve my local domain.</p>
 
+        </div>
         </div>
     </body>
 </html>

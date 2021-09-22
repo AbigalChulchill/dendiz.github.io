@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Jupyter notebook custom magic</h1>
         <div id="date"><em> 2021-09-01</em></div>
+        <div class="content">
         <p>Jupyter notebooks a great way of prototyping small programs and exploring/visualizing data from scripts. I use them to run back tests on trading algos. One of the most power features is that you can actually pipe the contents of a cell to another python function. This feature came in really handy when I wanted to pipe a trading algo into my backtesting framework. To accomplish this you need to make use of &quot;magics&quot;</p>
 <p>First create a function in your <code>__init__.py</code> file in your package</p>
 <pre><code>def load_ipython_extension(ipython):
@@ -53,6 +54,7 @@
 </code></pre>
 <p>The line parameter above will contain the first line that starts with <code>%%</code> and the cell parameter will contain the rest of the cell contents.</p>
 
+        </div>
         </div>
     </body>
 </html>

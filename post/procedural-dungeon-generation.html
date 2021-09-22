@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Procedural Dungeon Generation</h1>
         <div id="date"><em> 2017-05-13</em></div>
+        <div class="content">
         <p>The basics of any roguelike dungeon crawling game is the dungeon. What makes these types of game infinitely replayable is their use of procedural generation to produce a new dungeon and artifacts for each game.  Some one in the internets came up with the idea of generating dungeons based on &quot;pushing out&quot; random rectangles generated with in a circle. To get more realistic results it's best to use a Gaussian random number generator, as rarely anything natural is uniformly randomly created.</p>
 <p>So create some random rectangles with in a cirlce:</p>
 <pre><code>    for i in range(0, num_cells):
@@ -106,6 +107,7 @@ We want to use these as the main nodes for joining the rooms together.</p>
 <p><img src="/img/procgen_dungeons.png" alt="img" /></p>
 <p>The RNG construction and the overlap checking code is the brute force way of solving these problems. The overlap checking can be done using an interval search tree for a better runtime performance, and the wikipedia article mentions a paper with an algorithm to do it in linearithmic time. But since the number of rooms in a dungeon are relatively small, it's not worth the added code complexity</p>
 
+        </div>
         </div>
     </body>
 </html>

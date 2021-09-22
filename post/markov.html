@@ -22,6 +22,7 @@
         <div id="main">
         <h1 id="title"> Markov name generation</h1>
         <div id="date"><em> 2018-01-01</em></div>
+        <div class="content">
         <p>Generation of random planet names was a task I tackled recently, and these type of 'random name' generations are great candidates for Markov Chains. 
 Markov chains are probabilistic structures where the next element in the chain depends on the previous elements. By training the model on a set on 
 input data the process creates a chain with each link containing a set of the next probable elements. By starting at a random link in the chain 
@@ -129,6 +130,7 @@ Here is some clojure code to create a markov chain and generate names.</p>
 Playing with the order affects the quality of the results. For this example and order 3 was overfitting the data - producing mostly names 
 identical to the ones in the training data. Order 2 seems like the best fit.</p>
 
+        </div>
         </div>
     </body>
 </html>

@@ -22,11 +22,13 @@
         <div id="main">
         <h1 id="title"> TechScan DevLog 2021-03-01</h1>
         <div id="date"><em> 2021-03-01</em></div>
+        <div class="content">
         <p>So it's been a while since I had a look into my TechScan project. I’ve decided to take another spin at the platform with a data repo that unifies data from different providers, the engine based on pandas dataframes with a back tester and a signal generator.</p>
 <p>My starting point was the data repo. This component syncs data from providers (like Yahoo, Bitfinex, etc) and stores them as a CSV file on disk. There are another couple of issues that need to be handled by this component too. For example resampling of the data to different time periods and making sure the provider isn’t slammed with requests that would not result in any new data. This caching of data makes it very convenient to run multiple strategies multiple times in a row without worrying about being banned from the provider.</p>
 <pre><code>
 </code></pre>
 
+        </div>
         </div>
     </body>
 </html>
