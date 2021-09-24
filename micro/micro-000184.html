@@ -22,7 +22,7 @@
         </div>
         <hr />
         <div id="main">
-        <ul>
+        <ul class="content">
         <li>
         dataframelerle is yapmak icin gercekten enteresan cozumler gerekiyor. Vectorized programming gibi bir terim gerekli. Son 5 tane closing price’in BBands lower altinda olup olmadigina bakmak icin:r.loc[r.Close &amp;lt; r.lower, &amp;apos;below_bb&amp;apos;] = 1 r[&amp;apos;signal_sum&amp;apos;] = r[&amp;apos;below_bb&amp;apos;].rolling(window=5).sum()r.loc[r.signal_sum &amp;lt;= 5, &amp;apos;signal&amp;apos;] = 1
         &mdash;
