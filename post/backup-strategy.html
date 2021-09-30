@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -44,7 +44,7 @@
 <p>Different projects may live on different servers on the network and each host on the network gets it's own Borg repository. The initial repo setup is done manually but it's not really worth automating this as I haven' added a new machine to the network in ages (I don't think I've added a new machine after I started using Borg)</p>
 <h3>Backup process</h3>
 <p>I use Jenkins to schedule the backups, so each app/data store gets its own backup job in Jenkins.</p>
-<p><img src="/img/jenkins-backup-jobs.png" alt="jenkins" /></p>
+<p><a href="/img/jenkins-backup-jobs.png">jenkins</a></p>
 <p>Scripting Borg commands via the Shell execution block in Jenkins makes everything pretty simple:</p>
 <pre><code>NFS_MOUNTS=$(mount -l | grep nfs | wc -l)
 if [ $NFS_MOUNTS -eq 0 ]; then
@@ -68,7 +68,7 @@ sudo BORG_PASSPHRASE=&lt;password&gt; borg create -v --stats --compression zlib 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:58</em>
+	<em>generated on 2021-09-29 17:13:08</em>
 	</footer>
     </body>
 </html>

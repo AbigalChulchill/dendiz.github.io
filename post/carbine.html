@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -26,16 +26,16 @@
         <div id="date"><em> 2010-01-23</em></div>
         <div class="content">
         <p>Carbine is an implementation of the game Crimsonland developed by 10tons. It’s a shoot’em up style game where you start the map in the middle and all sorts of zombies, spiders, monsters start creeping up towards you and you have to shoot them and keep running away from them. Here’s a video of the game if you don’t know it already.</p>
-<p><img src="/img/h10.gif" alt="" />
+<p><a href="/img/h10.gif">/img/h10.gif</a>
 <a href="https://youtu.be/lpYcCAgKMxs">https://youtu.be/lpYcCAgKMxs</a></p>
 <p>Here are some screenshots</p>
-<p><img src="/img/57f4522362aaf.png" alt="" /></p>
-<p><img src="/img/57f4523b99a8b.png" alt="" /></p>
+<p><a href="/img/57f4522362aaf.png">/img/57f4522362aaf.png</a></p>
+<p><a href="/img/57f4523b99a8b.png">/img/57f4523b99a8b.png</a></p>
 <h1>Source code</h1>
 <p>The source code is released under any public domain license, i really don’t care. Use it, modify it, do what ever you want with it. You can find it on <a href="http://github.com/dendiz">http://github.com/dendiz</a></p>
 <h1>Zombie movement</h1>
 <p>Each zombie has x and y coordinates that get updated at each game tick. The new x,y coordinates are calculated as x = velocity * math.sin(direction) and y = vel * math.cos(direction) where direction is the angle that the zombie is facing. This angle has to be towards the player at some times if we ever want the player to drop dead. The angle is calculated as alpha = atan2(player.x-zombie.x, player.y-zombie.y) derived from some simple vector calculations</p>
-<p><img src="/img/57f45260c7ec9.png" alt="" /></p>
+<p><a href="/img/57f45260c7ec9.png">/img/57f45260c7ec9.png</a></p>
 <h1>Blast effect when firing</h1>
 <p>Implemented by swaping the sprites of the original player with sprites that have a blast at the end on the gun at each move() function call for the player if the fire_anim variable is enabled. The fire_anim variable is set to true at the fire() method of the player and a timer is set to disable in after 10ms have passed.</p>
 <h1>Player keybinding</h1>
@@ -61,16 +61,16 @@
 </ul>
 <p>at each frame the next x,y is current x,y + sin(direction)/cos(direction) * velocity * bullet life</p>
 <p>Projectile direction angle</p>
-<p><img src="/img/57f4527f8642c.png" alt="" /></p>
+<p><a href="/img/57f4527f8642c.png">/img/57f4527f8642c.png</a></p>
 <p>Projectile Trajectory</p>
-<p><img src="/img/57f45298050e8.png" alt="" /></p>
+<p><a href="/img/57f45298050e8.png">/img/57f45298050e8.png</a></p>
 <h1>Accuracy</h1>
 <p>The crosshair of the player widens with consecutives shots less than N seconds apart. The trajectory of the projectile intersect at a random point within this widend cross hair circle.</p>
 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:58</em>
+	<em>generated on 2021-09-29 17:13:08</em>
 	</footer>
     </body>
 </html>

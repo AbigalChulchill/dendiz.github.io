@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -58,16 +58,16 @@
 <h2>Update 1</h2>
 <p>An shortcoming that I discovered today with the pipeline was that the current animation has to finish before the next one can start and this is not always the desired effect. When you shoot a laser it's more realistic and better looking if the target starts bursting out sparks at contact rather then waiting for the beam animation to finish. This means that the architecture had to change into a model that allows creation of a chain of animations with the running animation having some means of triggering the next animation in the and continue running. I implemented this by adding an index and a closure parameter to the run function of the Animating protocol. When the pipeline calls run on the animation it passes in the current index and a reference to a method called trigger of itself. When the animation has done its initial work (e.g the beam animation has reached the target) it calls the method reference with the index parameter plus 1 indicating the next animation should start. This signal is captured by the pipeline and the animation with the index received from the current animation is added to the running queue.
 There are other ways of accomplishing the same synchronization by using semaphores inn the pipeline but this approach seemed cleaner and totally non blocking.</p>
-<p><img src="/img/km1.gif" alt="" />
-<img src="/img/km2.gif" alt="" /></p>
+<p><a href="/img/km1.gif">/img/km1.gif</a>
+<a href="/img/km2.gif">/img/km2.gif</a></p>
 <h2>Update 2</h2>
 <p>I ran into an issue with the sequence of the scheduled actors and the animations. Since these two are running in different queues some of the actors were getting scheduled to move before the explosion or destruction animations were being completed. I didn't want to use a single serial queue to synchronize the animations and scheduled actions to I implemented a DispatchGroup on the AnimationPipeline to block until the animation is completed.</p>
-<p><img src="/img/km11.gif" alt="" /></p>
+<p><a href="/img/km11.gif">/img/km11.gif</a></p>
 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:58</em>
+	<em>generated on 2021-09-29 17:13:08</em>
 	</footer>
     </body>
 </html>

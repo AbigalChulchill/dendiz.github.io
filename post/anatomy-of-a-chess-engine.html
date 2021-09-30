@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -28,7 +28,7 @@
         <p>Let's check out the anatomy of a chess engine.</p>
 <h1>Board Representation</h1>
 <p>The first thing we will tackle in programming our chess engine is a representation of the board. We will use the technique called a 10×12 board with sentinel markers. In this method the 8×8 chess board is wrapper with an extra 2 rows at the top and bottom and extra rows on the right and left side as in the figure</p>
-<p><img src="/img/10x12-board.png" alt="" /></p>
+<p><a href="/img/10x12-board.png">/img/10x12-board.png</a></p>
 <p>The blue squares are the actual chess board and the orange squares the sentinel squares that will come in handy when we are generating moves. You can think of the board as a 2 dimensional array in java. The square with the number 21 is the A1 square and the square 98 is the H8 square of the chess board. We will place our chess pieces in the array locations in this array. So say for example if a white pawn was represented with the value 2 then</p>
 <p><code>Board[21] = 2</code></p>
 <p>would mean that there is a white pawn on A1 (which is not a legal board state for chess – but just for the sake of an example bear with it)</p>
@@ -180,9 +180,9 @@ public class Piece {
 }
 </code></pre>
 <p>So we have here a basic initialization of the board. We have 2 arrays here that need attention: filesBoard and  ranksBoard . These two arrays hold the values for ranks and files. So after initialized the files board will look like</p>
-<p><img src="/img/10x12-fileboard.png" alt="" /></p>
+<p><a href="/img/10x12-fileboard.png">/img/10x12-fileboard.png</a></p>
 <p>and the rank file board will look like</p>
-<p><img src="/img/10x12-rankboard.png" alt="" /></p>
+<p><a href="/img/10x12-rankboard.png">/img/10x12-rankboard.png</a></p>
 <p>We have also a method that will return the index of a square for the given file and rank. So now on to the initialization part. First off we go and set everything slot in both arrays to an off square value to initialize the sentinel squares. Then we loop from file A rank 1 to file H rank 8 basically iterating over all of the squares on the chess board and set the file and rank values appropriately. After this initialization code has run the state of the arrays will like the figures above.</p>
 <p>Now lets write a test to make sure that our code is working as expected</p>
 <pre><code>@Test
@@ -247,7 +247,7 @@ public class Piece {
 </code></pre>
 <p>The material[]  array holds the total value of material present at the board indexed by color. So if the white side has a single pawn on the board material[0]  would 100. Simple enough.</p>
 <p>The pceNum[]  array holds the number of pieces of a certain type on the board. This is again using the Piece.pieces[]  as the index. So the index of a white pawn is 1 in the pieces array, so pceNum[1]  would be 5 if there were 5 white pawns on the board. The pList[] array holds the squares for each of the pieces on the board. There can be a maximum of 10 pieces of the same kind on the board at a given state. How is that possible you ask? This is an edge case but think about this scenario: I promote each of may eight pawns to rooks and I already have my two rooks so that makes a total of ten rooks for me. Taking this logic into account we set aside ten slots for each piece. So the following position</p>
-<p><img src="/img/ah9syj4hw36s.png" alt="" /></p>
+<p><a href="/img/ah9syj4hw36s.png">/img/ah9syj4hw36s.png</a></p>
 <p>would have pceNum[1]  = 8 and pList = [0,0,0,0,0,0,0,0,A2,B2,C2,...]  where A2 is the actual integer value of the board index. To get the square from the piece list all we have to do is multiply the piece integer representation by 10 and to get the beginning index in the pList[] array then we can get the next pceNum[piece integer value] elements. Let’s add that to the Board class</p>
 <pre><code>  public static int pieceIndex(int piece, int pieceNum) {
         return piece * 10 + pieceNum;
@@ -359,7 +359,7 @@ k = k XOR p3
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-29 17:13:08</em>
 	</footer>
     </body>
 </html>
