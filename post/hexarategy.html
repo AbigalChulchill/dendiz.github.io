@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -27,9 +27,9 @@
         <div class="content">
         <h1>Shield Visual Effects</h1>
 <p>Even though I had put up some text to indicate the shield status of a ship, it doesnâ€™t go without some visual effect to indicate a shield presence. This is mainly because Iâ€™m too lazy to read that info text every time I want to give some command to the ship. A more catchy indication is required.</p>
-<p><img src="/img/57f1b991b0add.png" alt="" /></p>
+<p><a href="/img/57f1b991b0add.png">/img/57f1b991b0add.png</a></p>
 <p>Also during the economical phase you can't move ship or adjust power diversion. I found myself clicking on ships multiple times during the economy phase without realizing that it was that phase only to thing &quot;why aren't my clicks registering?&quot; followed by a &quot;duh!&quot; second. So I used a similar effect to indicate that you can't select ships at the moment.</p>
-<p><img src="/img/57f1b9bbcda87.png" alt="" /></p>
+<p><a href="/img/57f1b9bbcda87.png">/img/57f1b9bbcda87.png</a></p>
 <h1>Discovering enemy units and planets</h1>
 <p>At first I though that the game could be a game of perfect information where you know where all the planets are and where your enemies are based. But then first I made the planets invisible so you have to explore around to find planets to colonize. Then I though well Iâ€™ll also make the enemies invisible until you scan them. The procedure is quite simple: Every ship and planet has a set property called exploredBy. When creating the units you add yourself to the set. Then during the Update() call of every ship in transit you scan the neighboring cells with a radius of N and if there is anything on that cell you add yourself to their explored list and make them visible. Setting a sight line of 1 is okay for planets but could be dangerous for enemy ships as you would end up right in the middle if you go the max distance. So setting this to 2 or 3 is going to better I guess. But this is also a tactical choice: Do you spend all your power on the engines and have nothing attack/defense when you end up in the attacking range of an enemy ship, or do you travel less but have your guard up?</p>
 <p>Here is the new stuff in action on a very small map for testing purposes</p>
@@ -40,19 +40,19 @@
 <h1>Economical phase</h1>
 <p>Every 4 turns there is an economy return the others are for moving around, colonizing etc. During the movement phase the player still collects income from the colonies and pays ship maintenance costs but cannot buy ships or do research. In the economy phase the player cannot do the things done in the movement phase, but does the things not allowed in the movement phase. Every turn the ships also generate power and burn fuel.</p>
 <p>At the beginning of the economy turn the player collects the income and pays the maintenance costs and whatever is left over he can use to purchase ships or technology. There is a nice report that displays what happened economy wise at the beginning of the turn like this</p>
-<p><img src="/img/57f1b9d9e8099.png" alt="" /></p>
+<p><a href="/img/57f1b9d9e8099.png">/img/57f1b9d9e8099.png</a></p>
 <p>One thing to mention is that if there is an enemy ship in the neighbor cells of a colony then it will not produce any income. All the colonist are fearing for their lives and will not work.</p>
 <p>Iâ€™ve also added a nice bar at the top that displays the current star date and the credit points the player has and a button to confirm that the turn has ended.</p>
-<p><img src="/img/57f1b9f14a1e0.png" alt="" /></p>
+<p><a href="/img/57f1b9f14a1e0.png">/img/57f1b9f14a1e0.png</a></p>
 <h1>Planet colonization</h1>
 <p>This one wasnâ€™t tricky as I expected it to be. To colonize a planet all you have to do is send a colony ship to that planet. No resistance â€“ no ground battle the colony is yours. The colony ship disappears from the grid as it is turned into a colony base on the surface and a colonization message is displayed. Now you can get all that extra production, yeah.</p>
 <p><a href="https://youtu.be/l5AC7sPvD44">https://youtu.be/l5AC7sPvD44</a></p>
 <h1>Planets and some info panels</h1>
 <p>over the weekend Iâ€™ve added some planets to the grid. That was straight forward, find some nice planet surface textures and apply them on to a sphere. The info panels for the planets were GUI text at first with a canvas etc. But if you rotate these along the X-axis so that they lay flat on the grid the font rendering gets screwed up big time so I changed that to 3D text mesh. The results are pleasing.</p>
-<p><img src="/img/57f1ba0f67fae.png" alt="" /></p>
+<p><a href="/img/57f1ba0f67fae.png">/img/57f1ba0f67fae.png</a></p>
 <p>the planet names are 3 arrays of 5 meaningless names and a unique selection is made at random from these arrays.</p>
 <p>While at the subject of panes I also changed the ship info pane to a text mesh. The previous videos had examples of UI text and how ugly it looks when rotated as the ship info text. Now itâ€™s much smoother:</p>
-<p><img src="/img/57f1ba28e4ea8.png" alt="" /></p>
+<p><a href="/img/57f1ba28e4ea8.png">/img/57f1ba28e4ea8.png</a></p>
 <p>One of the tricky things here was to keep the text facing towards the user as the ship rotates. The text is a child component of the ship, and is positioned 0,0,-10 relative to the ship. When the ship rotates so does the axis for the text and it would end up in different positions for each rotation of the ship. To keep it below the ship for all rotation the positioning has to be with respect to the world axis. To accomplish this I had to get the TransformPoint for the ship location with respect to the ships origin and add the difference vector. Now when you set the position of the text you get this effect. Something along the lines of</p>
 <pre><code>Vector3 p = ship.asset.transform.TransformPoint (Vector3.zero);
 text.transform.position = p + new Vector3 (0, 0, -10f);
@@ -71,7 +71,7 @@ text.transform.position = p + new Vector3 (0, 0, -10f);
 <p><a href="https://youtu.be/kw8HuirxIys">https://youtu.be/kw8HuirxIys</a></p>
 <h1>Hex grid border highlighting</h1>
 <p>So, Iâ€™ve been polishing the grid looks a little bit and one of the things Iâ€™ve seen posted around the forums and Q/A sites is how to draw a line around the hexagon cell borders to indicate possible movement ranges. Previously Iâ€™ve been doing this by actually highlighting all the possible cells, but itâ€™s looks a lot better if you just highlight the borders. Hereâ€™s the results Iâ€™ve got after this implementation</p>
-<p><img src="/img/57f1ba58dab73.png" alt="" /></p>
+<p><a href="/img/57f1ba58dab73.png">/img/57f1ba58dab73.png</a></p>
 <p>Calculating the border cells is a different task which Iâ€™ve explained over here. After we have the cells that we can navigate to we need to filter out the border cells. If you look carefully the edges that need highlighting from all the cells in range are the ones that do not have a navigable neighbor. In the image the cell (4,-6,2) and (5,-6,1) are both in range, but they share a border with a navigable cell, so that edge should not be highlighted. The algorithm should be like this:</p>
 <ol>
 <li>Get all the cells in range and the starting cell, and add the starting cell to the cells in range.</li>
@@ -87,7 +87,7 @@ text.transform.position = p + new Vector3 (0, 0, -10f);
 <p><a href="https://youtu.be/UkWKeim-n_Y">https://youtu.be/UkWKeim-n_Y</a></p>
 <h1>Avoiding obstacles in path during movement</h1>
 <p>Up until now there were any obstacles (excluding ship) so I really didnâ€™t care for a proper path finding algorithm to select the cells that the ship would follow to reach itâ€™s target. A simple rasterization of the cells were the way to calculate the path, but since Iâ€™ve added some asteroids it I also thought Iâ€™d spice up the path finding too.</p>
-<p><img src="/img/57f1ba74ae111.jpg" alt="" /></p>
+<p><a href="/img/57f1ba74ae111.jpg">/img/57f1ba74ae111.jpg</a></p>
 <p>In this picture the rasterization algorithm would pick the yellow line and the cells with the red dots on them, which are actually obscured by asteroids. The correct path is the path with the purple arrows. How to you choose these? Well luckily there are a couple of ways. The brute force version would be to do a breadth first search to find the target cell which would lead to wasted movements for sure. The next best approach is the select the next cell in the BFS not at random or in order but based on a heuristic, a good guess to which cell would lead quicker to the target cell. The easiest heuristic that comes to mind is the hex distance calculated as Math.max( x2-x1, y2-y1, z2-z1). You also add the total cost of movement to this cell, something that you know for sure. Why do we add the cost of movement? Because we may need a rotation to get to that neighbor cell, which is also a movement cost. So from the starting cell, you look at all the neighbors and calculate the distance to the target cell + the cost of movement to that cell and choose the closest one. You add the current cell to the visited list. Why? because in the next step the current cell will show up as a neighbor, and we donâ€™t want to check that cell again. Then you advanced to that cell and do the same until you have reached your target. Is it possible that the target cell is never found or a ship will be there to block us? No because the target cell validity check is done before hand (the green cells). This is a simplified version of the A-start algorithm. Here it is in action</p>
 <p><a href="https://youtu.be/8oQPrgEamu8">https://youtu.be/8oQPrgEamu8</a></p>
 <h1>Navigation order processing</h1>
@@ -100,7 +100,7 @@ text.transform.position = p + new Vector3 (0, 0, -10f);
 </ol>
 <p>We will address the first 3 items. Items 2 and 3 are simple so letâ€™s get them out of the way first. If the user wants to cancel the selection, he just clicks on a cell not highlighted by the cells in range call. We just need to check if the clicked cell is in the list returned from this call. If not reset the variable that holds the clicked ship to return to the initial state. If the user wants to select another ship to move, if has clicked on a cell with one of his ships. Since he canâ€™t attack that ship, just check if the clicked cell has a ship on it and if that ship belongs to the player. If true, set the selected cell to that one.</p>
 <p>Here is an image of a state machine that shows to transitions and states</p>
-<p><img src="/img/57f1ba8f2cd8d.jpg" alt="" /></p>
+<p><a href="/img/57f1ba8f2cd8d.jpg">/img/57f1ba8f2cd8d.jpg</a></p>
 <p>The red transition is cancelling the selection, and the green transition is selecting another ship to navigate.</p>
 <p>Now letâ€™s explore the case where the user wants to navigate to a cell. We need to support multiple ships wandering around at the same time, so the user doesnâ€™t have to wait for the first ship to arrive before issuing a second order. This means we need a queue of navigation orders that will be processed at each update. We create an object that will store the source cell, target cell, the path the ship will take and the ship model and the ship object that carries meta data associated with the ship. At each update call we will process each item in the command queue and make the required movement to the next cell in the path. After each item in the queue is processed it gets queued again. This way all the ships movements will be updated once for every update call. If there is another ship in the next cell for the ship we are processing just skip that command item for this frame. This will make the current ship wait if there is another ship blocking the path, until the ship moves away from that cell. There is an edge case that needs to handled here, which is that if the blocking ships final cell is that cell, then the current ship will wait forever. To mitigate this case checking if any ships will end up at a cell blocking the way needs to be considered when creating the command. Processing the cells in the path of the command object is quite similar. Each update call, dequeue the next path from the paths and move towards that cell. If the ship has reached the cell, transfer the ship to that cell and discard that cell from the path. If the path queue is empty, it means we have reached our destination. So here is the algorithm outlined in a list</p>
 <ol>
@@ -126,7 +126,7 @@ text.transform.position = p + new Vector3 (0, 0, -10f);
 <p><a href="https://youtu.be/iVI2z1xUZsc">https://youtu.be/iVI2z1xUZsc</a></p>
 <h1>Movement improments</h1>
 <p>on the last movement post I mentioned some of the improvements that I would be making to the ship movements. Here is the demo video of some of these improvements. There are still some rough edges as can be seen (like ships passing through each other) which I will fix later. There are a few options about fixing colliding ships, Iâ€™m thinking of elevating the ship in the +Z axis so it will fly over the other ship. Another option would be to select a different route. Current the way of selecting the hex cells to reach the target is done like this:</p>
-<p><img src="/img/57f1baa8917e8.jpg" alt="" /></p>
+<p><a href="/img/57f1baa8917e8.jpg">/img/57f1baa8917e8.jpg</a></p>
 <p>the yellow line is a direct line between the source and target cells. In the previous movement videos ship were taking this direct route. To rasterize the this route, I select N+1 equally distanced points on the line. N is the hex distance between the two points calculated as Math.max( x1-x2,y1-y2,z1-z2) . These points are the green dots on the yellow line. Each of these points will fall into a cell on the grid and these are the cells that the ship will follow to reach the target, as I highlight them in white. So here is the video of the ship moving along the grid:</p>
 <p><a href="https://youtu.be/Ij2ARqzowb4">https://youtu.be/Ij2ARqzowb4</a></p>
 <h1>Ship movements</h1>
@@ -146,7 +146,7 @@ text.transform.position = p + new Vector3 (0, 0, -10f);
 </ol>
 <p>The algorithm implementations will depend on the underlying data structure you choose to represent you grid. Today I will go over algorithms that can be used when using a graph to represent the grid. Letâ€™s start with the weapon range, as the movement range is a bit more complicated since it has some different constrains.</p>
 <p>The range of a weapon is defined as all the cells in all directions from the home cell that are &lt; N units away. Think like the inside area of a circle.</p>
-<p><img src="/img/57f1bacb29308.jpg" alt="" /></p>
+<p><a href="/img/57f1bacb29308.jpg">/img/57f1bacb29308.jpg</a></p>
 <p>If the yellow cell is the home cell, then the purple cells are all the cells that are 1 units away, and the orange cells + purple cells are all the cells that are 2 units away.  So given the yellow colored home cell, how can we get the cells that are N units away?</p>
 <p>This is a classical graph walk with a range constraint. Instead of visiting all nodes, or quitting when a node is found, we need to quit when we exhaust our range. So we need to keep track of the range, thatâ€™s for sure. We also need to consider when we decrease this range, because for all purple cells the range from the home cell is 1, and we cannot decrease the range each time we visit a purple cell. What we need is to keep track of how many purple cells there are and decrease the range after we have consumed them all. We will need track of this by using 2 extra counters: nodesInNext and nodesInCurrent . nodesInNext  will hold the count of the neighbors in the next level and the current will hold how much of the current level we have consumed. There are recursive graph traversing algorithms and there are ones using stacks and queues. Weâ€™ll opt for a non-recursive algorithm here</p>
 <pre><code>... get the home cell and add it to the queue
@@ -180,7 +180,7 @@ while(queue.Count &gt; 0 &amp;&amp; goneRange &gt; 0)
 </code></pre>
 <p>the result list will contain all the cells that are in range and we can use that. Note that this doesnâ€™t check for friendly fire.</p>
 <p>The movement range calculations are bit more interesting as there is the condition that a rotation move also costs 1 range. Take a look at this diagram</p>
-<p><img src="/img/57f1badd6bb3c.jpg" alt="" /></p>
+<p><a href="/img/57f1badd6bb3c.jpg">/img/57f1badd6bb3c.jpg</a></p>
 <p>Starting at the orange cell facing NE the yellow cell is in range 1. The cell NE of the yellow cell is in range 2 as it is in the same direction. The cells to the NW and E of the orange cell are in range 2 because 1 range point would be used to rotate the ship from NE to NW and NE to E. Letâ€™s solve this algorithm with a recursive approach. Here is the outline of what we will try to implement</p>
 <ol>
 <li>if no more range points left, return</li>
@@ -247,7 +247,7 @@ One way you can build the neighbors list is as you are constructing the grid its
 <p>For cells with 6 neighbors the original cell is refers to itâ€™s neighbors in a direction and the neighbors refer to the original cell in the opposite direction.</p>
 <p>How can we calculate the opposite direction? Quite easy: The position you want + 3 modulo 6. The module will make the directions wrap around after reaching the end of the direction array.</p>
 <p>Ok so letâ€™s start of with the easiest direction: the W â€“ E connection.</p>
-<p><img src="/img/57f1baff82c46.png" alt="" /></p>
+<p><a href="/img/57f1baff82c46.png">/img/57f1baff82c46.png</a></p>
 <p>In this diagram the white arrows show the W-E relationship between cells. Remember that we are populating the neighbor list as we create the grid, so the neighboring cells must exist before we can add their pointers to the neighbor list. If we start from the bottom left corner, the first cell has no neighbors to the W, so we can skip that. On to the second cell to its right. This guy has a neighbor to the west so we can add this to the list, and the opposite neighbor relation also holds. We can do this for the rest of this row, and go on to the next row. On the next row, the same is true: skip the first add the rest. So the condition for creating the E/W relation can be written</p>
 <pre><code>function addCell(x,z,i) {
 
@@ -298,7 +298,7 @@ if (z % 2 ==0) {
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

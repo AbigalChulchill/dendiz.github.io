@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -36,7 +36,7 @@ make a project that analyzes US stocks and runs scanners on the price data to
 generate signals. I want the system to be like twitter where you follow
 companies and the signals appear in the companies timeline.</p>
 <p>The architecture so far is pretty simple</p>
-<p><img src="/img/stocktoot-1.png" alt="" /></p>
+<p><a href="/img/stocktoot-1.png">/img/stocktoot-1.png</a></p>
 <p>I get the stock data from IEX and cache it in Redis. N signal scanners will run
 on this data to generate signals and the signal results are stored in MySQL.
 There is a signal point system that is arbitrary at the moment. I assign a
@@ -47,7 +47,7 @@ will emit a signal.</p>
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

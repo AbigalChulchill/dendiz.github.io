@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -26,7 +26,7 @@
         <div id="date"><em> 2018-05-09</em></div>
         <div class="content">
         <p>Previously I've been doing this by actually highlighting all the possible cells, but it's looks a lot better if you just highlight the borders. Here's the results I've got after this implementation</p>
-<p><img src="/img/57de50c77de2a.png" alt="" /></p>
+<p><a href="/img/57de50c77de2a.png">/img/57de50c77de2a.png</a></p>
 <p>Calculating the border cells is a different task which I've explained over <a href="/code/hex-grid-cells-in-range/">here</a>. After we have the cells that we can navigate to we need to filter out the border cells. If you look carefully the edges that need highlighting from all the cells in range are the ones that do not have a navigable neighbor. In the image the cell (4,-6,2) and (5,-6,1) are both in range, but they share a border with a navigable cell, so that edge should not be highlighted. The algorithm should be like this:</p>
 <ul>
 <li>Get all the cells in range and the starting cell, and add the starting cell to the cells in range.</li>
@@ -45,7 +45,7 @@
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

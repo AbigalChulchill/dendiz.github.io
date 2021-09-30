@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -34,7 +34,7 @@
 used when using a graph to represent the grid. Let’s start with the weapon range, as the movement range is a bit more complicated since it has some 
 different constrains.</p>
 <p>The range of a weapon is defined as all the cells in all directions from the home cell that are &lt; N units away. Think like the inside area of a circle.</p>
-<p><img src="/img/57de523c6fd8e.jpg" alt="" /></p>
+<p><a href="/img/57de523c6fd8e.jpg">/img/57de523c6fd8e.jpg</a></p>
 <p>If the yellow cell is the home cell, then the purple cells are all the cells that are 1 units away, and the orange cells + purple cells are all the cells 
 that are 2 units away.  So given the yellow colored home cell, how can we get the cells that are N units away?</p>
 <p>This is a classical graph walk with a range constraint. Instead of visiting all nodes, or quitting when a node is found, we need to quit when we exhaust our range. 
@@ -74,7 +74,7 @@ while(queue.Count &gt; 0 &amp;&amp; goneRange &gt; 0)
 </code></pre>
 <p>the result list will contain all the cells that are in range and we can use that. Note that this doesn’t check for friendly fire.</p>
 <p>The movement range calculations are bit more interesting as there is the condition that a rotation move also costs 1 range. Take a look at this diagram</p>
-<p><img src="/img/57de52979442d.jpg" alt="" /></p>
+<p><a href="/img/57de52979442d.jpg">/img/57de52979442d.jpg</a></p>
 <p>Starting at the orange cell facing NE the yellow cell is in range 1. The cell NE of the yellow cell is in range 2 as it is in the same direction. 
 The cells to the NW and E of the orange cell are in range 2 because 1 range point would be used to rotate the ship from NE to NW and NE to E. 
 Let’s solve this algorithm with a recursive approach. Here is the outline of what we will try to implement</p>
@@ -132,7 +132,7 @@ in 2 separate for loops.</p>
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:58</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

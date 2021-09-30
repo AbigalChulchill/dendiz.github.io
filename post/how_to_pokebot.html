@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -353,7 +353,7 @@ If you watch the terminal log, you'll see messages flying by with every little p
 <li>There are duplicate messages all over the place</li>
 </ul>
 <p>This is a screen shot of where we are now:</p>
-<p><img src="/img/pokebot.png" alt="" /></p>
+<p><a href="/img/pokebot.png">/img/pokebot.png</a></p>
 <h2>The Brain</h2>
 <p>Before setting out to code and getting our hands dirty, the most scary part seemed to me the win 32 API stuff, probably because I've been a linux console/web programmer all my life, and i was never into windows and desktop client, especially low level - unmanaged windows API calls. But it seems there are a lot of resources and documents, and even managed code that hooks API calls (discussed in a different chapter). The real beast is the brain, the decision making part, the AI Server.</p>
 <p>First off before discussing the actual algorithms and techniques, lets dicuss the architecture, and why it is called the AI Server. Simple: we'll have multiple poker room clients, playing on mutliple tables, some times even 2 of our bots playing on the same table, and sharing data, though one might think that this would decrease the winnings, and giving more rake, but this would increase our chances of winning more money from the other players. AI algorithms should be changable and tunable on the fly, and yet per AI Client (the Agent) configurable. The best design decision seemed like a client/server model, where the server was the AI Server, and the clients were the agents, that were the gateway between the AI and the poker room client. The AI Server's architectural crude design is like this:
@@ -365,7 +365,7 @@ If you watch the terminal log, you'll see messages flying by with every little p
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:58</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

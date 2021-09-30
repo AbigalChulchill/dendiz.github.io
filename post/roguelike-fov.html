@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -27,7 +27,7 @@
         <div class="content">
         <h1>Field of vision</h1>
 <p>FOV is the area that is visible to the player. Making the whole level visible would lead to boring games so the area is limited to a certain radius. There are a couple of different algorithms that can be used to implement FoV. I choose to go with the simplest which is ray casting from the player position towards the outer rim of a circle that is defined by the how far the player can see.</p>
-<p><img src="/img/fov1.jpg" alt="image" /></p>
+<p><a href="/img/fov1.jpg">image</a></p>
 <h2>Ray casting</h2>
 <p>The algorithm is pretty straight forward. Calculate the rim of the circle defined by the radius R that corresponds to the maximum distance the player can see. Don't forget to clamp the coordinates returned by this function to the limits of the map. You can get negative coordinates (or more generally out of bounds coordinates) if the player is standing at the top left edge of the map. The ide</p>
 <pre><code>private static func rim(origin: XY, radius: Int) -&gt; [XY]{
@@ -129,7 +129,7 @@
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

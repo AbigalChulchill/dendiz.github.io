@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -26,7 +26,7 @@
         <div id="date"><em> 2020-06-13</em></div>
         <div class="content">
         <p>With the new animation layer now in place I thought that I’d tweak the animations a bit more. The object explosion animation was not fading out properly so I added a color lerping function that fades the background from the explosion color to black. This makes for a better, more realistic effect.</p>
-<p><img src="/img/km9.gif" alt="" /></p>
+<p><a href="/img/km9.gif">/img/km9.gif</a></p>
 <p>All the animation related code was living in the BeamBlaster class as it was convenient to modify stuff, I moved those to their respective classes. Not much problems since no refactoring really required for this reorganization.</p>
 <p>Next up was setting the scene for more the first neutral bot. I had only implemented a concrete class for AI agents so I went ahead and extracted a protocol and a base class for NPCs. This process was pretty straight forward as XCode provides a way to automatically rename things across the project. An interesting swift quirk is that array.removeAll(where:) doesn’t work with protocols. I had to refactor there into array = array.filter(where:) and all was good again. With the basics in place I implemented the WallRepairBot. The idea for this bot is that it will search the level for walls that were destroyed and now lead into the void and repair these. They become a wall themselves to it’s an ‘honorable’ mission for them, they are martyrs. Initially I thought that each bot would search the map to find a wall that needs repair but that turned out to be super slow and a noticable performance bottle neck as scanning the map to get a tile, then checking the bots to see if anyone is already decided to repair that tile takes a long time. This made me think that a class that is responsible for assigning work to these janitors of the level could be a better way to go. I also set up some code that keeps tracks of the tiles that are destroyed so I don’t have to scan the whole level each turn. This architecture also requires the need for synchronization between the bots as they are racing to find a tile to repair. After some play testing I realized that assigning a wall to repair to an agent also needs some additional checks as the player may kill the bot assigned to that task and the BotMind should reassign that repair task to another bot if that happens.</p>
 <p>A funny bug I found was that when I destroyed a floor a repair bot would go there and build a wall. The reason was that I wasn’t filtering based on the tile type that was destroyed and adding them all to the destroyed objects list. It was an easy fix but I did chuckle when I first saw it.</p>
@@ -38,12 +38,12 @@
 <p>I also added ammo tracking to the ranged weapon. Melee weapons don’t have ammo so they are a special case. I added the ammo status to the info pane and disabled ranged targeting if none of the weapons have any ammo.</p>
 <p>It’s amazing how many bugs related to clamping and out of bounds coordinates have surfaced in the last couple of days. Another on was when the roll for a ranged weapon failed a new target location selected randomly from the neighboring tiles could turn up to be a void tile and the npcs trying to navigate there would error out because a path could not be found. The fix was simple, just filter out those bad location before picking the new one.</p>
 <p>I also came across another issue where a cell that was illuminated could not be picked as a target because it was reported to not be in the LOS. Thid was happening because LOS is calculated using Bresenham and in some cases the line would need to pass through a neighboring wall tile and that was not considered to be in LOS. I solved this by changing the definition of LOS to be a cell in the FOV. With the the targeting line can sometimes appear to cross walls but that’s okay.</p>
-<p><img src="/img/km10.gif" alt="" /></p>
+<p><a href="/img/km10.gif">/img/km10.gif</a></p>
 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

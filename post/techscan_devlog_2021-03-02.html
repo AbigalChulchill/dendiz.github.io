@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -35,7 +35,7 @@
 </code></pre>
 <p>I also refactored some of the persistence layer code and added support for providing the sample rate when saving CSV files. On the topic of CSV files I had to combat my way through DataFrames because of my ignorance. I was manually assigning the date field as the index when loading the CSV but there is a convenience method in the API that can make the reader parse the dates and also specify an index column. That’s neat. But then I had some other bugs when merging the data frame from the existing file with any new data from the APIs. Took a while to figure out exactly what was happening but got it working in the end.</p>
 <p>I also was plagued by bugs in Pandas DataReader. When I make a request that starts on current day and ends some date in the future the return data contains a duplicate.</p>
-<p><img src="attachment:Screen%20Shot%202021-03-06%20at%202.52.53%20PM.png" alt="Screen%20Shot%202021-03-06%20at%202.52.53%20PM.png" /></p>
+<p><a href="attachment:Screen%20Shot%202021-03-06%20at%202.52.53%20PM.png">Screen%20Shot%202021-03-06%20at%202.52.53%20PM.png</a></p>
 <p>Took a while to narrow this down but having a Jupyter notebook came in handy. So to fix this I decided to make sure the end date is always on the us/eastern time zone and if the last row’s date is the same as the end date, no request needs to be made. This should prune any unnecessary requests and avoid this pandas bug.</p>
 <p>And last item for today was the implementing the data loader. This class will allow the backtester and signal generator to load the ticker data for a given date. The tricky part here was that weekends and holidays don’t exist in the index. So any request made with that date should return the data up to that date. This can be done easily with a binary search to get the insertion index and then calculate the slice of the data frame to return.</p>
 <pre><code>
@@ -44,7 +44,7 @@
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:58</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

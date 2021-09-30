@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -26,7 +26,7 @@
         <div id="date"><em> 2015-09-20</em></div>
         <div class="content">
         <p>The apache spark framework is a great way of processing HUGE amounts of data in parallel. The learning curve is really flat, and you’ll get to crunching data in no time. I have already implemented a batch log processing / analytics application and a real-time streaming application at work for n11 and I thought that I do another fun project with spark. This time it’s generating a heat-map of a chess board by processing chess games. A heat map of a chess board is 8×8 table with each cell representing a square of the chess board with a color. Blue means there were not many moves to that square, and red means there were a lot. It’s an analogy to the warm-cold method of defining distance. We will do this for each piece there is in chess. The end results will look something like this</p>
-<p><img src="http://i.imgur.com/6hGU74G.png" alt="" /></p>
+<p><a href="http://i.imgur.com/6hGU74G.png">http://i.imgur.com/6hGU74G.png</a></p>
 <p>So, a method we could use and that I’ve tried was to generate a FEN representation of the board after each move, and feed this data to apache spark to extract how much each piece occupied each square. This did sound reasonable and it would have been very efficient because spark would not need any chess knowledge to compute the heat map. Just some string parsing would suffice. But it turns out that this method of processing overwhelms the heat map with the initial positions of the piece. Why? because the pieces rest on their initial squares for quite some time before they move. Let’s look at an example to make it clearer. The initial state of the board as a FEN string is:</p>
 <p><code>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR</code></p>
 <p>this would mean add 1 to the squares for each piece. E.g the rooks are on a1, a8, h1, h8. Add 1 to each square. After the first move, say 1. e4, the FEN is</p>
@@ -183,7 +183,7 @@ Map(&quot;r&quot;-&gt; Array(11, 25, 10, 1, ...) //64 of these numbers
 </code></pre>
 <p>this will give us the total numbers of moves to each square for each piece. Just what we needed for the heat map!
 But we still need to do one more thing before we can start the rendering of the map and that is to normalise the values in the array to values between 0 and 1. We can do that using the feature normalisation formula</p>
-<p><img src="http://imgur.com/l4gwnyv.png" alt="" /></p>
+<p><a href="http://imgur.com/l4gwnyv.png">http://imgur.com/l4gwnyv.png</a></p>
 <p>the code is like this</p>
 <pre><code>val map3: RDD[(String, List[Double])] = map2.map(x=&amp;gt; (x._1, x._2.map( y=&gt; (y - x._2.min) / (x._2.max.toDouble - x._2.min) )))
 </code></pre>
@@ -196,17 +196,17 @@ But we still need to do one more thing before we can start the rendering of the 
 </code></pre>
 <p>the html() function used here is a string template that uses the values between 0 and 1 to create a HLS color for a 5 color heat map. check out the code in the repo – it’s too verbose to include it in this post.</p>
 <p>That’s about it on how to generate a chess board heat map. Here are the results for 1.5M games analyzed:</p>
-<p><img src="http://i.imgur.com/6hGU74G.png" alt="" /></p>
-<p><img src="http://imgur.com/PbJC7Kx.png" alt="" /></p>
-<p><img src="http://imgur.com/FHXDfVL.png" alt="" /></p>
-<p><img src="http://imgur.com/5I08pXS.png" alt="" /></p>
-<p><img src="http://imgur.com/HaHDp9E.png" alt="" /></p>
-<p><img src="http://imgur.com/UvNxeq7.png" alt="" /></p>
+<p><a href="http://i.imgur.com/6hGU74G.png">http://i.imgur.com/6hGU74G.png</a></p>
+<p><a href="http://imgur.com/PbJC7Kx.png">http://imgur.com/PbJC7Kx.png</a></p>
+<p><a href="http://imgur.com/FHXDfVL.png">http://imgur.com/FHXDfVL.png</a></p>
+<p><a href="http://imgur.com/5I08pXS.png">http://imgur.com/5I08pXS.png</a></p>
+<p><a href="http://imgur.com/HaHDp9E.png">http://imgur.com/HaHDp9E.png</a></p>
+<p><a href="http://imgur.com/UvNxeq7.png">http://imgur.com/UvNxeq7.png</a></p>
 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

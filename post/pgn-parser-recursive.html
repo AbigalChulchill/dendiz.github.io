@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -211,7 +211,7 @@ so we return an EOF token if that's the case.</p>
 <p>&quot;1.e4 (11. f3 (111. f4 a7) a6) 1... e5 2.f4 exf4 (220... exf3) (221... exf2) 3.Nf3 g5 4.h4 ...&quot;</p>
 <p>(The move numbers are not correct even the moves may be illegal but the purpose is to illustrate the tree that we are aiming to build.)</p>
 <p>We want to transform this into the following tree:</p>
-<p><img src="/img/1-P17kH330Z1CMJ5qF.png" alt="image http://forum.dizman.org/assets/images/1-P17kH330Z1CMJ5qF.png" /></p>
+<p><a href="/img/1-P17kH330Z1CMJ5qF.png">image http://forum.dizman.org/assets/images/1-P17kH330Z1CMJ5qF.png</a></p>
 <p>All vertical connections are the next node connections and the horizontal connections are the variation connections. So &quot;e4&quot; move spawns a variation 
 that it self has an embedded variation (hence the name recursive variations). The move &quot;exf4&quot; spawns 2 variations at this move.</p>
 <p>So we start with a method to transform the current token to a node:</p>
@@ -317,16 +317,16 @@ that it self has an embedded variation (hence the name recursive variations). Th
 <li>it we see a RPAREN pop the node on the stack and add the next pointer nodes to the variations list. Set the previous node to this node, and delete the next pointer for this node.</li>
 </ul>
 <p>So if we walk through an example move text of &quot;1. e4 (11. f3 a7) 1...e5 2.Nf3&quot; this is node state and stack state just before the RPAREN:</p>
-<p><img src="/img/1-awbP4CgiRNjLcGHB.png" alt="image http://forum.dizman.org/assets/images/1-awbP4CgiRNjLcGHB.png" /></p>
+<p><a href="/img/1-awbP4CgiRNjLcGHB.png">image http://forum.dizman.org/assets/images/1-awbP4CgiRNjLcGHB.png</a></p>
 <p>When we process the RPAREN we will pop the &quot;e4&quot; node from the stack, move the next pointers nodes to the variations, delete the next pointer and set the previous node to e4 and continue processing.</p>
-<p><img src="/img/1-XnoB3aI53wls76dH.png" alt="image http://forum.dizman.org/assets/images/1-XnoB3aI53wls76dH.png" /></p>
+<p><a href="/img/1-XnoB3aI53wls76dH.png">image http://forum.dizman.org/assets/images/1-XnoB3aI53wls76dH.png</a></p>
 <p>There the tree with embedded variations. The code I use actually takes care of further evaluating the tree into the chess model I use in the application by 
 checking if the move in the PGN is valid, and adding the comments to the move etc. But this is the basics of parsing the PGN file.</p>
 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:58</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

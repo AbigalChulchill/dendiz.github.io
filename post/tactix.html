@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -26,7 +26,7 @@
         <div id="date"><em> 2015-08-01</em></div>
         <div class="content">
         <p>Tactics training is such an essential part of chess if you want to improve. So much so that I bought a premium chess.com subscription mainly for the unlimited tactics they give. But then I thought, why not do my own and have unlimited tactics to practice on? See that cluster from laptops a couple of posts ago? well that is the chess engine cluster that I’m using to generate tactics training puzzles such as this:</p>
-<p><img src="/img/tactix1.png" alt="" /></p>
+<p><a href="/img/tactix1.png">/img/tactix1.png</a></p>
 <p>white to play and get a good position with blacks king wondering around the board 😀</p>
 <p>So how are tactics like these generated? Find the positions for tactical opportunities is actually rather simple. You get some game PGN’s, and feed them into a chess engine like stockfish, and mark the position where the engine evaluation goes from a draw-ish position to a material advantage for one side. For example consider the board state</p>
 <p><code>r1b1r3/1p1nqpkp/p3pnp1/3p2N1/3P3Q/2NBP3/PP3PPP/3R1RK1 b - - 13 15</code></p>
@@ -41,7 +41,7 @@
 </ul>
 <p>Checking for these conditions after every candidate move leads to some pretty decent puzzles.</p>
 <p>Here is my poor-mans cluster that crunched all the games to generate the tactics</p>
-<p><img src="http://imgur.com/ZEySaMS.png" alt="" /></p>
+<p><a href="http://imgur.com/ZEySaMS.png">http://imgur.com/ZEySaMS.png</a></p>
 <p>Architecture
 The tactix application consists of 3 main parts</p>
 <ol>
@@ -50,13 +50,13 @@ The tactix application consists of 3 main parts</p>
 <li>tactix webapp</li>
 </ol>
 <p>The most interesting part is the tactix-finder module that actually implements most of what I was talking above. It is an Akka app (hence the cluster in the image above) that distributes calculation of tactics to different actors in the network. Here are a bunch of diagrams that explain how this is accomplished:</p>
-<p><img src="/img/tactix3.png" alt="" /></p>
-<p><img src="/img/tactix4.png" alt="" /></p>
+<p><a href="/img/tactix3.png">/img/tactix3.png</a></p>
+<p><a href="/img/tactix4.png">/img/tactix4.png</a></p>
 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

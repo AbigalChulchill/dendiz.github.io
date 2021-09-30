@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -152,12 +152,12 @@ for x in 0..&lt;cols {
 <p>This is accomplished by having a Renderable protocol that takes the GameScene which contains the actually methods to manipulate textures on the screen. The Game object has a reference to the GameScene object to it can pass it along to the objects that are Renderable.</p>
 <p><strong>Update 3: Animation overlay</strong></p>
 <p>After starting work on the animations I realized that using the illumination system to render explosion effects with alpha channel was going to be a pain because of the transparency required. I would need to find the glyphs for the tiles that have the explosion effect and adjust illumination to give a transparency / lighting effect. Even with this approach I still wouldn't get exactly what I wanted as the effects that illumination provide even when applied to the background is not really what an explosion or laser charing effect look like. So I decided to add another NxM array of cells to the scene as the overlay. This is where all the animation rendering happens and it sits at a higher Z index than the tile cells. Now when the animation is rendered on this layer I can adjust the transparency of the background for the cell to get great effects.</p>
-<p><img src="/img/5.gif" alt="" /></p>
+<p><a href="/img/5.gif">/img/5.gif</a></p>
 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:57</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>

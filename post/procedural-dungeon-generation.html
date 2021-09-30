@@ -13,10 +13,10 @@
     <body>
         <div>
         <strong>
-        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> | 
-        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> | 
-        <a href="/post/about.html">About</a> |
-        <a href="/post/now.html">Now</a> |
+        <a href="/micro/micro-index.html" onClick="this.href+='?rnd='+new Date().getTime()">Micro</a> &middot; 
+        <a href="/post/index.html" onClick="this.href+='?rnd='+new Date().getTime()">Macro</a> &middot; 
+        <a href="/post/about.html">About</a> &middot; 
+        <a href="/post/now.html">Now</a> &middot; 
         <a href="/twtxt.txt">twtxt</a>
         </strong>
         </div>
@@ -106,13 +106,13 @@ We want to use these as the main nodes for joining the rooms together.</p>
     				graph[rooms[i][&quot;id&quot;]] = []
     			graph[rooms[i][&quot;id&quot;]].append(rooms[j][&quot;id&quot;])
 </code></pre>
-<p><img src="/img/procgen_dungeons.png" alt="img" /></p>
+<p><a href="/img/procgen_dungeons.png">img</a></p>
 <p>The RNG construction and the overlap checking code is the brute force way of solving these problems. The overlap checking can be done using an interval search tree for a better runtime performance, and the wikipedia article mentions a paper with an algorithm to do it in linearithmic time. But since the number of rooms in a dungeon are relatively small, it's not worth the added code complexity</p>
 
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-28 17:12:58</em>
+	<em>generated on 2021-09-30 11:09:50</em>
 	</footer>
     </body>
 </html>
