@@ -25,7 +25,7 @@
         <hr />
         <div id="main">
         <h1 id="title"> Build order in a parallel maven build</h1>
-        <div id="date"><em> 2014-10-19</em></div>
+        <div id="date"><em>created  2014-10-19 </em></div>
         <div class="content">
         <p>After completing the development of a grails application for a client, they asked me to integrate the grails app with the current build-test-deploy cycle which is using maven. The grails application depends on a few artifacts from the java project. Grails does have maven support, but you will run into all sorts of classpath problems when you try to integrate with a multi-module complicated parent project. So the solution was to execute the grails build after the parent project was done. The problem is that the parent project artifacts were not being published to a maven repository and the grails app needs to find the artifacts in the local repository before it can do anything. For a multi-module maven project, it is not a problem for the individual modules as they recognize each other as dependencies but the grails project is not a module of this parent project. So the initial solution was to create a pom for the grails project with the exec-maven-plugin running grailsw test-app -unit after the install phase. The relevant pom part looks like this</p>
 <pre><code class="language-xml">&lt;plugin&gt;
@@ -55,7 +55,7 @@
         </div>
         </div>
 	<footer>
-	<em>generated on 2021-09-30 23:19:54</em>
+	<em>generated on 2021-10-01 11:31:15</em>
 	</footer>
     </body>
 </html>
