@@ -6,9 +6,14 @@
   </head>
 
   <body>
-    <div>This page contains javascript code and downloads ~500kb resource data</div>
+    <h1>Search tool</h1>
+    <div><strong>This page contains javascript code and downloads ~500kb resource data</strong></div>
     <div>
-      <input type="text" id="query" placeholder="search term..." value="rediscovered"/>
+      This is a simple client side search engine, that will download an index of the posts on this site and search through them for a query word.
+      It support "natural language" in the sense that if you search for 'paid' pages that contained the word 'pay' will also be presented.
+    </div>
+    <div>
+      <input type="text" id="query" placeholder="search term..."/>
       <button onclick="search()">Search</button>
     </div>
     <div id="searchResults"></div>
