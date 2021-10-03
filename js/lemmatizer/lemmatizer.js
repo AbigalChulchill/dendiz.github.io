@@ -16,20 +16,20 @@ if (typeof String.endsWith !== "function") {
 var Lemmatizer = function() {
   this.wn_files = {
     noun: [
-      '../dict/index.noun.json',
-      '../dict/noun.exc.json'
+      '/js/dict/index.noun.json',
+      '/js/dict/noun.exc.json'
     ],
     verb: [
-      '../dict/index.verb.json',
-      '../dict/verb.exc.json'
+      '/js/dict/index.verb.json',
+      '/js/dict/verb.exc.json'
     ],
     adj:  [
-      '../dict/index.adj.json',
-      '../dict/adj.exc.json'
+      '/js/dict/index.adj.json',
+      '/js/dict/adj.exc.json'
     ],
     adv:  [
-      '../dict/index.adv.json',
-      '../dict/adv.exc.json'
+      '/js/dict/index.adv.json',
+      '/js/dict/adv.exc.json'
     ]
   };
 
