@@ -20,6 +20,11 @@
         <div id="main">
         <ul class="content">
         <li>
+        increasing the data to 5y made the caches blow up with OOM errors. I had to reduce the chart data cache to 1/5 size. That made the technical calculations super slow, as the correlation calculation were querying the DB for each other symbol. Now I put another cache for correlation calculations that just holds the last 30 days closing price. &lt;a href=&quot;https://mastodon.dizman.org/tags/devlog&quot; class=&quot;mention hashtag&quot; rel=&quot;tag&quot;&gt;#&lt;span&gt;devlog&lt;/span&gt;&lt;/a&gt;
+        &mdash;
+        <em style="color:gray">2018-12-06 07:28:57</em>
+        </li>
+        <li>
         &amp;apos;code is art&amp;apos; was a quote I saw on the WordPress site. Arts sole purpose is itself ergo any piece of useful code is by definition not art. another perspective would code is more art than science. which would really only be applicable to the underlying function. maybe they meant looking at code is pleasant which maybe true for the obfuscated C code entries that look like ascii art. the algorithm implemented maybe elegant but that&amp;apos;s independent from the code anyway.
         &mdash;
         <em style="color:gray">2018-12-05 20:54:21</em>
@@ -114,17 +119,12 @@
         &mdash;
         <em style="color:gray">2018-11-28 05:07:14</em>
         </li>
-        <li>
-        Belim koptu gene bugun yamuldum
-        &mdash;
-        <em style="color:gray">2018-11-27 03:59:34</em>
-        </li>
         </ul>
 
         <a href="/micro/micro-000137.html">&lt;&lt; older</a>
         </div>
 	<footer>
-	<em>generated on 2021-10-23 23:42:35</em>
+	<em>generated on 2021-10-23 23:52:28</em>
 	</footer>
     </body>
 </html>
