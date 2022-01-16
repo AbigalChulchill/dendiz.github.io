@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Deniz's Web blog</title><link>https://dendiz.github.io</link><description>Deniz's personal web space</description><language>en-US</language><lastBuildDate>Sun, 09 Jan 2022 17:45:22 GMT</lastBuildDate><generator>rfeed v1.0.0</generator><docs>https://github.com/svpino/rfeed/blob/master/README.md</docs><item><title>My MacBook pro just died</title><description>the story of my macbook pro and how it died</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 08 Nov 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">mbp32_death.html</guid><content:encoded>&lt;p&gt;I got a macbook pro from work around 2 years ago. It was the replacement for the first macbook pro they gave me which was not the correct specs. The new one was a monster: Core i9 with 32gb RAM and 1tb disk space. Unfortunately it had the touchbar and the crappy keyboard that feels okay to type on but is just super unreliable. It has been my daily driver in conjunction with my iMac ever since, spending countless CPU cycles on compiling objective c and swift code.&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Deniz's Web blog</title><link>https://dendiz.github.io</link><description>Deniz's personal web space</description><language>en-US</language><lastBuildDate>Sun, 16 Jan 2022 22:06:16 GMT</lastBuildDate><generator>rfeed v1.1.1</generator><docs>https://github.com/svpino/rfeed/blob/master/README.md</docs><item><title>My MacBook pro just died</title><description>the story of my macbook pro and how it died</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 08 Nov 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">mbp32_death.html</guid><content:encoded>&lt;p&gt;I got a macbook pro from work around 2 years ago. It was the replacement for the first macbook pro they gave me which was not the correct specs. The new one was a monster: Core i9 with 32gb RAM and 1tb disk space. Unfortunately it had the touchbar and the crappy keyboard that feels okay to type on but is just super unreliable. It has been my daily driver in conjunction with my iMac ever since, spending countless CPU cycles on compiling objective c and swift code.&lt;/p&gt;
 &lt;p&gt;This morning I stopped at a Safeway to get some groceries and also picked up a bottle of sparkling flavored water. I put the bottle in my bag, went home then went to the office. I opened the bottle at my desk and it squirted everywhere including all over my laptop's keyboard and me. I got some paper towels and dried it up and everything seemed to be working fine, computer still alive - phew. I did my daily stuff and then packed it back in my bag, started driving to pick up my kid. After we got home I put a half full water bottle that was sealed properly in my bag and went inside. As soon as I got inside I set my bag on the chair and took out the water bottle and put it somewhere else. Then we had dinner, etc. A totally ordinary evening. After my kid went to sleep I thought I’d get some work done so I went to take out my laptop and realized the chair was wet. It looked like water had leaked from the bag and got the chair wet. I was surprised at how that could have happened but didn't dwell on it and got my computer and went upstairs. I plugged my screens in the usb-c ports and opened the lid. The screens turned on and I tried to enter my password but some of the keys didn’t register. Crappy butterfly keyboard I thought and tried again. No luck. I also realized some shadows on the screen but I had just upgraded to Monterey and thought it was part of the new wallpaper. I wanted to use the trackpad to click on something but it wasn’t clickable. At this point I noticed water leaking out from in between the keys and that what I saw on the screen were not shadows but water. The more I pressed the more water came out. Then I heard a hissing sound coming from the side vents. I was scared something was wrong with the battery, but that wasn’t very likely. The hissing went on for a few seconds and then the computer shut itself off. And I think it was for good, as it has not responded to any of my power on attempts. There was still some water coming out of the chassis after it had been off for 10 minutes.&lt;/p&gt;
 &lt;p&gt;I don’t miraculously expect it to come back to life so I started setting up an environment on my old macbook. I’m still puzzled how so much water could have come out of the computer. I checked the bottle I had in the bag that I took out and it was still half full so I don't think it's that. My best guess is that the accident from the morning leaked when I put the computer vertically in the bag. Or maybe it's ghosts?&lt;/p&gt;
 </content:encoded></item><item><title>Micro rss</title><description>Micro blog syndication</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sun, 07 Nov 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">micro-rss.html</guid><content:encoded>&lt;p&gt;The micro posts page no longer exists in HTML form, but can only be accessed via RSS.&lt;/p&gt;
@@ -55,9 +55,6 @@ The market opens at 9:30a and closes at 4p (discard extended hours). This means 
 &lt;p&gt;To address the second issue, the compiler will generate a mapping of the root of a word to all the inflections found in the document. So if you have the word &amp;quot;paying&amp;quot; and &amp;quot;pays&amp;quot; in the doc, the &lt;code&gt;rootMapping&lt;/code&gt; variable in the index will contain &lt;code&gt;pay -&amp;gt; [paying, pays]&lt;/code&gt;.
 This will be used on the client side to do the highlighting. So if the user searched for &amp;quot;paid&amp;quot; the searching code would expand to search to encompass all the versions of the word that was indexed.&lt;/p&gt;
 &lt;p&gt;In the previous version I had also incorporated synonym expansion but that turned out to be subpar simply because synonyms for words are actually context dependent. Without that context the results would contain low quality results, so I ditched that.&lt;/p&gt;
-</content:encoded></item><item><title>New microblogging tools</title><description>Some changes to the way I microblog (and blog)</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Tue, 21 Sep 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">new_microblog_tools.html</guid><content:encoded>&lt;p&gt;I recently stumbled upon an old initiative called twtxt which is an indie-web type of project to replace micro blogging platforms. The idea is very simple, a file called twtxt.txt on your server per user to hold the updates. The file format is dead simple too with a timestamp and the text. It doesn't support embedded images etc but that's not really a big deal as you can add rudimentary markdown support to the client to display images from a URL.&lt;/p&gt;
-&lt;p&gt;I'm not really publishing these updates for others or to start conversations etc. so I don't really care if it is federated or not but the data storage is so simple it just makes sense to adopt it. With this in mind I sat down for a day over the weekend to create a tool that imports the micro posts from the jupyter notebooks that I was using into the twtxt file. The twtxt file by itself is not enough to display the posts, so I had to write a script to output all the static html pages hosted in github. Well, since I started I though I might as well simplify the whole process and converted the macro post notebooks to markdown as well. My end goal with this conversion was to import these into Obsidian, but I might not do that.&lt;/p&gt;
-&lt;p&gt;After migrating the micro-imap scripts to Laminar, I started enjoying stable micro post updates with proper error logging etc. But sending an email everytime to post was getting a bit cumbersome, so I also added support to post updates via a telegram bot.&lt;/p&gt;
 </content:encoded></item><item><title>Yaran diyaloglar</title><description>🇹🇷Funny dialogs - Turkish</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Tue, 21 Sep 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">yaran_diyaloglar.html</guid><content:encoded>&lt;p&gt;&lt;em&gt;2021-09-21&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Sabah telefonu kic cebine koyan B apple watch'undan telefonu pingler. Yakininda caldigini fark eder ama tam anlayamaz. Acaba minderin altinda mi diye bakar. Bulamayinca acaba yukaridan mi geliyor diye yukari cikip tekrar pingler. &amp;quot;alla alla cok ta yakinda sanki&amp;quot; diye dusunur.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;2020-11-14&lt;/em&gt;&lt;/p&gt;
@@ -69,6 +66,9 @@ This will be used on the client side to do the highlighting. So if the user sear
 &lt;p&gt;D: puhaha haraketleri niye yapiyorsun sadece videolara baksan yeter 😂😂&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Dogrucu davutluk boyle bisi iste.&lt;/p&gt;
+</content:encoded></item><item><title>New microblogging tools</title><description>Some changes to the way I microblog (and blog)</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Tue, 21 Sep 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">new_microblog_tools.html</guid><content:encoded>&lt;p&gt;I recently stumbled upon an old initiative called twtxt which is an indie-web type of project to replace micro blogging platforms. The idea is very simple, a file called twtxt.txt on your server per user to hold the updates. The file format is dead simple too with a timestamp and the text. It doesn't support embedded images etc but that's not really a big deal as you can add rudimentary markdown support to the client to display images from a URL.&lt;/p&gt;
+&lt;p&gt;I'm not really publishing these updates for others or to start conversations etc. so I don't really care if it is federated or not but the data storage is so simple it just makes sense to adopt it. With this in mind I sat down for a day over the weekend to create a tool that imports the micro posts from the jupyter notebooks that I was using into the twtxt file. The twtxt file by itself is not enough to display the posts, so I had to write a script to output all the static html pages hosted in github. Well, since I started I though I might as well simplify the whole process and converted the macro post notebooks to markdown as well. My end goal with this conversion was to import these into Obsidian, but I might not do that.&lt;/p&gt;
+&lt;p&gt;After migrating the micro-imap scripts to Laminar, I started enjoying stable micro post updates with proper error logging etc. But sending an email everytime to post was getting a bit cumbersome, so I also added support to post updates via a telegram bot.&lt;/p&gt;
 </content:encoded></item><item><title>RocketBook review</title><description>Thoughts about the RocketBook notebook</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Thu, 09 Sep 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">rockerbook-review.html</guid><content:encoded>&lt;p&gt;The RocketBook reusable notebook is just what it sounds like - a reusable notebook that you can archive and erase and reuse. The writing experience is somewhere between the Apple pencil + iPad and a plain notebook. You have to use the Pilot Frixion erasable pens which are pleasant to use. The paper on the notebook is coated and feels like it lacks friction. The metal binder makes it difficult to fold it and write on a table because the height difference makes it unstable on the flat surface but it’s not too bad.&lt;/p&gt;
 &lt;p&gt;The iOS app is good. It’s very easy to snap the pages and archive them as a PDF. This process has to be seamless because you’ll be snapping 20 pages or so when the notebook is full. There are features like some rudimentary OCR to extract titles and categorize pages but I haven’t used any of them. Erasing the pages of the notebook is a hassle. There is a microfiber cloth that comes with it which you have to dampen and scrub the pages clean. That cloth gets dirty with ink and you have to clean it a couple of times and give it a good squeeze and continue cleaning. Maybe the microwave erase version is better, but cleaning is tedious.&lt;/p&gt;
 &lt;p&gt;I mainly use this for quick note taking during the day, or note taking when reading a book. I also got a small notepad version that’s more portable.&lt;/p&gt;
@@ -239,6 +239,10 @@ plt.show()
 &lt;p&gt;And last item for today was the implementing the data loader. This class will allow the backtester and signal generator to load the ticker data for a given date. The tricky part here was that weekends and holidays don’t exist in the index. So any request made with that date should return the data up to that date. This can be done easily with a binary search to get the insertion index and then calculate the slice of the data frame to return.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>TechScan DevLog 2021-03-01</title><description>Re-re-rebooting</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">techscan_devlog_2021-03-01.html</guid><content:encoded>&lt;p&gt;So it's been a while since I had a look into my TechScan project. I’ve decided to take another spin at the platform with a data repo that unifies data from different providers, the engine based on pandas dataframes with a back tester and a signal generator.&lt;/p&gt;
+&lt;p&gt;My starting point was the data repo. This component syncs data from providers (like Yahoo, Bitfinex, etc) and stores them as a CSV file on disk. There are another couple of issues that need to be handled by this component too. For example resampling of the data to different time periods and making sure the provider isn’t slammed with requests that would not result in any new data. This caching of data makes it very convenient to run multiple strategies multiple times in a row without worrying about being banned from the provider.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>Consumption 2021/02</title><description>What I consumed in 2021/02</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">consumption-2021-02.html</guid><content:encoded>&lt;h2&gt;AirPods Max: An Audiophile Review&lt;/h2&gt;
 &lt;p&gt;An article that goes deep into what the AirPod Max has to offer - from the perspective of someone who has been in the industry for a decade. I was considering buying these so I went through the article. Has it changed my mind? Not yet, I’m still contemplating it as it's expensive.&lt;/p&gt;
 &lt;h2&gt;Amazon almost killed BestBuy&lt;/h2&gt;
@@ -251,17 +255,6 @@ plt.show()
 &lt;p&gt;A long article on Stephan Wolfram’s blog about how he manages his personal and work data and what he uses to accomplish this.&lt;/p&gt;
 &lt;h2&gt;The personal analytics of my Life&lt;/h2&gt;
 &lt;p&gt;Another article on Stephen Wolfram’s blog that details the analytics he has stored and the insights he has extracted from all the data he has collected over the years. It’s an interesting read but he doesn’t really mention any actionable items or how he used this data to make interesting changes/decisions.&lt;/p&gt;
-</content:encoded></item><item><title>TechScan DevLog 2021-03-01</title><description>Re-re-rebooting</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">techscan_devlog_2021-03-01.html</guid><content:encoded>&lt;p&gt;So it's been a while since I had a look into my TechScan project. I’ve decided to take another spin at the platform with a data repo that unifies data from different providers, the engine based on pandas dataframes with a back tester and a signal generator.&lt;/p&gt;
-&lt;p&gt;My starting point was the data repo. This component syncs data from providers (like Yahoo, Bitfinex, etc) and stores them as a CSV file on disk. There are another couple of issues that need to be handled by this component too. For example resampling of the data to different time periods and making sure the provider isn’t slammed with requests that would not result in any new data. This caching of data makes it very convenient to run multiple strategies multiple times in a row without worrying about being banned from the provider.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Jupyter notebooks as a todo list manager</title><description>My journey in Jupyterizing my life continues with moving todo lists to Jupyter</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 20 Feb 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">jupyter_as_todo_list.html</guid><content:encoded>&lt;p&gt;I have been working on moving all of my digital notes and blog to Jupyter and I'm really liking the flexible environment it is providing for me. I have completed the move of all my writings on my blog to Jupyter and wrote a publishing scripting (again in a Jupyter notebook) that even has a client side search engine.&lt;/p&gt;
-&lt;p&gt;The next thing to do (pun intended) was to move my to-do lists to Jupyter. For this I thought that I would have a single notebook (called very imaginatively &lt;code&gt;todo.ipynb&lt;/code&gt;) and that every cell in the note book would represent something that I wanted to do. This is OK until you want to check off an item. I thought I'd just delete the completed items but I don't like throwing away things I spent time writing so I wanted a way to mark them as complete, then eventually move to an archive so they don't clutter the main notebook. The best way I could think of this was to add &lt;code&gt;todo&lt;/code&gt; tag to the item. If the items is pending it has the &lt;code&gt;todo&lt;/code&gt; tag if it's not then it's done. I might actually convert this to be the other way around where if the item does not have a tag it's a &lt;code&gt;todo&lt;/code&gt; and then add a &lt;code&gt;done&lt;/code&gt; tag when it's done. The reason for this is that it's easy to forget to add the tag when you add a new item.&lt;/p&gt;
-&lt;p&gt;&lt;a href="attachment:todolist-fs8.png"&gt;todolist-fs8.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This tagging method makes it kind of OK to work with items but there is still a lot of clutter because completed items are intertwined with pending items. I was using the down and up arrow to move the cells but that's a lot of clicking when you have a lot of to-do items and there is no &amp;quot;send to bottom&amp;quot; button. So I wrote a small script that does this for me. It traverses the notebook and moves cells with no &lt;code&gt;todo&lt;/code&gt; tag to the end of the list, adds a &lt;code&gt;done&lt;/code&gt; tag (which is used by the archiving script) and also adds a green text to indicate that it's done. Guess what that text reads? Yes, &amp;quot;done&amp;quot;.&lt;/p&gt;
-&lt;p&gt;The script can the triggered from a python cell in the to-do notebook which is convenient but requires a reload because it modifies the notebook.&lt;/p&gt;
-&lt;p&gt;I also have a script that I added as a scheduled job that moves the completed items in the to-do notebook to an archive notebook once a week to reduce clutter. The archive notebooks are per month.&lt;/p&gt;
-&lt;p&gt;It's not always easy to add an item to your list when you are not in front of a computer or not at home (I don't open my homelab to the outside world) so I added another script that monitors an email  account and creates to-do items from the email.&lt;/p&gt;
 </content:encoded></item><item><title>Checkmate heat map</title><description>A look at the distribution of the squares that a checkmate occured</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 20 Feb 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">checkmate_square_distribution.html</guid><content:encoded>&lt;p&gt;This is a small experiment on a visualization of the squares that had the most check mates delivered on. The dataset is from lichess and not filtered on rating. I guess that the most check mates would happen at the castled position at amateur level of play and the heat map confirms that.&lt;/p&gt;
 &lt;p&gt;First off we need to do some pre-processing for our PGN files. This is not strictly necessary as you can use the excellent python-chess module to parse them but it's a lot faster if we turn it into a pattern matching problem rather that parsing the the whole game. We will use the &lt;code&gt;pgn-extract&lt;/code&gt; utility for this processing step:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;!pgn-extract --dropply -1 -V -C -N -F --notags --nomovenumbers -s --linelength 10000 -M lichess_db_standard_rated_2016-09.pgn &amp;gt; matefen
@@ -346,6 +339,15 @@ fig.tight_layout()
 plt.show()
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="/img/eaa68c29b4e5a31141fe56b70deb818a.png"&gt;/img/eaa68c29b4e5a31141fe56b70deb818a.png&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Jupyter notebooks as a todo list manager</title><description>My journey in Jupyterizing my life continues with moving todo lists to Jupyter</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 20 Feb 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">jupyter_as_todo_list.html</guid><content:encoded>&lt;p&gt;I have been working on moving all of my digital notes and blog to Jupyter and I'm really liking the flexible environment it is providing for me. I have completed the move of all my writings on my blog to Jupyter and wrote a publishing scripting (again in a Jupyter notebook) that even has a client side search engine.&lt;/p&gt;
+&lt;p&gt;The next thing to do (pun intended) was to move my to-do lists to Jupyter. For this I thought that I would have a single notebook (called very imaginatively &lt;code&gt;todo.ipynb&lt;/code&gt;) and that every cell in the note book would represent something that I wanted to do. This is OK until you want to check off an item. I thought I'd just delete the completed items but I don't like throwing away things I spent time writing so I wanted a way to mark them as complete, then eventually move to an archive so they don't clutter the main notebook. The best way I could think of this was to add &lt;code&gt;todo&lt;/code&gt; tag to the item. If the items is pending it has the &lt;code&gt;todo&lt;/code&gt; tag if it's not then it's done. I might actually convert this to be the other way around where if the item does not have a tag it's a &lt;code&gt;todo&lt;/code&gt; and then add a &lt;code&gt;done&lt;/code&gt; tag when it's done. The reason for this is that it's easy to forget to add the tag when you add a new item.&lt;/p&gt;
+&lt;p&gt;&lt;a href="attachment:todolist-fs8.png"&gt;todolist-fs8.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This tagging method makes it kind of OK to work with items but there is still a lot of clutter because completed items are intertwined with pending items. I was using the down and up arrow to move the cells but that's a lot of clicking when you have a lot of to-do items and there is no &amp;quot;send to bottom&amp;quot; button. So I wrote a small script that does this for me. It traverses the notebook and moves cells with no &lt;code&gt;todo&lt;/code&gt; tag to the end of the list, adds a &lt;code&gt;done&lt;/code&gt; tag (which is used by the archiving script) and also adds a green text to indicate that it's done. Guess what that text reads? Yes, &amp;quot;done&amp;quot;.&lt;/p&gt;
+&lt;p&gt;The script can the triggered from a python cell in the to-do notebook which is convenient but requires a reload because it modifies the notebook.&lt;/p&gt;
+&lt;p&gt;I also have a script that I added as a scheduled job that moves the completed items in the to-do notebook to an archive notebook once a week to reduce clutter. The archive notebooks are per month.&lt;/p&gt;
+&lt;p&gt;It's not always easy to add an item to your list when you are not in front of a computer or not at home (I don't open my homelab to the outside world) so I added another script that monitors an email  account and creates to-do items from the email.&lt;/p&gt;
+</content:encoded></item><item><title>Book review: On Basilisk station</title><description>A review of my first book in the Honorverse</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 17 Feb 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">on_basilisk_station_review.html</guid><content:encoded>&lt;p&gt;I've been looking into reading more fiction books and what better place to start than sci-fi. I actually came across this series when I was browsing the Aurora 4x game forums trying to get an idea behind what inspired Steve Whimsley to create the game. Anyways the Honor Harrington books were recommended reading so and since the first book in the series was free for the Kindle I got it. It's a long book with 32 chapters and 422 pages but the it's very easy reading. The language is simple and the chapters flow. It took me about 6 weeks to finish the book as I tried to read a chapter every evening. The characters and the relations between the characters are described in detail and the reader can empathize and understand them. There aren't too many characters so things don't get complicated. One thing I would have liked to see would have been more epic ship to ship battles and more introduction into the physics and technology of the era. I had to refer to a wiki to get an understanding of what they were talking about.&lt;/p&gt;
+&lt;p&gt;All in all I enjoyed reading the book and will continue with the rest of the series.&lt;/p&gt;
 </content:encoded></item><item><title>Brooks Ghost 13 running shoes review</title><description>A review after 75 miles with these shoes</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 17 Feb 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">brooks_ghost13_review.html</guid><content:encoded>&lt;p&gt;After injuring my knee because I was running with the New Balance 990v4 shoes that were worn out, I decided to get a new pair. After hours and hours of research on Amazon reading countless reviews and reading running sites and best running shoe articles, I was left with 2 options.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Asics Gel Kayano 27&lt;/li&gt;
@@ -358,8 +360,6 @@ plt.show()
 &lt;li&gt;&lt;a href="/img/brooks-side.png"&gt;side-opt.png&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/img/brooks-top.png"&gt;top-opt.png&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Book review: On Basilisk station</title><description>A review of my first book in the Honorverse</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 17 Feb 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">on_basilisk_station_review.html</guid><content:encoded>&lt;p&gt;I've been looking into reading more fiction books and what better place to start than sci-fi. I actually came across this series when I was browsing the Aurora 4x game forums trying to get an idea behind what inspired Steve Whimsley to create the game. Anyways the Honor Harrington books were recommended reading so and since the first book in the series was free for the Kindle I got it. It's a long book with 32 chapters and 422 pages but the it's very easy reading. The language is simple and the chapters flow. It took me about 6 weeks to finish the book as I tried to read a chapter every evening. The characters and the relations between the characters are described in detail and the reader can empathize and understand them. There aren't too many characters so things don't get complicated. One thing I would have liked to see would have been more epic ship to ship battles and more introduction into the physics and technology of the era. I had to refer to a wiki to get an understanding of what they were talking about.&lt;/p&gt;
-&lt;p&gt;All in all I enjoyed reading the book and will continue with the rest of the series.&lt;/p&gt;
 </content:encoded></item><item><title>Client side search engine</title><description>The internals of the mini search engine that powers the search feature on this static blog</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 15 Feb 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">client_side_search.html</guid><content:encoded>&lt;p&gt;Searching statically generating sites can be a bit unusual. You don't have a server side component that will execute the search so you either need to have an external search engine index your site or you need to have the client perform the search on an index that you provide for download. Having an external search engine index needs your site to provide the HTML for crawler requests and web application don't usually work well with this. You should probably have a fully rendered version of your site for SEO purposes but I'm not about SEO. So I went ahead and wrote a mini search engine for this purpose.&lt;/p&gt;
 &lt;p&gt;So when exporting the content from the source (it could be a markdown source etc.) the script also needs to generate the search index. The most basic structure for this index could a JSON file that contains the document URL mapped to it's content.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docs = {
@@ -513,6 +513,23 @@ More power!
 More power!
 
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>All-free non-alcoholic beer</title><description>A beer substitute for people who watch calories</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sun, 31 Jan 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">allfree_beer-2021-01-31.html</guid><content:encoded>&lt;p&gt;Lately I have been watching my calorie intake to lose some weight and improve my health in general. 
+When you are constrainted in this way and you can't cut the bad stuff cold-turkey you start looking
+for healthier/low calorie substitutes. I had actually substituted coke zero for regular soda years ago
+but there are downsides to sweeteners too so this year I decided to ditch the sweetened drinks too. La Croix
+was a great option so I stuck with it for sometime. Even though it has a variety of different flavors to 
+choose from it doesn't provide a deep/bold flavor. It's more like someone is cutting a piece of the fruit 
+in the kitchen and you can smell it in your drink. This made me look for other alternatives for fizzy drinks
+with more body to them and I came across this product &amp;quot;All free&amp;quot; on Amazon.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/allfree1.jpeg"&gt;1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a zero calorie, zero sweetener, low sodium drink. It's not your average non-alcoholic beer with 60 calories.
+The reviews were mixed but it had a decent rating of ~4 stars, so I ordered a 6 pack.&lt;/p&gt;
+&lt;p&gt;Visually I think it looks exactly like beer (even though I usually drink it straight from the can)&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/allfree2.jpeg"&gt;2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The taste resembles lager beer quite a bit. The initial effect on the palate and the fizziness is definitely on par
+with regular beer but the after taste is where you can that it's a substitute. I'm not really a beer snob but the 
+best way I can describe it is that it lacks the body and affect that a true beer would leave on the palate. 
+But for zero calories, I don't really care. I think it's a great drink and I'll keep buying it.&lt;/p&gt;
 </content:encoded></item><item><title>Consumption 01/2021</title><description>What I consumed in 01/2021</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sun, 31 Jan 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">consumption-01-21.html</guid><content:encoded>&lt;h2&gt;Investing legend James Simon's record won't be beat&lt;/h2&gt;
 &lt;p&gt;A nice article on how Renaissance technologies beat the market and the strategies they used to keep
 the competitive advantage. It's interesting to know that they didn't allow investors to keep all their
@@ -540,25 +557,19 @@ who are proposing the idea to be clear, concise and accountable for the idea.&lt
 &lt;p&gt;A wacko experiment of a data scientist who logged their life in 15 minute intervals. They came up with a couple
 of different categories for their activities during the day and put then in an excel sheet. After a year they
 drew some conclusions (like how does my leisure time vary over months, how much do I work, etc)&lt;/p&gt;
-</content:encoded></item><item><title>All-free non-alcoholic beer</title><description>A beer substitute for people who watch calories</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sun, 31 Jan 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">allfree_beer-2021-01-31.html</guid><content:encoded>&lt;p&gt;Lately I have been watching my calorie intake to lose some weight and improve my health in general. 
-When you are constrainted in this way and you can't cut the bad stuff cold-turkey you start looking
-for healthier/low calorie substitutes. I had actually substituted coke zero for regular soda years ago
-but there are downsides to sweeteners too so this year I decided to ditch the sweetened drinks too. La Croix
-was a great option so I stuck with it for sometime. Even though it has a variety of different flavors to 
-choose from it doesn't provide a deep/bold flavor. It's more like someone is cutting a piece of the fruit 
-in the kitchen and you can smell it in your drink. This made me look for other alternatives for fizzy drinks
-with more body to them and I came across this product &amp;quot;All free&amp;quot; on Amazon.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/allfree1.jpeg"&gt;1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This is a zero calorie, zero sweetener, low sodium drink. It's not your average non-alcoholic beer with 60 calories.
-The reviews were mixed but it had a decent rating of ~4 stars, so I ordered a 6 pack.&lt;/p&gt;
-&lt;p&gt;Visually I think it looks exactly like beer (even though I usually drink it straight from the can)&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/allfree2.jpeg"&gt;2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The taste resembles lager beer quite a bit. The initial effect on the palate and the fizziness is definitely on par
-with regular beer but the after taste is where you can that it's a substitute. I'm not really a beer snob but the 
-best way I can describe it is that it lacks the body and affect that a true beer would leave on the palate. 
-But for zero calories, I don't really care. I think it's a great drink and I'll keep buying it.&lt;/p&gt;
 </content:encoded></item><item><title>Tracking hydration (for free)</title><description>Stitching some iOS apps to track water intake and be reminded to do so, for free</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 23 Jan 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">free_hydration.html</guid><content:encoded>&lt;p&gt;Lately I've been into calorie counting and water consumption tracking. I'm using the MyNetDiary app for the calorie tracking but I hadn't been able to find a free app that's good for water tracking. I tried the app DrinkWaterReminder which has a weird UI and takes some time to understand how to use such a simple app. I also hate that it constantly nags you to upgrade and displays add (both in-app and fullscreen).&lt;/p&gt;
 &lt;p&gt;Instead of using a crappy app to track water, I wanted to use the built-in health app but it's not practical to launch the app, find the water component, press add data, input data and save. That's a lot of steps. This is where the ShortCuts app comes in very handy. I found a shortcut called &amp;quot;Log water&amp;quot; (or found it in the gallery, I don't recall exactly as I had been playing around with this a long time ago) and modified it to show the sizes of the glasses I use the most. Then I added the short cut to my home screen, and that's it. I still use the app I mentioned to get the push notifications to remind me to drink, but at least I'm not seeing any ads. I could replace this with a push notification app (like PushOver) and a cron that's sends the notification but no need for that now.&lt;/p&gt;
+</content:encoded></item><item><title>Book review: Procedural generation in game design</title><description>A look at the world of procedural generation</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 13 Jan 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">procedural_generation_in_game_design.html</guid><content:encoded>&lt;p&gt;I’ve been looking into rogue like games and the generation of levels done 
+using procedural generation is something that I found to be interesting. 
+A book on the subject edited by the creator of dwarf fortress look like a 
+good read so I got it from Amazon on May 28, 2020 for 50$ as a hard copy. 
+The book is a compilation of articles ranging from some what procedural 
+generation is and isn’t to the ethics in the output of the generated content.
+It’s an interesting read though nothing that is too enlightening.&lt;/p&gt;
+&lt;p&gt;There is only one chapter that provides some pseudo-code about the idea but the
+rest of the chapters are more around discussions and ideas in PCG. So if you are
+looking for implementations of PCG techniques look else where.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/procedural_generation_in_game_design.png"&gt;/img/procedural_generation_in_game_design.png&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Book review: Rocket science for traders</title><description>Can DSP be the silver bullet for trading systems?</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 13 Jan 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">rocket_science_for_traders.html</guid><content:encoded>&lt;p&gt;This book takes an interesting approach to technical analysis in that it treats 
 the price data as time series data and tries to apply digital signal processing 
 techniques to reduce the noise. It’s of course not a silver bullet and you won’t 
@@ -578,17 +589,6 @@ invest time in tuning the given systems.&lt;/p&gt;
 &lt;p&gt;Overall I think it's an interesting book and the author is taking a fresh approach 
 on applying DSP techniques to a different type of signal.&lt;/p&gt;
 &lt;p&gt;&lt;a href="/img/rocket_science_for_traders.png"&gt;/img/rocket_science_for_traders.png&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Book review: Procedural generation in game design</title><description>A look at the world of procedural generation</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 13 Jan 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">procedural_generation_in_game_design.html</guid><content:encoded>&lt;p&gt;I’ve been looking into rogue like games and the generation of levels done 
-using procedural generation is something that I found to be interesting. 
-A book on the subject edited by the creator of dwarf fortress look like a 
-good read so I got it from Amazon on May 28, 2020 for 50$ as a hard copy. 
-The book is a compilation of articles ranging from some what procedural 
-generation is and isn’t to the ethics in the output of the generated content.
-It’s an interesting read though nothing that is too enlightening.&lt;/p&gt;
-&lt;p&gt;There is only one chapter that provides some pseudo-code about the idea but the
-rest of the chapters are more around discussions and ideas in PCG. So if you are
-looking for implementations of PCG techniques look else where.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/procedural_generation_in_game_design.png"&gt;/img/procedural_generation_in_game_design.png&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Book review: Game coding complete</title><description>A short review on the game engine development book.</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 13 Jan 2021 00:00:00 GMT</pubDate><guid isPermaLink="true">game_coding_complete.html</guid><content:encoded>&lt;p&gt;This book is aimed at taking a deeper dive into the neglected parts of game 
 engine developerment such as asset loading management, event handling, caching 
 and an architecturally sounds design. It does go throught the topics of 
@@ -1076,106 +1076,6 @@ RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch ingest-att
 &lt;p&gt;if everything goes well you can start the indexing&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker-compose exec --user www-data app php occ fulltextsearch:index
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Roguelike FOV</title><description>Raycasting for roguelike field of vision</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 18 Jul 2020 00:00:00 GMT</pubDate><guid isPermaLink="true">roguelike-fov.html</guid><content:encoded>&lt;h1&gt;Field of vision&lt;/h1&gt;
-&lt;p&gt;FOV is the area that is visible to the player. Making the whole level visible would lead to boring games so the area is limited to a certain radius. There are a couple of different algorithms that can be used to implement FoV. I choose to go with the simplest which is ray casting from the player position towards the outer rim of a circle that is defined by the how far the player can see.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/fov1.jpg"&gt;image&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Ray casting&lt;/h2&gt;
-&lt;p&gt;The algorithm is pretty straight forward. Calculate the rim of the circle defined by the radius R that corresponds to the maximum distance the player can see. Don't forget to clamp the coordinates returned by this function to the limits of the map. You can get negative coordinates (or more generally out of bounds coordinates) if the player is standing at the top left edge of the map. The ide&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;private static func rim(origin: XY, radius: Int) -&amp;gt; [XY]{
-    var result = [XY]()
-    var x = radius, y = 0
-    var P = 1 - radius
-    result.append(XY(x: origin.x, y: origin.y + radius))
-    result.append(XY(x: origin.x, y: origin.y - radius))
-    result.append(XY(x: origin.x + radius, y: origin.y))
-    result.append(XY(x: origin.x - radius, y: origin.y))
-    while x &amp;gt; y {
-        y += 1
-        if P &amp;lt;= 0 {
-            P = P + 2 * y + 1
-        } else {
-            x -= 1
-            P = P + 2*y - 2*x + 1
-        }
-        if x &amp;lt; y {
-            break
-        }
-        result.append(XY(x: origin.x + x, y: origin.y + y))
-        result.append(XY(x: origin.x - x, y: origin.y + y))
-        result.append(XY(x: origin.x + x, y: origin.y - y))
-        result.append(XY(x: origin.x - x, y: origin.y - y))
-
-        if x != y {
-            result.append(XY(x: origin.x + y, y: origin.y + x))
-            result.append(XY(x: origin.x - y, y: origin.y + x))
-            result.append(XY(x: origin.x + y, y: origin.y - x))
-            result.append(XY(x: origin.x - y, y: origin.y - x))
-        }
-    }
-    return result
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now we have a bunch of target coordinates that we can shoot rays at. When shooting the rays the only thing that you need to check for is to make sure you don't penetrate blocking tiles like walls. This is a simple check when we are drawing a virtual line from the origin to the target. We stop drawing if we hit a wall. Drawing a line uses Bresenham's rasterized line drawing method.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;public static func bresenham(x0: Int, y0: Int, x1: Int, y1: Int) -&amp;gt; [XY] {
-    var result = [XY]()
-    var dx = x1 - x0
-    var dy = y1 - y0
-    let xsign = dx &amp;gt; 0 ? 1 : -1
-    let ysign = dy &amp;gt; 0 ? 1 : -1
-    dx = abs(dx)
-    dy = abs(dy)
-
-    var xx: Int, xy: Int, yx: Int, yy: Int
-    if dx &amp;gt; dy {
-        xx = xsign
-        xy = 0
-        yx = 0
-        yy = ysign
-    } else {
-        let t = dx
-        dx = dy
-        dy = t
-        xx = 0
-        xy = ysign
-        yx = xsign
-        yy = 0
-    }
-    var D = 2*dy - dx
-    var y = 0
-    for x in 0...dx {
-        result.append(XY(x: x0 + x * xx + y*yx, y: y0 + x*xy + y*yy))
-        if D &amp;gt;= 0 {
-            y += 1
-            D -= 2 * dx
-        }
-        D += 2*dy
-    }
-    return result
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now that we have a way of casting the rays, we just need a loop that sends a ray to each of the targets.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;static func naiveFov(origin: XY, radius: Int, level: [[Tile]]) -&amp;gt; [XY] {
-    let rows = level.count
-    let cols = level[0].count
-    let rim = Set(Self.rim(origin: origin, radius: radius)
-      .map { XY(x: clamp($0.x, min: 0, max: cols), y: clamp($0.y, min: 0, max: rows)) })
-    var lit = [XY]()
-    for target in rim {
-        let ray = Bresenham.bresenham(x0: origin.x, y0: origin.y, x1: target.x, y1: target.y)
-
-        for path in ray {
-            if level[path.y][path.x].blocking {
-                lit.append(path)
-                break
-            }
-            lit.append(path)
-        }
-    }
-    return lit
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This is a rather inefficient way in terms of complexity as it processes the same tiles over and over but in practice is fast enough. There are other more sophisticated ways of determining FoV with different permissiveness properties like shadow casting which I will explore in the future.&lt;/p&gt;
-&lt;p&gt;The code here only calculates the coordinates that fall in the FoV but doesn't do any highlighting. Thats part of a different post.&lt;/p&gt;
 </content:encoded></item><item><title>Roguelike FOV 2</title><description>Shadowcasting for roguelike field of vision</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 18 Jul 2020 00:00:00 GMT</pubDate><guid isPermaLink="true">roguelike-fov2.html</guid><content:encoded>&lt;h1&gt;Shadow casting&lt;/h1&gt;
 &lt;p&gt;I was thinking that the ray casting method above would be sufficient but I have since seen some quirks in the highlighted tiles in the FoV that made me want to ditch it. Another reason for implementing a more efficient algorithm is that the enemies and neutral characters in the level also have a field of view that will make them react to other actors, props, etc. that they can see. This meant that the FoV calculations will be triggered over and over for potentially tens to hundreds of actors per turn.&lt;/p&gt;
 &lt;p&gt;Shadow casting is actually a reversal in a sense that you don't try to figure out the cells that are visible but try to find the cells that are shadowed by obstacles. After some research on previous implementations I was able to grasp the logic behind the algorithm and want to go over it here with hopes to explain it better.&lt;/p&gt;
@@ -1310,6 +1210,106 @@ private func processOctant(actor: Character, octant: Int) -&amp;gt; [XY] {
  }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Here are 2 images of a ray casting and shadow casting to compare:&lt;/p&gt;
+</content:encoded></item><item><title>Roguelike FOV</title><description>Raycasting for roguelike field of vision</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 18 Jul 2020 00:00:00 GMT</pubDate><guid isPermaLink="true">roguelike-fov.html</guid><content:encoded>&lt;h1&gt;Field of vision&lt;/h1&gt;
+&lt;p&gt;FOV is the area that is visible to the player. Making the whole level visible would lead to boring games so the area is limited to a certain radius. There are a couple of different algorithms that can be used to implement FoV. I choose to go with the simplest which is ray casting from the player position towards the outer rim of a circle that is defined by the how far the player can see.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/fov1.jpg"&gt;image&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Ray casting&lt;/h2&gt;
+&lt;p&gt;The algorithm is pretty straight forward. Calculate the rim of the circle defined by the radius R that corresponds to the maximum distance the player can see. Don't forget to clamp the coordinates returned by this function to the limits of the map. You can get negative coordinates (or more generally out of bounds coordinates) if the player is standing at the top left edge of the map. The ide&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;private static func rim(origin: XY, radius: Int) -&amp;gt; [XY]{
+    var result = [XY]()
+    var x = radius, y = 0
+    var P = 1 - radius
+    result.append(XY(x: origin.x, y: origin.y + radius))
+    result.append(XY(x: origin.x, y: origin.y - radius))
+    result.append(XY(x: origin.x + radius, y: origin.y))
+    result.append(XY(x: origin.x - radius, y: origin.y))
+    while x &amp;gt; y {
+        y += 1
+        if P &amp;lt;= 0 {
+            P = P + 2 * y + 1
+        } else {
+            x -= 1
+            P = P + 2*y - 2*x + 1
+        }
+        if x &amp;lt; y {
+            break
+        }
+        result.append(XY(x: origin.x + x, y: origin.y + y))
+        result.append(XY(x: origin.x - x, y: origin.y + y))
+        result.append(XY(x: origin.x + x, y: origin.y - y))
+        result.append(XY(x: origin.x - x, y: origin.y - y))
+
+        if x != y {
+            result.append(XY(x: origin.x + y, y: origin.y + x))
+            result.append(XY(x: origin.x - y, y: origin.y + x))
+            result.append(XY(x: origin.x + y, y: origin.y - x))
+            result.append(XY(x: origin.x - y, y: origin.y - x))
+        }
+    }
+    return result
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we have a bunch of target coordinates that we can shoot rays at. When shooting the rays the only thing that you need to check for is to make sure you don't penetrate blocking tiles like walls. This is a simple check when we are drawing a virtual line from the origin to the target. We stop drawing if we hit a wall. Drawing a line uses Bresenham's rasterized line drawing method.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;public static func bresenham(x0: Int, y0: Int, x1: Int, y1: Int) -&amp;gt; [XY] {
+    var result = [XY]()
+    var dx = x1 - x0
+    var dy = y1 - y0
+    let xsign = dx &amp;gt; 0 ? 1 : -1
+    let ysign = dy &amp;gt; 0 ? 1 : -1
+    dx = abs(dx)
+    dy = abs(dy)
+
+    var xx: Int, xy: Int, yx: Int, yy: Int
+    if dx &amp;gt; dy {
+        xx = xsign
+        xy = 0
+        yx = 0
+        yy = ysign
+    } else {
+        let t = dx
+        dx = dy
+        dy = t
+        xx = 0
+        xy = ysign
+        yx = xsign
+        yy = 0
+    }
+    var D = 2*dy - dx
+    var y = 0
+    for x in 0...dx {
+        result.append(XY(x: x0 + x * xx + y*yx, y: y0 + x*xy + y*yy))
+        if D &amp;gt;= 0 {
+            y += 1
+            D -= 2 * dx
+        }
+        D += 2*dy
+    }
+    return result
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that we have a way of casting the rays, we just need a loop that sends a ray to each of the targets.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;static func naiveFov(origin: XY, radius: Int, level: [[Tile]]) -&amp;gt; [XY] {
+    let rows = level.count
+    let cols = level[0].count
+    let rim = Set(Self.rim(origin: origin, radius: radius)
+      .map { XY(x: clamp($0.x, min: 0, max: cols), y: clamp($0.y, min: 0, max: rows)) })
+    var lit = [XY]()
+    for target in rim {
+        let ray = Bresenham.bresenham(x0: origin.x, y0: origin.y, x1: target.x, y1: target.y)
+
+        for path in ray {
+            if level[path.y][path.x].blocking {
+                lit.append(path)
+                break
+            }
+            lit.append(path)
+        }
+    }
+    return lit
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is a rather inefficient way in terms of complexity as it processes the same tiles over and over but in practice is fast enough. There are other more sophisticated ways of determining FoV with different permissiveness properties like shadow casting which I will explore in the future.&lt;/p&gt;
+&lt;p&gt;The code here only calculates the coordinates that fall in the FoV but doesn't do any highlighting. Thats part of a different post.&lt;/p&gt;
 </content:encoded></item><item><title>Roguelike time system</title><description>A method for sequencing time in a roguelike</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 11 Jul 2020 00:00:00 GMT</pubDate><guid isPermaLink="true">roguelike-time-system.html</guid><content:encoded>&lt;p&gt;&lt;em&gt;This post contains a series of updates to an algorithm that show the evaluation and rationale. You don't end up with what you started.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The most naive scheduler in a rogue like is just assuming that every character moves at the same speed and iterating over the list to make them move. But that is boring and diminishes the tactics in the game. A huge slug should be slower than the player and a vampire bat should be faster.&lt;/p&gt;
 &lt;p&gt;A simple way of accomplishing this is to use a priority queue. Each character in the world has a plan function that calculates the move it will make and enqueues it with the scheduler to be executed at a certain time. This time should be the current time + the cost to execute the action. For the human player this plan function is partly when the human is thinking what to do and partly in the input handler for the (when the action is sent to the queue).&lt;/p&gt;
@@ -2528,6 +2528,44 @@ community so I’ll probably drop F7 in favor Vuetify.&lt;/p&gt;
 &lt;p&gt;That was a long post, but I guess this is how it’s gonna be if I do it monthly.
 I still want to do a write up about the team dynamics, and the frustration that
 I’m having with that.&lt;/p&gt;
+</content:encoded></item><item><title>Hibernate batch statements</title><description>batching hibernate insert statements for performance gains</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 05 Sep 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">hibernate-batch-statements.html</guid><content:encoded>&lt;p&gt;Here is a working way to do bulk inserts for hibernate:&lt;/p&gt;
+&lt;p&gt;First make sure that your entity id generation is not AUTO. I use UUID/GUID generation&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    @Id
+    @GeneratedValue(generator = &amp;quot;uuid&amp;quot;)
+    @GenericGenerator(name = &amp;quot;uuid&amp;quot;, strategy = &amp;quot;uuid&amp;quot;)
+    @Column(columnDefinition = &amp;quot;CHAR(32)&amp;quot;)
+    private String id;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;add the following to your configuration (this is for spring boot)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;spring.jpa.properties.hibernate.jdbc.batch_size=400
+spring.jpa.properties.hibernate.order_inserts=true
+spring.jpa.properties.hibernate.order_updates=true
+spring.jpa.properties.hibernate.jdbc.batch_versioned_data=true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;the following code will batch the statements for a great performance increase:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;        List&amp;lt;SurfaceTile&amp;gt; tiles = new ArrayList&amp;lt;&amp;gt;();
+        for (Star star : stars) {
+            for (Planet planet : star.getPlanets()) {
+                tiles.addAll(planet.getTiles());
+            }
+        }
+        tiles.removeAll(Collections.singleton(null));
+        surfaceTileRepository.save(tiles);
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;you can check that it's being batched using the following spy driver:&lt;/p&gt;
+&lt;p&gt;add &lt;code&gt;compile 'p6spy:p6spy:2.1.4'&lt;/code&gt; to your build file and set the following for your datasource url and driver&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#spring.datasource.url=jdbc:p6spy:mysql://host:3306/db?rewriteBatchedStatements=true
+#spring.datasource.driverClassName=com.p6spy.engine.spy.P6SpyDriver
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;download the properties file in the attachment and put it in your resources directory and you will see the following in the logs&lt;/p&gt;
+&lt;p&gt;&lt;a href="spy.properties.txt"&gt;spy.properties&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;p6spy  : 1450114684813|0|batch|connection 7|insert into ...
+p6spy  : 1450114684814|1|statement|connection 7|insert into ...
+p6spy  : 1450114684817|2|commit|connection 7||
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;the 3rd column (batch) means that the statements are getting batched and if the 3rd column reads 'statement' that means the query was sent to the server.&lt;/p&gt;
 </content:encoded></item><item><title>TechScan DevLog 2018-09-05</title><description>Techscan project updates</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 05 Sep 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">techscan_devlog_2018-09-05.html</guid><content:encoded>&lt;p&gt;It’s been quite a while since I wrote a devlog, and quite a lot has happened in
 the project in between. I’ll try to merge the stuff from the commit logs and
 stuff I posted on mastodon to give an overview. I’ve been coding the scanner
@@ -2581,44 +2619,6 @@ product manager.&lt;/p&gt;
 everybody on their toes, but my current status on this is yellow, that’s why
 I’m also working on a B plan. The opportunity cost is just too high now that I
 have the EAD.&lt;/p&gt;
-</content:encoded></item><item><title>Hibernate batch statements</title><description>batching hibernate insert statements for performance gains</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 05 Sep 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">hibernate-batch-statements.html</guid><content:encoded>&lt;p&gt;Here is a working way to do bulk inserts for hibernate:&lt;/p&gt;
-&lt;p&gt;First make sure that your entity id generation is not AUTO. I use UUID/GUID generation&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    @Id
-    @GeneratedValue(generator = &amp;quot;uuid&amp;quot;)
-    @GenericGenerator(name = &amp;quot;uuid&amp;quot;, strategy = &amp;quot;uuid&amp;quot;)
-    @Column(columnDefinition = &amp;quot;CHAR(32)&amp;quot;)
-    private String id;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;add the following to your configuration (this is for spring boot)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;spring.jpa.properties.hibernate.jdbc.batch_size=400
-spring.jpa.properties.hibernate.order_inserts=true
-spring.jpa.properties.hibernate.order_updates=true
-spring.jpa.properties.hibernate.jdbc.batch_versioned_data=true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;the following code will batch the statements for a great performance increase:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;        List&amp;lt;SurfaceTile&amp;gt; tiles = new ArrayList&amp;lt;&amp;gt;();
-        for (Star star : stars) {
-            for (Planet planet : star.getPlanets()) {
-                tiles.addAll(planet.getTiles());
-            }
-        }
-        tiles.removeAll(Collections.singleton(null));
-        surfaceTileRepository.save(tiles);
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;you can check that it's being batched using the following spy driver:&lt;/p&gt;
-&lt;p&gt;add &lt;code&gt;compile 'p6spy:p6spy:2.1.4'&lt;/code&gt; to your build file and set the following for your datasource url and driver&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#spring.datasource.url=jdbc:p6spy:mysql://host:3306/db?rewriteBatchedStatements=true
-#spring.datasource.driverClassName=com.p6spy.engine.spy.P6SpyDriver
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;download the properties file in the attachment and put it in your resources directory and you will see the following in the logs&lt;/p&gt;
-&lt;p&gt;&lt;a href="spy.properties.txt"&gt;spy.properties&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;p6spy  : 1450114684813|0|batch|connection 7|insert into ...
-p6spy  : 1450114684814|1|statement|connection 7|insert into ...
-p6spy  : 1450114684817|2|commit|connection 7||
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;the 3rd column (batch) means that the statements are getting batched and if the 3rd column reads 'statement' that means the query was sent to the server.&lt;/p&gt;
 </content:encoded></item><item><title>Efficient calculation of bollinger bands</title><description>a method to calculate the standard deviations for a period window over a list of numbers</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Tue, 21 Aug 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">bollinger.html</guid><content:encoded>&lt;p&gt;The Bollinger bands used in technical analysis is the +/- 2 * standard deviation of the closing price plotted on the chart.
 This prices are expected to fluctuate in this band 95% of the time. As with any sliding window calculation the easy way is
 to calculate everything each time for each window. Which usually means quadratic algorithm. A better way exists to calculate
@@ -2804,67 +2804,6 @@ sorted these out.&lt;/p&gt;
 &lt;p&gt;I also started on the stock data display page GUI design. Foundation CSS
 provides a nice framework for the layout etc so I’m not using bootstrap.&lt;/p&gt;
 &lt;p&gt;&lt;a href="/img/stocktoot2-1.png"&gt;/img/stocktoot2-1.png&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Island detection / Flood fill with clojure</title><description>using clojure to detect an invalid board state for a game of scrabble</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">scrabble-island-detection-clojure.html</guid><content:encoded>&lt;p&gt;I had already talked about a mutable version of this algorithm for flood filling island detection &lt;a href="/code/scrabble-island-detection.html"&gt;here&lt;/a&gt;. This time I went immutable with clojure
-The algorithm is a bit different, this we will not have a variable in the outer scope but pass a new instance of a board (which is efficiently managed by clojure) to the function for
-each iteration/recursion.&lt;/p&gt;
-&lt;p&gt;The full source is at &lt;a href="https://gitlab.com/dendiz/kelimelik-clj/tree/master"&gt;https://gitlab.com/dendiz/kelimelik-clj/tree/master&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;there a few helper functions&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;first-char-on-board&lt;/code&gt; scans the board to find the first tile that is not empty
-&lt;code&gt;split&lt;/code&gt; this will split a string such as &amp;quot;abc&amp;quot; into a vector as &lt;code&gt;[&amp;quot;a&amp;quot; &amp;quot;b&amp;quot; &amp;quot;c&amp;quot;]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;the basic idea is to keep a list of next slots to visit on the board as we visit slots. 
-the &lt;code&gt;next-frontier&lt;/code&gt; function will return a list of next slots. This is basically BFS search
-on a graph.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(defn flood-fill
-  &amp;quot;flood fill the board starting from the first non empty slot.
-   the flooded slots will contain '!' empty slots '.'. If there
-   are islands they will contain letters.
-  &amp;quot;
-  [board]
-  (let [[y x] (first-char-on-board board)
-        board (mapv split board)
-        ]
-    (loop [board board
-           frontier [[x y]]]
-      (if (-&amp;gt; frontier count zero?)
-        board
-        (let [front (first frontier)
-              x (first front)
-              y (second front)]
-          (recur
-           (assoc-in board [y x] &amp;quot;!&amp;quot;)
-           (concat (next frontier) (next-frontier board [x y]))))))))
-    	   		   
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;the &lt;code&gt;next-frontier&lt;/code&gt; code is also worth mentioning&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(defn next-frontier
-  &amp;quot;return the coordinates of candidate neighbors for flood filling&amp;quot;
-  [board [x y]]
-  (for [i [(dec y) y (inc y)]
-        j [(dec x) x (inc x)]
-        :when (and (&amp;gt;= i 0)
-                   (&amp;gt;= j 0)
-                   (&amp;lt; i 15)
-                   (&amp;lt; j 15)
-                   (or (= x j) (= y i))
-                   (not (and (= x j) (= y i)))
-                   (not= &amp;quot;!&amp;quot; (get-in board [i j]))
-                   (not= &amp;quot;.&amp;quot; (get-in board [i j])))]
-    [j i]))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;flood-fill&lt;/code&gt; will mark visited slots with &lt;code&gt;!&lt;/code&gt; and &lt;code&gt;next-frontier&lt;/code&gt; will return a list of the candidate slot from the 8 neighbors of the current slot.
-if the neighbor is visited or empty it's not included in the list.&lt;/p&gt;
-&lt;p&gt;if the starting board was like this&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;...a...
-...bc..
-..de...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;the flood would start with &lt;code&gt;a&lt;/code&gt; and the &lt;code&gt;next-frontier&lt;/code&gt; would return only &lt;code&gt;b&lt;/code&gt; from the neighbors and mark &lt;code&gt;a&lt;/code&gt; as &lt;code&gt;!&lt;/code&gt;.
-&lt;code&gt;b&lt;/code&gt; would return &lt;code&gt;c&lt;/code&gt; and &lt;code&gt;e&lt;/code&gt; and &lt;code&gt;d&lt;/code&gt;. &lt;code&gt;a&lt;/code&gt; would be marked as &lt;code&gt;!&lt;/code&gt; so it would not be included. After the fill the board would be like&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;...!...
-...!!..
-..!!...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;this algorithm is useful when detecting if the scrabble board is connected.&lt;/p&gt;
 </content:encoded></item><item><title>Using Kruskal's MST algorithm for warp lane generation</title><description>making sure all stars in a galaxy are connected</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">kruskal-galaxy-mst.html</guid><content:encoded>&lt;p&gt;Almost every sci-fi / space themed game has warp lanes connecting the star systems in the game. I've come across this quite often so here is a small piece of code that implements a Minimum spanning tree between the stars to guarantee all of them are reachable.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;public class WarpLaneBuilder
     {
@@ -2941,13 +2880,286 @@ if the neighbor is visited or empty it's not included in the list.&lt;/p&gt;
         }
     }
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Mirroring a website with wget</title><description>wget parameters to mirror a web site for offline usage</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">mirror-website.html</guid><content:encoded>&lt;p&gt;Mirroring a website? Why would you do that in the first place? Well I used it to mirror documentation/API reference for offline usage, like on long flights. Here is a fast way of doing this with wget:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;wget -r -np -N [url] &amp;amp;
-wget -r -np -N [url] &amp;amp;
-wget -r -np -N [url] &amp;amp;
-wget -r -np -N [url] &amp;amp;
+</content:encoded></item><item><title>Galaxy generation algorithm</title><description>a method for generating a galaxy for a space game</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">procedural-galaxy-generation.html</guid><content:encoded>&lt;p&gt;an integral part of a 4x space game is the galaxy generation. Galaxy generation means speading out the stars in your galaxy in a way that looks good,
+should resemeble reality and must satisfy some constraints. If you take a look at the maps fom old 4x games you will see that the stars are laid out in a very 
+linear fashion. The method used here is splitting the coordinate plane into sectors of a defined height/width and then randomly placing stars in side this 
+satisfying a density constraint. You also have to check the neighboring sectors for stars that are near the border otherwise you might end up with star 
+that are very close to each other. This is a tedious way of going about things and the end result isn’t that satisfactory.&lt;/p&gt;
+&lt;p&gt;Here is an example of the sector method&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/57c7fdc9d8a3b.png"&gt;/img/57c7fdc9d8a3b.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A better method is generating a spiral galaxy. I’ve being doing some research on the subject and there are various methods even some involving actual 
+astro-physical calculations (simplified) but these are still to complicated and a better approximated result can be obtained will less hassle. 
+Here is the version that I found which works quite well&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/57c7fdedc12aa-2.png"&gt;/img/57c7fdedc12aa-2.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Each black dot represents a star in the system. I think it looks nice and quasi realistic. The code to accomplish this layout is&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; public Galaxy generate(Galaxy galaxy) {
+
+        int NUMHUB = 20;
+        int NUMDISK = 5000;
+        double DISKRAD = 400;
+        double HUBRAD = 50;
+        int NUMARMS = 3;
+        double ARMROTS = 0.5;
+        double ARMWIDTH = 65.0;
+        double FUZZ = 25.0;
+
+        double omega = 360 / NUMARMS;
+        int i = 0;
+        while (i &amp;lt; NUMDISK) {
+            i++;
+
+            double dist = HUBRAD + RandomUtils.nextFloat(0, 1) * DISKRAD;
+            double theta = ((360.0 * ARMROTS * (dist / DISKRAD))) + RandomUtils.nextFloat(0, 1) * ARMWIDTH
+                    + omega * RandomUtils.nextInt(0, NUMARMS) + RandomUtils.nextFloat(0, 1) * FUZZ * 2.0 - FUZZ;
+
+            double x = Math.cos(theta * Math.PI / 180) * dist;
+            double y = Math.sin(theta * Math.PI / 180) * dist;
+
+            Star star = starService.create(x + galaxy.getSize().getWidth() /2 , y + galaxy.getSize().getHeight() / 2);
+            if (!isDensitySatisfied(galaxy, star)) { //make sure that the stars are not too close to eachother
+                LOGGER.info(&amp;quot;density condition failed.&amp;quot;);
+                continue;
+            }
+            galaxy.getStars().add(star);
+        }
+
+        i = 0;
+        while (i &amp;lt; NUMHUB) {
+            i++;
+
+            double dist = RandomUtils.nextFloat(0, 1) * HUBRAD;
+            double theta = RandomUtils.nextFloat(0, 1) * 360;
+            double x = Math.cos(theta * Math.PI / 180) * dist;
+            double y = Math.sin(theta * Math.PI / 180) * dist;
+            Star star = starService.create(x + 500, y + 500);
+            if (!isDensitySatisfied(galaxy, star)) {
+                LOGGER.info(&amp;quot;density condition failed.&amp;quot;);
+                continue;
+            }
+
+            galaxy.getStars().add(star);
+        }
+
+        return galaxy;
+
+    }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The trick is the -N switch, which downloads the file if its newer than the one on disk.&lt;/p&gt;
+&lt;p&gt;Here is a legend of what the knobs in the code actually tweak&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/57c7fe1749fc3-2.png"&gt;/img/57c7fe1749fc3-2.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The only gotcha here is that you may not get the number of stars that you requested if the density checking function returns false for some stars. 
+But thats no big problem as you are requesting a constraint be satisfied.
+The algorithm used is by Ben Motz &amp;lt;motzb-at-hotmail.com&amp;gt; The original C source code for DOS (including a 3D viewer).&lt;/p&gt;
+</content:encoded></item><item><title>ChessPresso extract FEN</title><description>using the chesspresso library</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">chesspresso-fen-extract.html</guid><content:encoded>&lt;p&gt;Chesspresso is a great library for processing chess games stored in PGN format. One of the greatest uses I have found for chesspresso is using it to extract FENs of the current position on the board. I’ve used this for example to create a candidate move selector in a chess database application. 
+Here is a an example usage to extract the FENs from a game PGN given as a String:&lt;/p&gt;
+&lt;pre&gt;
+ByteArrayInputStream bis = new ByteArrayInputStream(singleGame.getBytes());
+PGNReader pgnReader = new PGNReader(bis, "");
+Game game;
+game = pgnReader.parseGame();
+if (game == null) return null;
+game.gotoStart();
+Move[] mainLine = game.getMainLine();
+for (int i = 0; i &lt; mainLine.length; i++) {
+    Move move = mainLine[i];
+    String fen = game.getPosition().getFEN();
+    System.out.println(fen);
+    game.getPosition().doMove(move);
+}
+&lt;/pre&gt;
+</content:encoded></item><item><title>CORS with spring boot</title><description>setting up a CORS filter in spring boot</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">cors-with-spring-boot.html</guid><content:encoded>&lt;p&gt;CORS (Cross Origin Resource Sharing) allows to make cross domain ajax requests for allowed domain. To setup CORS in spring add the following filter&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@Component
+public class CORSFilter implements Filter {
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
+    }
+
+    @Override
+    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+        HttpServletResponse response = (HttpServletResponse) res;
+        response.setHeader(&amp;quot;Access-Control-Allow-Origin&amp;quot;, &amp;quot;*&amp;quot;);
+        response.setHeader(&amp;quot;Access-Control-Allow-Methods&amp;quot;, &amp;quot;POST, GET, PUT, OPTIONS, DELETE&amp;quot;);
+        response.setHeader(&amp;quot;Access-Control-Max-Age&amp;quot;, &amp;quot;3600&amp;quot;);
+        response.setHeader(&amp;quot;Access-Control-Allow-Headers&amp;quot;, &amp;quot;Origin, X-Requested-With, Content-Type, Accept&amp;quot;);
+        chain.doFilter(req, res);
+    }
+
+    @Override
+    public void destroy() {
+
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The ‘Access-Control-Allow-Origin’ parameter controls which domains will be allowed to make cross domain requests and ‘Access-Control-Allow-Methods’ defines the methods that will be allowed&lt;/p&gt;
+</content:encoded></item><item><title>ITTB devlog 2018-05-09</title><description>AI, movement, animations updates</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">ittb_devlog-2018-05-09.html</guid><content:encoded>&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AI, movement&lt;/li&gt;
+&lt;li&gt;movement animations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;over the last 2 days the AI got a lot of attention. Moving to random tiles with in the range
+was annoying anyway so I implemented a target selection algorithm. The basics are the same 
+for the algorithm I had used in the prototype. Pick the closest building based on euclidean
+distance and go towards that. This type of target selection may sometimes lead to what would
+seem as non optimal. Such as the case&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;. . . . .
+1 x . @ .
+. x . . .
+. x . . .
+. x . . .
+. . . . .
+. . . 2 .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;@ = player&lt;/p&gt;
+&lt;p&gt;1 = target&lt;/p&gt;
+&lt;p&gt;2 = target&lt;/p&gt;
+&lt;p&gt;x = blocker&lt;/p&gt;
+&lt;p&gt;Here the closest target is 1 based on euclidean distance, when in fact the path to that target
+is way longer than the path to target 2.&lt;/p&gt;
+&lt;p&gt;But “optimal” is not what I’m searching for. It’s OK to make the game unpredictable at times,
+so it doesn’t get boring. After the target selection, I added the ability to show a target indication
+for enemies. This is actually a ‘threat’ indication as the attack will happen next turn. The enemies
+stay committed to the direction they are attacking if they lock on to a target and will attack
+in that direction if they are pushed/pulled or dislodged some other way. I also added the force move
+and it’s damage effects on the units. I realized that if a weapon can do more than 1 tile force move
+the code has to be in the movement class, as the damage effects need to be applied after the animation
+to that tile is complete. This lead to the need for separating the movement animation code from the 
+movement class into a separate component. I also needed to add a “Fly” method that doesn’t check if
+the path to a target node contains blockers, as I want the unit to crash into the blockers. While at
+it I also changed the way the movement animations were done. Previously I was LERP’ing the movement 
+between the tiles, which lead to a movement that gradually sped up when it was getting near to it’s 
+target. Now I just use a simple method to calculate the amount to move and animate the movement in a
+linear fashion, which made the animations look better. The idea is quite simple, I don’t know why I
+didn’t do it in the first place:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;distance = Speed * Time.deltaTime //distance to travel this frame
+dir = target.position - my.position
+if (dir.magnitude &amp;gt; distance) {
+  translate(dir.normalized * distance)
+} else {
+  my.position = target.position
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I also added an in game console, which I use for messages as the unity Debug.Log sucks.&lt;/p&gt;
+</content:encoded></item><item><title>Galaxy hyper lane generation</title><description>a few different methods for generating travel lanes between stars</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">galaxy-hyper-lane-generation.html</guid><content:encoded>&lt;p&gt;Hyper lanes a.k.a Warp Lanes? What are those? They are a simple element of most space RTS/TBS games. They the lines that connect the stars. They are the highway lanes of spacetime, they enable spaceships to travel through them and guide the spaceships to their destination. They are a cheap alternative to wormhole generators which bend spacetime to connect stars. Here are what they look like from a popular game&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a34c67daa29.png"&gt;/img/58a34c67daa29.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Technically speaking they are edges (the lines) between vertices (stars). What we need to do is generate these edges given a set of vertices and there a couple of methods for doing this. The first one that pops up is to generate a minimum spanning tree. But a minimum spanning tree would look this&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a34d26a9467.png"&gt;/img/58a34d26a9467.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;and this doesn't exactly look like a nice interstellar highway as we would like to be able to travel to a couple of nearby stars from our origin star. This way when we are trying to reach a distant star we have multiple options of getting to that star. Image that you did your warp lanes using an MST and you want to get from star A to star D and the only path is A -&amp;gt; B -&amp;gt; C -&amp;gt; D. What do you do if there is an enemy fleet in the star C system and you don't want to engage that fleet with your science ship? Observe that the MST has only 1 connection between 2 neighboring stars so there is no way for you to do that.&lt;/p&gt;
+&lt;p&gt;So here is a naive algorithm I came up with&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;let S be a list star with random coordinates in a 1000x1000 plane&lt;/li&gt;
+&lt;li&gt;for each star in S&lt;ol&gt;
+&lt;li&gt;if star was visited before, skip it&lt;/li&gt;
+&lt;li&gt;get the N closest stars to this star&lt;/li&gt;
+&lt;li&gt;add a connection from this star to its neighbors&lt;/li&gt;
+&lt;li&gt;add a connection from each neighbor to this star&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;the get closest star also needs some attention as we don't want to return a close neighbor if it already has a connection to the current star.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;filter out all other stars except our current star&lt;/li&gt;
+&lt;li&gt;filter out all stars that already have a connection with the current star&lt;/li&gt;
+&lt;li&gt;map the remaining stars as a tuple of ( distance to source, this star)&lt;/li&gt;
+&lt;li&gt;sort by the distance&lt;/li&gt;
+&lt;li&gt;take N closest and return the stars from the tuple&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The N parameter determines the number of max connections going out from a star.
+Here is an image of this algorithm with N=5&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a34f85a5be6.png"&gt;/img/58a34f85a5be6.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This does look a bit better but there are too many cramped points where it's hard to tell what's going on. The stars are too close to each other so we need some kind of regulation when generating the random points for the stars. One way of doing this is checking the &amp;quot;star density&amp;quot; when generating the star and only placing the star if it's acceptable. This basically means not placing a star to close another and we can do this by checking if the generated star falls within a range of existing stars. That would be done by checking if it lies in a circle of radius R with the star at its origin.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;let S be a list of stars initially empty&lt;/li&gt;
+&lt;li&gt;while S size &amp;lt; number of stars to generate&lt;/li&gt;
+&lt;li&gt;generate a random point in the plane&lt;/li&gt;
+&lt;li&gt;if this point satisfies the density condition add the star to S&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;One point to note about this algorithm is that it has the possibility of never terminating if the density conditions are too strict and it cannot find a good place for the next star. So it's a good idea to add a loop counter check that will terminate with an exception after a number of tries and tell the user to relax the number of stars and the radius R. The acceptable density function can be done as follows&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;let R be the minimum distance that two stars should be apart (which is the radius R)&lt;/li&gt;
+&lt;li&gt;for each star already generated check if (src.x - star.x)^2 - (src.y - star.y)^2 &amp;lt; R^2&lt;/li&gt;
+&lt;li&gt;if there are stars that satisfy this equation then the density condition is not satisfied.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After adding the density check and reducing N to 3 the lines look a bit clearer.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a352d019823.png"&gt;/img/58a352d019823.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There is a fundamental error in this approach. If you select a low N (connectivity value) then you sometimes will get disconnected stars like this&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a36eaca414e.png"&gt;/img/58a36eaca414e.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To address this issue a combination of an MST and the naive approach could work.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a36f7ad5694.png"&gt;/img/58a36f7ad5694.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now that the MST guarantees that all the graph will be connected we have addressed the issue but still, the layout doesn't look good for efficient traveling. We still could use more triangulation that is more lanes connecting nearby stars. Using the closest N method led to a cluttered layout. The cause of this clutter is that if 2 stars are almost in a straight line and are the 2 closest stars, there will 2 connections to these stars that overlap.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a37252c62a7.png"&gt;/img/58a37252c62a7.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yet another way of connecting the stars would be to use Delaunay Triangulation. This also produces a very nice warp lane structure but still, has the cluttering problem due to the star layout.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a37861e14cc.png"&gt;/img/58a37861e14cc.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now let's address the clutter problem. It seem that the warp lanes look cluttered if there are neighboring stars too close to an existing warp lane.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a385c4c845c.png"&gt;/img/58a385c4c845c.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;the green arrow shows a lane we could do better without. How can we detect these lanes? Just from the definition of the problem. If a neighbor star is too close to a lane, drop the existing lane so the closer lane to the a star will remain. Here is a simple outline for the algorithm that requires a bit of linear algebra:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Sort all the neighbors for each star is descending order according to their distance from the origin star.&lt;/li&gt;
+&lt;li&gt;for each neighbor i to all neighbors - 1&lt;ol&gt;
+&lt;li&gt;for each neighbor j from i + 1 to all neighbors&lt;/li&gt;
+&lt;li&gt;if the distance of neighbor i from the lane between origin star and neighbor j &amp;lt; some threshold T discard the lane&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;calculating the distance of a point P0 to a line given by P1 and P2 is&lt;/p&gt;
+&lt;p&gt;$$ \bigl|\frac{(y_2 - y_1) \times x_0 - (x_2 - x_1) \times y_0 + x_2 \times y_1 - y_2 \times x_1}{\sqrt{(y_2-y_1)^2 + (x_2-x_1)^2}}\bigr| $$&lt;/p&gt;
+&lt;p&gt;Here is the result of a relaxed threshold that will draw a lot of lanes&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a3871f9072d.png"&gt;/img/58a3871f9072d.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;here are the same results with a stricter threshold that has discarded the middle lane&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/58a387534357e.png"&gt;/img/58a387534357e.png&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>LetterPress helper</title><description>a simple script to generate the maximum scoring words in LetterPress</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">letterpress-helper.html</guid><content:encoded>&lt;p&gt;LetterPress is a nice combination of Go and scrabble. Here are a few lines of scala code that will give a decisive advantage&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import scala.io.Source
+def freq(w:String) : Map[Char,Int] = {
+ w.map(x=&amp;gt;(x,1)).groupBy(_._1).map { 
+  case (key,values) =&amp;gt; (key, values.map(_._2).sum)
+  }
+}
+
+val src = freq(&amp;quot;rfcdpnrxqgeruenaolhntutim&amp;quot;)
+//val src = freq(&amp;quot;wasttaxnmerhenriehxldtihr&amp;quot;)
+
+val words = Source.fromFile(&amp;quot;corncob_lowercase.txt&amp;quot;).getLines.toList.map(_.trim)
+val f = words.map(x=&amp;gt;(x, freq(x)))
+f.filter(x=&amp;gt; x._2.map({ case (k,v) =&amp;gt; src.contains(k) &amp;amp;&amp;amp; src(k) &amp;gt;= v}).forall(x=&amp;gt;x == true) )
+ .sortWith(_._1.size &amp;gt; _._1.size)
+ .take(10)
+ .foreach(println)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Explanation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The logic behind it is very simple:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;count the frequencies of the letters on the board (the src var has this)&lt;/li&gt;
+&lt;li&gt;count the frequencies of all the letters per word in the dictionary &lt;code&gt;( (word, Map(w-&amp;gt;1,o-&amp;gt;1,r-&amp;gt;1,d-&amp;gt;) )&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;filter out all the words that have letter frequencies less than or equal to the letters on the board&lt;/li&gt;
+&lt;li&gt;sort these by word length&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>Scrabble Island detection</title><description>java code to detect an invalid board for scrabble</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">scrabble-island-detection.html</guid><content:encoded>&lt;p&gt;there is a game app called “kelimelik” which is a Turkish version of scrabble that I’ve been playing for a while now which is quite fun. So I thought it might be a nice way to waste a couple of hours trying to write a program that would give the highest scoring word given a board state. Most of the program is quite trivial in that it just has to generate permutations of the given letters and place them in all possible combinations on the board and then check if the board is valid. E.g that all the words on the board are in a dictionary and all the tiles are connected. The second part of the validity check is interesting. The first thing that popped to my mind was using a flood-fill algorithm starting from the tile nearest to the top-left corner. After the fill if there are any tiles on the board that are unmarked then there is more than 1 island on the board and the board is invalid. So how does a flood-fill algorithm work? Quite simple actually. You mark the current tile you are on at (x,y) and recurse to the neighbors if they are not empty, or have not been marked. Here is a simple bit code that does this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;private boolean connectedCheck(int i, int j, String[][] board) {
+    board[i][j] = &amp;quot;!&amp;quot;;
+    boolean resh = true;
+    boolean resv = true;
+    boolean resh2 = true;
+    boolean resv2 = true;
+    if (i &amp;lt; 14 &amp;amp;&amp;amp; !board[i + 1][j].equals(&amp;quot;*&amp;quot;) &amp;amp;&amp;amp; !board[i + 1][j].equals(&amp;quot;!&amp;quot;)) {
+        connectedCheck(i + 1, j, board);
+    }
+    if (i &amp;gt; 0 &amp;amp;&amp;amp; !board[i - 1][j].equals(&amp;quot;*&amp;quot;) &amp;amp;&amp;amp; !board[i - 1][j].equals(&amp;quot;!&amp;quot;)) {
+        connectedCheck(i - 1, j, board);
+    }
+    if (j &amp;lt; 14 &amp;amp;&amp;amp; !board[i][j + 1].equals(&amp;quot;*&amp;quot;) &amp;amp;&amp;amp; !board[i][j + 1].equals(&amp;quot;!&amp;quot;)) {
+        connectedCheck(i, j + 1, board);
+    }
+    if (j &amp;gt; 0 &amp;amp;&amp;amp; !board[i][j - 1].equals(&amp;quot;*&amp;quot;) &amp;amp;&amp;amp; !board[i][j - 1].equals(&amp;quot;!&amp;quot;)) {
+        connectedCheck(i, j - 1, board);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;empty squares are noted as “*”, tiles with the letter and marked tiles with “!”. Here is a 3×3 board array for reference:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;|   |   |   |
+|---|---|---|
+|*  | * | * |
+|A  | * | * |
+|B  | C | * |
+
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>3 different approaches to the same problem</title><description>finding the first unique character in a string</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">3-different-approaches.html</guid><content:encoded>&lt;p&gt;I came a across a seemingly simple problem today that turned out to have multiple solutions with varying efficiency. These type of problems are very well suited for step by step iterative solutions where each step you improve upon the existing solution. 
 The problem is the simple matter of find the first unique character in a string. 
 I'm skipping the obvious solution of starting at the beginning of the string and scanning through the string comparing the current charater with every other. This type of solution will lead to an N^2 solution which is usually unacceptable. Think that you are searching a DNA sequence of 10 million nucleotides. No way exponential solutions are going to work. 
@@ -3070,169 +3282,6 @@ instead of keeping the position of the character, keep a pointer to a linked lis
         return head.value == null ? head.next.value : head.value;
     }
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>CORS with spring boot</title><description>setting up a CORS filter in spring boot</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">cors-with-spring-boot.html</guid><content:encoded>&lt;p&gt;CORS (Cross Origin Resource Sharing) allows to make cross domain ajax requests for allowed domain. To setup CORS in spring add the following filter&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@Component
-public class CORSFilter implements Filter {
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-
-    }
-
-    @Override
-    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
-        HttpServletResponse response = (HttpServletResponse) res;
-        response.setHeader(&amp;quot;Access-Control-Allow-Origin&amp;quot;, &amp;quot;*&amp;quot;);
-        response.setHeader(&amp;quot;Access-Control-Allow-Methods&amp;quot;, &amp;quot;POST, GET, PUT, OPTIONS, DELETE&amp;quot;);
-        response.setHeader(&amp;quot;Access-Control-Max-Age&amp;quot;, &amp;quot;3600&amp;quot;);
-        response.setHeader(&amp;quot;Access-Control-Allow-Headers&amp;quot;, &amp;quot;Origin, X-Requested-With, Content-Type, Accept&amp;quot;);
-        chain.doFilter(req, res);
-    }
-
-    @Override
-    public void destroy() {
-
-    }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The ‘Access-Control-Allow-Origin’ parameter controls which domains will be allowed to make cross domain requests and ‘Access-Control-Allow-Methods’ defines the methods that will be allowed&lt;/p&gt;
-</content:encoded></item><item><title>hex grid border highlighting</title><description>highlighting the borders of a hex on a grid in unity 3d</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">hex-grid-border-highlighting.html</guid><content:encoded>&lt;p&gt;Previously I've been doing this by actually highlighting all the possible cells, but it's looks a lot better if you just highlight the borders. Here's the results I've got after this implementation&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/57de50c77de2a.png"&gt;/img/57de50c77de2a.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Calculating the border cells is a different task which I've explained over &lt;a href="/code/hex-grid-cells-in-range/"&gt;here&lt;/a&gt;. After we have the cells that we can navigate to we need to filter out the border cells. If you look carefully the edges that need highlighting from all the cells in range are the ones that do not have a navigable neighbor. In the image the cell (4,-6,2) and (5,-6,1) are both in range, but they share a border with a navigable cell, so that edge should not be highlighted. The algorithm should be like this:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Get all the cells in range and the starting cell, and add the starting cell to the cells in range.&lt;/li&gt;
-&lt;li&gt;for all the cells loop&lt;ul&gt;
-&lt;li&gt;for all the neighboring cells of the current cell loop&lt;ul&gt;
-&lt;li&gt;if the cells current neighbor = null or cells in range doesn't have the neighbor highlight that edge&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The actual highlighting is done by placing a quad with a bar texture with the correct rotation and coordinates easily calculated from the current cell we are processing.&lt;/p&gt;
-&lt;p&gt;Here is a video of the highlighting:&lt;/p&gt;
-&lt;p&gt;{{&amp;lt; youtube UkWKeim-n_Y &amp;gt;}}&lt;/p&gt;
-</content:encoded></item><item><title>Sbt publishing to repository</title><description>using sbt to push an artifact to a repository</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">sbt-publishing.html</guid><content:encoded>&lt;p&gt;If you run a maven repository for your own company/projects here is how you can publish your artifacts using SBT. 
-The repository manager I use is archiva but it should be similar for nexus etc too.&lt;/p&gt;
-&lt;p&gt;in your build.sbt file&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;credentials += Credentials(&amp;quot;Repository Archiva Managed internal Repository&amp;quot;,&amp;quot;10.0.1.23&amp;quot;, &amp;quot;admin&amp;quot;, &amp;quot;somepass&amp;quot;)
-//or use a file
-//credentials += Credentials(Path.userHome / &amp;quot;.ivy2&amp;quot; / &amp;quot;.archiva-cred&amp;quot;)
-
-publishMavenStyle := true
-
-publishArtifact in Test := false
-
-publishTo := {
-  val archiva = &amp;quot;http://10.0.1.23:9001/repository/&amp;quot;
-    Some(&amp;quot;internal&amp;quot;  at archiva + &amp;quot;internal&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;important points:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;the hostname in the credentials part should not contain the port&lt;/li&gt;
-&lt;li&gt;the realm is important, it should be like it's shown here (substitute 'internal' for your repo name if it's different)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you are using a file to store your credentials (which is the better way) here is the file format&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;realm=Repository Archiva Managed internal Repository
-host=10.0.1.23
-user=admin
-password=somepassword
-&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Chained ajax calls</title><description>a method of making async calls in sequence</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">chained-ajax-calls.html</guid><content:encoded>&lt;p&gt;Sometimes you want to make successive calls to multiple urls one after another - not in parallel. With the programming model for javascript using callbacks this can be a bit confusing to implement properly. Here is a neat trick to do it.
-say you have a list of urls [url1, url2, url3] if you could transform this list to&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[
-  function() {
-    XHR.send();
-    XHR.onload = next_fn_in_list
-  },
-  function() {
-    XHR.send();
-    XHR.onload = next_fn_in_list
-  }, ...
-]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;you actually dont even need this be a list, because the onload will reference the next function to call. This is exactly what reduce does for arrays.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var chainedAjaxCalls = myList.reduceRight(function(previousValue, currentValue) {
-        return function() {
-            var xhr = new XMLHttpRequest();
-            xhr.onload = previousValue;
-            xhr.open(&amp;quot;GET&amp;quot;, 'http://url?param=' + currentValue);
-            xhr.send()
-        }
-    }, function() {});
-    chainedAjaxCalls();
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;we iterate over the array with the initial NOP function, and return a function that sets the onload to the previous function. We start from the right so the last requests onload is the nop. then n-1 functions onload is n, etc. 
-this will create a chain of ajax calls for the url list.
-very nice.&lt;/p&gt;
-</content:encoded></item><item><title>Hex grid backing arrays</title><description>how to represent a backing array for a hex grid</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">hex-grid-backing-arrays.html</guid><content:encoded>&lt;p&gt;Programming game worlds with square grids is pretty straight forward. You just use a 2D array, and calculations are quite easy. 
-To go up you subtract from the Y coordinate, to go left you add 1 to the X coordinate. But when you are dealing with hex grids 
-life gets a bit more complicated. Representing a backing array for a hex grid can be done in the following way&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[
-  [null,null,null,{},{},{},{}],
-  [null,null,{},{},{},{},{}],
-  [null,{},{},{},{},{},{}],
-  [{},{},{},{},{},{},{}],
-  [{},{},{},{},{},{},null],
-  [{},{},{},{},{},null,null],
-  [{},{},{},{},null,null,null]]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;this would be the representation array for the following grid&lt;/p&gt;
-&lt;p&gt;the row 3 in the array is the row in the center of the grid. If you go up one row the row becomes an element shorter (represented by a null element). 
-You could also skip adding the null element and use different length elements for each row, but that brings it own advantages and disadvantages. 
-The radius of the grid is defined as the length on the longest row for the hex shaped grid. Now for a given radius of N how could we generate 
-the backing array for that grid?&lt;/p&gt;
-&lt;p&gt;The property to notice here is that the number of nulls increases from the middle out by one. So you would have abs(i - mid) number of null 
-elements for a given row i where mid is floor(radius) /2. You would place these null elements in the beginning of the array if i &amp;lt; mid 
-and at the end of the array if i &amp;gt; mid.
-Here is some coffeescript code that does this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;createMatrix: (radius) -&amp;gt;
-        mid = Math.floor(radius/2)
-        matrix = [1..radius].map (it, i) -&amp;gt;;
-            count = Math.abs(i - mid)
-            head = [0 ... count].map -&amp;gt; null
-            tail = [count + 1 .. radius].map (it) -&amp;gt; {}
-            if  i &amp;gt; 3 then head.concat tail else tail.concat head
-        matrix
-
-&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>K Closest star selection</title><description>An efficient way of calculating the first N items of unsorted array</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">closest-star-selection.html</guid><content:encoded>&lt;p&gt;In my post about generation galaxy warp lanes &lt;a href="/code/galaxy-hyper-lane-generation/"&gt;GalaxyWarpLaneGeneration&lt;/a&gt; I talked about the a naive method that would select the N closest stars to a given star. 
-Even though the name states the method as naive it isn't such a naive tasks when you consider large amounts of stars. For a game the number of stars could be in the 
-hundreds or maybe thousand, but what if for a minute we actually consider the real world? How could you select N closest start from 10M star? or 100M maybe even a 1B?&lt;/p&gt;
-&lt;p&gt;My initial though was the simple approach: calculate the distance between the source and each of the other stars, and sort the other star list on this distance. 
-This results in an O(nlogn) algorithm which is the best a sort on this type of randomized data. But there is a better way: The key is we don't need to 
-sort all the list, we are just looking to get the closest N elements. The algorithm is as follows:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;create a MAX heap of size N&lt;/li&gt;
-&lt;li&gt;add the first N stars from the list to the heap, based on a distance comparator from the source star.&lt;/li&gt;
-&lt;li&gt;for the remaining stars in the list:&lt;ol&gt;
-&lt;li&gt;if the distance to that star is less than the top of the heap, remove the top and add this star.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;get all the element in the heap for the result.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;public List&amp;lt;Star&amp;gt; closest(List&amp;lt;Star&amp;gt; stars, int n) {
-    PriorityQueue&amp;lt;Pair&amp;lt;Star,Double&amp;gt;&amp;gt; heap = new PriorityQueue&amp;lt;&amp;gt;(n, 
-       (x1, x2) -&amp;gt; x2.getSecond().compareTo(x1.getSecond()));
-
-    for (int i =0;i&amp;lt;n;i++) {
-        heap.add(new Pair&amp;lt;&amp;gt;(stars.get(i), distance(stars.get(i))));
-    }
-    for(int i=n;i&amp;lt;stars.size();i++) {
-        if(stars.get(i) == this) continue;;
-        double distance = distance(stars.get(i));
-        if (distance &amp;lt; heap.peek().getSecond()) {
-            heap.poll();
-            heap.add(new Pair&amp;lt;&amp;gt;(stars.get(i), distance));
-        }
-    }
-    return heap.stream().map(Pair::getFirst).collect(toList());
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;we are adding (N-k) element to a heap of k element. Each insertion will cost log(k). So the total will be o(N * logK)
-I am usually connecting 2 or 3 stars which result in 1000 * log2 which is around 300 operations vs. 1000 * log(1000) which is also 300 operations.
-It doesn't make a difference for the basic case. But if I had 10M start then 10M * log2 = 3M vs 10M * log10M = 70M
-it does make a difference.&lt;/p&gt;
 </content:encoded></item><item><title>Hex grid cells in range</title><description>calculating the hex cells that are N units away from the source</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">hex-grid-cells-in-range.html</guid><content:encoded>&lt;p&gt;Getting the cells in a range of N is also an important aspect that worth talking about. There are 2 current uses for this feature in Hexarategy:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;get the cells that a weapon of range N can target&lt;/li&gt;
@@ -3336,54 +3385,129 @@ There is a cell to the E so go to that cell and add it to the list… you get th
 &lt;p&gt;One interesting point here is that, you cannot rotate 6 six times clockwise to get all the directions, as that would mean consuming extra ranges, 
 e.g if you are facing NE and want to face NW you would not go E,SE,SW,W,NW. You would just go NE, NW. That’s why you have to check the directions 
 in 2 separate for loops.&lt;/p&gt;
-</content:encoded></item><item><title>ITTB devlog 2018-05-09</title><description>AI, movement, animations updates</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">ittb_devlog-2018-05-09.html</guid><content:encoded>&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AI, movement&lt;/li&gt;
-&lt;li&gt;movement animations&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;over the last 2 days the AI got a lot of attention. Moving to random tiles with in the range
-was annoying anyway so I implemented a target selection algorithm. The basics are the same 
-for the algorithm I had used in the prototype. Pick the closest building based on euclidean
-distance and go towards that. This type of target selection may sometimes lead to what would
-seem as non optimal. Such as the case&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;. . . . .
-1 x . @ .
-. x . . .
-. x . . .
-. x . . .
-. . . . .
-. . . 2 .
+</content:encoded></item><item><title>Island detection / Flood fill with clojure</title><description>using clojure to detect an invalid board state for a game of scrabble</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">scrabble-island-detection-clojure.html</guid><content:encoded>&lt;p&gt;I had already talked about a mutable version of this algorithm for flood filling island detection &lt;a href="/code/scrabble-island-detection.html"&gt;here&lt;/a&gt;. This time I went immutable with clojure
+The algorithm is a bit different, this we will not have a variable in the outer scope but pass a new instance of a board (which is efficiently managed by clojure) to the function for
+each iteration/recursion.&lt;/p&gt;
+&lt;p&gt;The full source is at &lt;a href="https://gitlab.com/dendiz/kelimelik-clj/tree/master"&gt;https://gitlab.com/dendiz/kelimelik-clj/tree/master&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;there a few helper functions&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;first-char-on-board&lt;/code&gt; scans the board to find the first tile that is not empty
+&lt;code&gt;split&lt;/code&gt; this will split a string such as &amp;quot;abc&amp;quot; into a vector as &lt;code&gt;[&amp;quot;a&amp;quot; &amp;quot;b&amp;quot; &amp;quot;c&amp;quot;]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;the basic idea is to keep a list of next slots to visit on the board as we visit slots. 
+the &lt;code&gt;next-frontier&lt;/code&gt; function will return a list of next slots. This is basically BFS search
+on a graph.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(defn flood-fill
+  &amp;quot;flood fill the board starting from the first non empty slot.
+   the flooded slots will contain '!' empty slots '.'. If there
+   are islands they will contain letters.
+  &amp;quot;
+  [board]
+  (let [[y x] (first-char-on-board board)
+        board (mapv split board)
+        ]
+    (loop [board board
+           frontier [[x y]]]
+      (if (-&amp;gt; frontier count zero?)
+        board
+        (let [front (first frontier)
+              x (first front)
+              y (second front)]
+          (recur
+           (assoc-in board [y x] &amp;quot;!&amp;quot;)
+           (concat (next frontier) (next-frontier board [x y]))))))))
+    	   		   
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;@ = player&lt;/p&gt;
-&lt;p&gt;1 = target&lt;/p&gt;
-&lt;p&gt;2 = target&lt;/p&gt;
-&lt;p&gt;x = blocker&lt;/p&gt;
-&lt;p&gt;Here the closest target is 1 based on euclidean distance, when in fact the path to that target
-is way longer than the path to target 2.&lt;/p&gt;
-&lt;p&gt;But “optimal” is not what I’m searching for. It’s OK to make the game unpredictable at times,
-so it doesn’t get boring. After the target selection, I added the ability to show a target indication
-for enemies. This is actually a ‘threat’ indication as the attack will happen next turn. The enemies
-stay committed to the direction they are attacking if they lock on to a target and will attack
-in that direction if they are pushed/pulled or dislodged some other way. I also added the force move
-and it’s damage effects on the units. I realized that if a weapon can do more than 1 tile force move
-the code has to be in the movement class, as the damage effects need to be applied after the animation
-to that tile is complete. This lead to the need for separating the movement animation code from the 
-movement class into a separate component. I also needed to add a “Fly” method that doesn’t check if
-the path to a target node contains blockers, as I want the unit to crash into the blockers. While at
-it I also changed the way the movement animations were done. Previously I was LERP’ing the movement 
-between the tiles, which lead to a movement that gradually sped up when it was getting near to it’s 
-target. Now I just use a simple method to calculate the amount to move and animate the movement in a
-linear fashion, which made the animations look better. The idea is quite simple, I don’t know why I
-didn’t do it in the first place:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;distance = Speed * Time.deltaTime //distance to travel this frame
-dir = target.position - my.position
-if (dir.magnitude &amp;gt; distance) {
-  translate(dir.normalized * distance)
-} else {
-  my.position = target.position
+&lt;p&gt;the &lt;code&gt;next-frontier&lt;/code&gt; code is also worth mentioning&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(defn next-frontier
+  &amp;quot;return the coordinates of candidate neighbors for flood filling&amp;quot;
+  [board [x y]]
+  (for [i [(dec y) y (inc y)]
+        j [(dec x) x (inc x)]
+        :when (and (&amp;gt;= i 0)
+                   (&amp;gt;= j 0)
+                   (&amp;lt; i 15)
+                   (&amp;lt; j 15)
+                   (or (= x j) (= y i))
+                   (not (and (= x j) (= y i)))
+                   (not= &amp;quot;!&amp;quot; (get-in board [i j]))
+                   (not= &amp;quot;.&amp;quot; (get-in board [i j])))]
+    [j i]))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;flood-fill&lt;/code&gt; will mark visited slots with &lt;code&gt;!&lt;/code&gt; and &lt;code&gt;next-frontier&lt;/code&gt; will return a list of the candidate slot from the 8 neighbors of the current slot.
+if the neighbor is visited or empty it's not included in the list.&lt;/p&gt;
+&lt;p&gt;if the starting board was like this&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;...a...
+...bc..
+..de...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;the flood would start with &lt;code&gt;a&lt;/code&gt; and the &lt;code&gt;next-frontier&lt;/code&gt; would return only &lt;code&gt;b&lt;/code&gt; from the neighbors and mark &lt;code&gt;a&lt;/code&gt; as &lt;code&gt;!&lt;/code&gt;.
+&lt;code&gt;b&lt;/code&gt; would return &lt;code&gt;c&lt;/code&gt; and &lt;code&gt;e&lt;/code&gt; and &lt;code&gt;d&lt;/code&gt;. &lt;code&gt;a&lt;/code&gt; would be marked as &lt;code&gt;!&lt;/code&gt; so it would not be included. After the fill the board would be like&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;...!...
+...!!..
+..!!...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;this algorithm is useful when detecting if the scrabble board is connected.&lt;/p&gt;
+</content:encoded></item><item><title>Chained ajax calls</title><description>a method of making async calls in sequence</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">chained-ajax-calls.html</guid><content:encoded>&lt;p&gt;Sometimes you want to make successive calls to multiple urls one after another - not in parallel. With the programming model for javascript using callbacks this can be a bit confusing to implement properly. Here is a neat trick to do it.
+say you have a list of urls [url1, url2, url3] if you could transform this list to&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+  function() {
+    XHR.send();
+    XHR.onload = next_fn_in_list
+  },
+  function() {
+    XHR.send();
+    XHR.onload = next_fn_in_list
+  }, ...
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;you actually dont even need this be a list, because the onload will reference the next function to call. This is exactly what reduce does for arrays.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var chainedAjaxCalls = myList.reduceRight(function(previousValue, currentValue) {
+        return function() {
+            var xhr = new XMLHttpRequest();
+            xhr.onload = previousValue;
+            xhr.open(&amp;quot;GET&amp;quot;, 'http://url?param=' + currentValue);
+            xhr.send()
+        }
+    }, function() {});
+    chainedAjaxCalls();
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;we iterate over the array with the initial NOP function, and return a function that sets the onload to the previous function. We start from the right so the last requests onload is the nop. then n-1 functions onload is n, etc. 
+this will create a chain of ajax calls for the url list.
+very nice.&lt;/p&gt;
+</content:encoded></item><item><title>Sbt publishing to repository</title><description>using sbt to push an artifact to a repository</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">sbt-publishing.html</guid><content:encoded>&lt;p&gt;If you run a maven repository for your own company/projects here is how you can publish your artifacts using SBT. 
+The repository manager I use is archiva but it should be similar for nexus etc too.&lt;/p&gt;
+&lt;p&gt;in your build.sbt file&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;credentials += Credentials(&amp;quot;Repository Archiva Managed internal Repository&amp;quot;,&amp;quot;10.0.1.23&amp;quot;, &amp;quot;admin&amp;quot;, &amp;quot;somepass&amp;quot;)
+//or use a file
+//credentials += Credentials(Path.userHome / &amp;quot;.ivy2&amp;quot; / &amp;quot;.archiva-cred&amp;quot;)
+
+publishMavenStyle := true
+
+publishArtifact in Test := false
+
+publishTo := {
+  val archiva = &amp;quot;http://10.0.1.23:9001/repository/&amp;quot;
+    Some(&amp;quot;internal&amp;quot;  at archiva + &amp;quot;internal&amp;quot;)
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I also added an in game console, which I use for messages as the unity Debug.Log sucks.&lt;/p&gt;
+&lt;p&gt;important points:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the hostname in the credentials part should not contain the port&lt;/li&gt;
+&lt;li&gt;the realm is important, it should be like it's shown here (substitute 'internal' for your repo name if it's different)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are using a file to store your credentials (which is the better way) here is the file format&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;realm=Repository Archiva Managed internal Repository
+host=10.0.1.23
+user=admin
+password=somepassword
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>Mirroring a website with wget</title><description>wget parameters to mirror a web site for offline usage</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">mirror-website.html</guid><content:encoded>&lt;p&gt;Mirroring a website? Why would you do that in the first place? Well I used it to mirror documentation/API reference for offline usage, like on long flights. Here is a fast way of doing this with wget:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget -r -np -N [url] &amp;amp;
+wget -r -np -N [url] &amp;amp;
+wget -r -np -N [url] &amp;amp;
+wget -r -np -N [url] &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The trick is the -N switch, which downloads the file if its newer than the one on disk.&lt;/p&gt;
 </content:encoded></item><item><title>Scrabble Solver Script</title><description>groovy script to find the max scoring word for scrabble</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">scrabble-solver.html</guid><content:encoded>&lt;p&gt;I've been challenged by burcin at a game of scrabble - the Turkish version. She is quite crafty with words and can easily beat me and all of her friends. 
 But I'm crafty with computers so I wrote a nice groovy script to play for me. I'm quite ok with making the strategical decisions, so the script just 
 finds the best possible word for a given state. To make it play a good game of scrabble would involve far more than that. Here are some interesting 
@@ -3540,214 +3664,90 @@ Next check all locations for a character other than &amp;quot;!&amp;quot; or &am
 I have a more detailed write up on this method &lt;a href="/code/scrabble-island-detection/"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The first iteration of the script ran on a single thread and would take about 6 to 7 minutes to calculate 13699 words. But it's a great 
 candidate for parallelization which is very simple with groovy. With 6 threads it completes in about 2 minutes which is quite acceptable.&lt;/p&gt;
-</content:encoded></item><item><title>Scrabble Island detection</title><description>java code to detect an invalid board for scrabble</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">scrabble-island-detection.html</guid><content:encoded>&lt;p&gt;there is a game app called “kelimelik” which is a Turkish version of scrabble that I’ve been playing for a while now which is quite fun. So I thought it might be a nice way to waste a couple of hours trying to write a program that would give the highest scoring word given a board state. Most of the program is quite trivial in that it just has to generate permutations of the given letters and place them in all possible combinations on the board and then check if the board is valid. E.g that all the words on the board are in a dictionary and all the tiles are connected. The second part of the validity check is interesting. The first thing that popped to my mind was using a flood-fill algorithm starting from the tile nearest to the top-left corner. After the fill if there are any tiles on the board that are unmarked then there is more than 1 island on the board and the board is invalid. So how does a flood-fill algorithm work? Quite simple actually. You mark the current tile you are on at (x,y) and recurse to the neighbors if they are not empty, or have not been marked. Here is a simple bit code that does this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;private boolean connectedCheck(int i, int j, String[][] board) {
-    board[i][j] = &amp;quot;!&amp;quot;;
-    boolean resh = true;
-    boolean resv = true;
-    boolean resh2 = true;
-    boolean resv2 = true;
-    if (i &amp;lt; 14 &amp;amp;&amp;amp; !board[i + 1][j].equals(&amp;quot;*&amp;quot;) &amp;amp;&amp;amp; !board[i + 1][j].equals(&amp;quot;!&amp;quot;)) {
-        connectedCheck(i + 1, j, board);
+</content:encoded></item><item><title>Hex grid backing arrays</title><description>how to represent a backing array for a hex grid</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">hex-grid-backing-arrays.html</guid><content:encoded>&lt;p&gt;Programming game worlds with square grids is pretty straight forward. You just use a 2D array, and calculations are quite easy. 
+To go up you subtract from the Y coordinate, to go left you add 1 to the X coordinate. But when you are dealing with hex grids 
+life gets a bit more complicated. Representing a backing array for a hex grid can be done in the following way&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+  [null,null,null,{},{},{},{}],
+  [null,null,{},{},{},{},{}],
+  [null,{},{},{},{},{},{}],
+  [{},{},{},{},{},{},{}],
+  [{},{},{},{},{},{},null],
+  [{},{},{},{},{},null,null],
+  [{},{},{},{},null,null,null]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;this would be the representation array for the following grid&lt;/p&gt;
+&lt;p&gt;the row 3 in the array is the row in the center of the grid. If you go up one row the row becomes an element shorter (represented by a null element). 
+You could also skip adding the null element and use different length elements for each row, but that brings it own advantages and disadvantages. 
+The radius of the grid is defined as the length on the longest row for the hex shaped grid. Now for a given radius of N how could we generate 
+the backing array for that grid?&lt;/p&gt;
+&lt;p&gt;The property to notice here is that the number of nulls increases from the middle out by one. So you would have abs(i - mid) number of null 
+elements for a given row i where mid is floor(radius) /2. You would place these null elements in the beginning of the array if i &amp;lt; mid 
+and at the end of the array if i &amp;gt; mid.
+Here is some coffeescript code that does this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;createMatrix: (radius) -&amp;gt;
+        mid = Math.floor(radius/2)
+        matrix = [1..radius].map (it, i) -&amp;gt;;
+            count = Math.abs(i - mid)
+            head = [0 ... count].map -&amp;gt; null
+            tail = [count + 1 .. radius].map (it) -&amp;gt; {}
+            if  i &amp;gt; 3 then head.concat tail else tail.concat head
+        matrix
+
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>K Closest star selection</title><description>An efficient way of calculating the first N items of unsorted array</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">closest-star-selection.html</guid><content:encoded>&lt;p&gt;In my post about generation galaxy warp lanes &lt;a href="/code/galaxy-hyper-lane-generation/"&gt;GalaxyWarpLaneGeneration&lt;/a&gt; I talked about the a naive method that would select the N closest stars to a given star. 
+Even though the name states the method as naive it isn't such a naive tasks when you consider large amounts of stars. For a game the number of stars could be in the 
+hundreds or maybe thousand, but what if for a minute we actually consider the real world? How could you select N closest start from 10M star? or 100M maybe even a 1B?&lt;/p&gt;
+&lt;p&gt;My initial though was the simple approach: calculate the distance between the source and each of the other stars, and sort the other star list on this distance. 
+This results in an O(nlogn) algorithm which is the best a sort on this type of randomized data. But there is a better way: The key is we don't need to 
+sort all the list, we are just looking to get the closest N elements. The algorithm is as follows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;create a MAX heap of size N&lt;/li&gt;
+&lt;li&gt;add the first N stars from the list to the heap, based on a distance comparator from the source star.&lt;/li&gt;
+&lt;li&gt;for the remaining stars in the list:&lt;ol&gt;
+&lt;li&gt;if the distance to that star is less than the top of the heap, remove the top and add this star.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;get all the element in the heap for the result.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;public List&amp;lt;Star&amp;gt; closest(List&amp;lt;Star&amp;gt; stars, int n) {
+    PriorityQueue&amp;lt;Pair&amp;lt;Star,Double&amp;gt;&amp;gt; heap = new PriorityQueue&amp;lt;&amp;gt;(n, 
+       (x1, x2) -&amp;gt; x2.getSecond().compareTo(x1.getSecond()));
+
+    for (int i =0;i&amp;lt;n;i++) {
+        heap.add(new Pair&amp;lt;&amp;gt;(stars.get(i), distance(stars.get(i))));
     }
-    if (i &amp;gt; 0 &amp;amp;&amp;amp; !board[i - 1][j].equals(&amp;quot;*&amp;quot;) &amp;amp;&amp;amp; !board[i - 1][j].equals(&amp;quot;!&amp;quot;)) {
-        connectedCheck(i - 1, j, board);
+    for(int i=n;i&amp;lt;stars.size();i++) {
+        if(stars.get(i) == this) continue;;
+        double distance = distance(stars.get(i));
+        if (distance &amp;lt; heap.peek().getSecond()) {
+            heap.poll();
+            heap.add(new Pair&amp;lt;&amp;gt;(stars.get(i), distance));
+        }
     }
-    if (j &amp;lt; 14 &amp;amp;&amp;amp; !board[i][j + 1].equals(&amp;quot;*&amp;quot;) &amp;amp;&amp;amp; !board[i][j + 1].equals(&amp;quot;!&amp;quot;)) {
-        connectedCheck(i, j + 1, board);
-    }
-    if (j &amp;gt; 0 &amp;amp;&amp;amp; !board[i][j - 1].equals(&amp;quot;*&amp;quot;) &amp;amp;&amp;amp; !board[i][j - 1].equals(&amp;quot;!&amp;quot;)) {
-        connectedCheck(i, j - 1, board);
-    }
+    return heap.stream().map(Pair::getFirst).collect(toList());
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;empty squares are noted as “*”, tiles with the letter and marked tiles with “!”. Here is a 3×3 board array for reference:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;|   |   |   |
-|---|---|---|
-|*  | * | * |
-|A  | * | * |
-|B  | C | * |
-
-&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>LetterPress helper</title><description>a simple script to generate the maximum scoring words in LetterPress</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">letterpress-helper.html</guid><content:encoded>&lt;p&gt;LetterPress is a nice combination of Go and scrabble. Here are a few lines of scala code that will give a decisive advantage&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import scala.io.Source
-def freq(w:String) : Map[Char,Int] = {
- w.map(x=&amp;gt;(x,1)).groupBy(_._1).map { 
-  case (key,values) =&amp;gt; (key, values.map(_._2).sum)
-  }
-}
-
-val src = freq(&amp;quot;rfcdpnrxqgeruenaolhntutim&amp;quot;)
-//val src = freq(&amp;quot;wasttaxnmerhenriehxldtihr&amp;quot;)
-
-val words = Source.fromFile(&amp;quot;corncob_lowercase.txt&amp;quot;).getLines.toList.map(_.trim)
-val f = words.map(x=&amp;gt;(x, freq(x)))
-f.filter(x=&amp;gt; x._2.map({ case (k,v) =&amp;gt; src.contains(k) &amp;amp;&amp;amp; src(k) &amp;gt;= v}).forall(x=&amp;gt;x == true) )
- .sortWith(_._1.size &amp;gt; _._1.size)
- .take(10)
- .foreach(println)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Explanation&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The logic behind it is very simple:&lt;/p&gt;
+&lt;p&gt;we are adding (N-k) element to a heap of k element. Each insertion will cost log(k). So the total will be o(N * logK)
+I am usually connecting 2 or 3 stars which result in 1000 * log2 which is around 300 operations vs. 1000 * log(1000) which is also 300 operations.
+It doesn't make a difference for the basic case. But if I had 10M start then 10M * log2 = 3M vs 10M * log10M = 70M
+it does make a difference.&lt;/p&gt;
+</content:encoded></item><item><title>hex grid border highlighting</title><description>highlighting the borders of a hex on a grid in unity 3d</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">hex-grid-border-highlighting.html</guid><content:encoded>&lt;p&gt;Previously I've been doing this by actually highlighting all the possible cells, but it's looks a lot better if you just highlight the borders. Here's the results I've got after this implementation&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/57de50c77de2a.png"&gt;/img/57de50c77de2a.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Calculating the border cells is a different task which I've explained over &lt;a href="/code/hex-grid-cells-in-range/"&gt;here&lt;/a&gt;. After we have the cells that we can navigate to we need to filter out the border cells. If you look carefully the edges that need highlighting from all the cells in range are the ones that do not have a navigable neighbor. In the image the cell (4,-6,2) and (5,-6,1) are both in range, but they share a border with a navigable cell, so that edge should not be highlighted. The algorithm should be like this:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;count the frequencies of the letters on the board (the src var has this)&lt;/li&gt;
-&lt;li&gt;count the frequencies of all the letters per word in the dictionary &lt;code&gt;( (word, Map(w-&amp;gt;1,o-&amp;gt;1,r-&amp;gt;1,d-&amp;gt;) )&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;filter out all the words that have letter frequencies less than or equal to the letters on the board&lt;/li&gt;
-&lt;li&gt;sort these by word length&lt;/li&gt;
+&lt;li&gt;Get all the cells in range and the starting cell, and add the starting cell to the cells in range.&lt;/li&gt;
+&lt;li&gt;for all the cells loop&lt;ul&gt;
+&lt;li&gt;for all the neighboring cells of the current cell loop&lt;ul&gt;
+&lt;li&gt;if the cells current neighbor = null or cells in range doesn't have the neighbor highlight that edge&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>ChessPresso extract FEN</title><description>using the chesspresso library</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">chesspresso-fen-extract.html</guid><content:encoded>&lt;p&gt;Chesspresso is a great library for processing chess games stored in PGN format. One of the greatest uses I have found for chesspresso is using it to extract FENs of the current position on the board. I’ve used this for example to create a candidate move selector in a chess database application. 
-Here is a an example usage to extract the FENs from a game PGN given as a String:&lt;/p&gt;
-&lt;pre&gt;
-ByteArrayInputStream bis = new ByteArrayInputStream(singleGame.getBytes());
-PGNReader pgnReader = new PGNReader(bis, "");
-Game game;
-game = pgnReader.parseGame();
-if (game == null) return null;
-game.gotoStart();
-Move[] mainLine = game.getMainLine();
-for (int i = 0; i &lt; mainLine.length; i++) {
-    Move move = mainLine[i];
-    String fen = game.getPosition().getFEN();
-    System.out.println(fen);
-    game.getPosition().doMove(move);
-}
-&lt;/pre&gt;
-</content:encoded></item><item><title>Galaxy generation algorithm</title><description>a method for generating a galaxy for a space game</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">procedural-galaxy-generation.html</guid><content:encoded>&lt;p&gt;an integral part of a 4x space game is the galaxy generation. Galaxy generation means speading out the stars in your galaxy in a way that looks good,
-should resemeble reality and must satisfy some constraints. If you take a look at the maps fom old 4x games you will see that the stars are laid out in a very 
-linear fashion. The method used here is splitting the coordinate plane into sectors of a defined height/width and then randomly placing stars in side this 
-satisfying a density constraint. You also have to check the neighboring sectors for stars that are near the border otherwise you might end up with star 
-that are very close to each other. This is a tedious way of going about things and the end result isn’t that satisfactory.&lt;/p&gt;
-&lt;p&gt;Here is an example of the sector method&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/57c7fdc9d8a3b.png"&gt;/img/57c7fdc9d8a3b.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A better method is generating a spiral galaxy. I’ve being doing some research on the subject and there are various methods even some involving actual 
-astro-physical calculations (simplified) but these are still to complicated and a better approximated result can be obtained will less hassle. 
-Here is the version that I found which works quite well&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/57c7fdedc12aa-2.png"&gt;/img/57c7fdedc12aa-2.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Each black dot represents a star in the system. I think it looks nice and quasi realistic. The code to accomplish this layout is&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; public Galaxy generate(Galaxy galaxy) {
-
-        int NUMHUB = 20;
-        int NUMDISK = 5000;
-        double DISKRAD = 400;
-        double HUBRAD = 50;
-        int NUMARMS = 3;
-        double ARMROTS = 0.5;
-        double ARMWIDTH = 65.0;
-        double FUZZ = 25.0;
-
-        double omega = 360 / NUMARMS;
-        int i = 0;
-        while (i &amp;lt; NUMDISK) {
-            i++;
-
-            double dist = HUBRAD + RandomUtils.nextFloat(0, 1) * DISKRAD;
-            double theta = ((360.0 * ARMROTS * (dist / DISKRAD))) + RandomUtils.nextFloat(0, 1) * ARMWIDTH
-                    + omega * RandomUtils.nextInt(0, NUMARMS) + RandomUtils.nextFloat(0, 1) * FUZZ * 2.0 - FUZZ;
-
-            double x = Math.cos(theta * Math.PI / 180) * dist;
-            double y = Math.sin(theta * Math.PI / 180) * dist;
-
-            Star star = starService.create(x + galaxy.getSize().getWidth() /2 , y + galaxy.getSize().getHeight() / 2);
-            if (!isDensitySatisfied(galaxy, star)) { //make sure that the stars are not too close to eachother
-                LOGGER.info(&amp;quot;density condition failed.&amp;quot;);
-                continue;
-            }
-            galaxy.getStars().add(star);
-        }
-
-        i = 0;
-        while (i &amp;lt; NUMHUB) {
-            i++;
-
-            double dist = RandomUtils.nextFloat(0, 1) * HUBRAD;
-            double theta = RandomUtils.nextFloat(0, 1) * 360;
-            double x = Math.cos(theta * Math.PI / 180) * dist;
-            double y = Math.sin(theta * Math.PI / 180) * dist;
-            Star star = starService.create(x + 500, y + 500);
-            if (!isDensitySatisfied(galaxy, star)) {
-                LOGGER.info(&amp;quot;density condition failed.&amp;quot;);
-                continue;
-            }
-
-            galaxy.getStars().add(star);
-        }
-
-        return galaxy;
-
-    }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here is a legend of what the knobs in the code actually tweak&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/57c7fe1749fc3-2.png"&gt;/img/57c7fe1749fc3-2.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The only gotcha here is that you may not get the number of stars that you requested if the density checking function returns false for some stars. 
-But thats no big problem as you are requesting a constraint be satisfied.
-The algorithm used is by Ben Motz &amp;lt;motzb-at-hotmail.com&amp;gt; The original C source code for DOS (including a 3D viewer).&lt;/p&gt;
-</content:encoded></item><item><title>Galaxy hyper lane generation</title><description>a few different methods for generating travel lanes between stars</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 09 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">galaxy-hyper-lane-generation.html</guid><content:encoded>&lt;p&gt;Hyper lanes a.k.a Warp Lanes? What are those? They are a simple element of most space RTS/TBS games. They the lines that connect the stars. They are the highway lanes of spacetime, they enable spaceships to travel through them and guide the spaceships to their destination. They are a cheap alternative to wormhole generators which bend spacetime to connect stars. Here are what they look like from a popular game&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a34c67daa29.png"&gt;/img/58a34c67daa29.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Technically speaking they are edges (the lines) between vertices (stars). What we need to do is generate these edges given a set of vertices and there a couple of methods for doing this. The first one that pops up is to generate a minimum spanning tree. But a minimum spanning tree would look this&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a34d26a9467.png"&gt;/img/58a34d26a9467.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;and this doesn't exactly look like a nice interstellar highway as we would like to be able to travel to a couple of nearby stars from our origin star. This way when we are trying to reach a distant star we have multiple options of getting to that star. Image that you did your warp lanes using an MST and you want to get from star A to star D and the only path is A -&amp;gt; B -&amp;gt; C -&amp;gt; D. What do you do if there is an enemy fleet in the star C system and you don't want to engage that fleet with your science ship? Observe that the MST has only 1 connection between 2 neighboring stars so there is no way for you to do that.&lt;/p&gt;
-&lt;p&gt;So here is a naive algorithm I came up with&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;let S be a list star with random coordinates in a 1000x1000 plane&lt;/li&gt;
-&lt;li&gt;for each star in S&lt;ol&gt;
-&lt;li&gt;if star was visited before, skip it&lt;/li&gt;
-&lt;li&gt;get the N closest stars to this star&lt;/li&gt;
-&lt;li&gt;add a connection from this star to its neighbors&lt;/li&gt;
-&lt;li&gt;add a connection from each neighbor to this star&lt;/li&gt;
-&lt;/ol&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;the get closest star also needs some attention as we don't want to return a close neighbor if it already has a connection to the current star.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;filter out all other stars except our current star&lt;/li&gt;
-&lt;li&gt;filter out all stars that already have a connection with the current star&lt;/li&gt;
-&lt;li&gt;map the remaining stars as a tuple of ( distance to source, this star)&lt;/li&gt;
-&lt;li&gt;sort by the distance&lt;/li&gt;
-&lt;li&gt;take N closest and return the stars from the tuple&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The N parameter determines the number of max connections going out from a star.
-Here is an image of this algorithm with N=5&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a34f85a5be6.png"&gt;/img/58a34f85a5be6.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This does look a bit better but there are too many cramped points where it's hard to tell what's going on. The stars are too close to each other so we need some kind of regulation when generating the random points for the stars. One way of doing this is checking the &amp;quot;star density&amp;quot; when generating the star and only placing the star if it's acceptable. This basically means not placing a star to close another and we can do this by checking if the generated star falls within a range of existing stars. That would be done by checking if it lies in a circle of radius R with the star at its origin.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;let S be a list of stars initially empty&lt;/li&gt;
-&lt;li&gt;while S size &amp;lt; number of stars to generate&lt;/li&gt;
-&lt;li&gt;generate a random point in the plane&lt;/li&gt;
-&lt;li&gt;if this point satisfies the density condition add the star to S&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;One point to note about this algorithm is that it has the possibility of never terminating if the density conditions are too strict and it cannot find a good place for the next star. So it's a good idea to add a loop counter check that will terminate with an exception after a number of tries and tell the user to relax the number of stars and the radius R. The acceptable density function can be done as follows&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;let R be the minimum distance that two stars should be apart (which is the radius R)&lt;/li&gt;
-&lt;li&gt;for each star already generated check if (src.x - star.x)^2 - (src.y - star.y)^2 &amp;lt; R^2&lt;/li&gt;
-&lt;li&gt;if there are stars that satisfy this equation then the density condition is not satisfied.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;After adding the density check and reducing N to 3 the lines look a bit clearer.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a352d019823.png"&gt;/img/58a352d019823.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;There is a fundamental error in this approach. If you select a low N (connectivity value) then you sometimes will get disconnected stars like this&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a36eaca414e.png"&gt;/img/58a36eaca414e.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;To address this issue a combination of an MST and the naive approach could work.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a36f7ad5694.png"&gt;/img/58a36f7ad5694.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Now that the MST guarantees that all the graph will be connected we have addressed the issue but still, the layout doesn't look good for efficient traveling. We still could use more triangulation that is more lanes connecting nearby stars. Using the closest N method led to a cluttered layout. The cause of this clutter is that if 2 stars are almost in a straight line and are the 2 closest stars, there will 2 connections to these stars that overlap.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a37252c62a7.png"&gt;/img/58a37252c62a7.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Yet another way of connecting the stars would be to use Delaunay Triangulation. This also produces a very nice warp lane structure but still, has the cluttering problem due to the star layout.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a37861e14cc.png"&gt;/img/58a37861e14cc.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Now let's address the clutter problem. It seem that the warp lanes look cluttered if there are neighboring stars too close to an existing warp lane.&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a385c4c845c.png"&gt;/img/58a385c4c845c.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;the green arrow shows a lane we could do better without. How can we detect these lanes? Just from the definition of the problem. If a neighbor star is too close to a lane, drop the existing lane so the closer lane to the a star will remain. Here is a simple outline for the algorithm that requires a bit of linear algebra:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Sort all the neighbors for each star is descending order according to their distance from the origin star.&lt;/li&gt;
-&lt;li&gt;for each neighbor i to all neighbors - 1&lt;ol&gt;
-&lt;li&gt;for each neighbor j from i + 1 to all neighbors&lt;/li&gt;
-&lt;li&gt;if the distance of neighbor i from the lane between origin star and neighbor j &amp;lt; some threshold T discard the lane&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;calculating the distance of a point P0 to a line given by P1 and P2 is&lt;/p&gt;
-&lt;p&gt;$$ \bigl|\frac{(y_2 - y_1) \times x_0 - (x_2 - x_1) \times y_0 + x_2 \times y_1 - y_2 \times x_1}{\sqrt{(y_2-y_1)^2 + (x_2-x_1)^2}}\bigr| $$&lt;/p&gt;
-&lt;p&gt;Here is the result of a relaxed threshold that will draw a lot of lanes&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a3871f9072d.png"&gt;/img/58a3871f9072d.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;here are the same results with a stricter threshold that has discarded the middle lane&lt;/p&gt;
-&lt;p&gt;&lt;a href="/img/58a387534357e.png"&gt;/img/58a387534357e.png&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;
+&lt;p&gt;The actual highlighting is done by placing a quad with a bar texture with the correct rotation and coordinates easily calculated from the current cell we are processing.&lt;/p&gt;
+&lt;p&gt;Here is a video of the highlighting:&lt;/p&gt;
+&lt;p&gt;{{&amp;lt; youtube UkWKeim-n_Y &amp;gt;}}&lt;/p&gt;
 </content:encoded></item><item><title>ITTB DevLog 2018-05-07</title><description>map generation, path finding, weapons and loots updates</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 07 May 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">ittb_devlog-2018-05-07.html</guid><content:encoded>&lt;h2&gt;Summary&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;map generation&lt;/li&gt;
@@ -4009,54 +4009,6 @@ instance I could not find a way to compare a class to it self. Say I have a
 function that returns all the enemy units on the map and in the support unit I
 want to skip over the enemy types “support unit”. You can load the support unit
 within itself, so you are kind of stuck with the constant comparisons.&lt;/p&gt;
-</content:encoded></item><item><title>ITTB DevLog 2018-04-23</title><description>Firing arcs, support units and water flooding</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 23 Apr 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">ittb_devlog-2018-04-23.html</guid><content:encoded>&lt;h2&gt;summary&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;firing arcs&lt;/li&gt;
-&lt;li&gt;AI target selection&lt;/li&gt;
-&lt;li&gt;support units&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I put off working on indirect/direct firing weapons for a couple of days to get
-the basics of targeting and arc display going, but now that I have that down, I
-added types of different range selection. Indirect firing weapons don’t require
-a direct line of sight, these will be weapons like rockets, or attack drones.
-Direct fire weapons are your classical AC and laser type weapons. L.O.S is
-normally a tricky thing to implement when you are doing it for an arc F.O.V but
-the weapons in this game are simple, and only have effect on files and ranks.
-So no diagonals means easier L.O.S sigh implementation. Just keep looking at
-the next tile in the direction you are scanning in and if you hit a target or
-blocker stop progressing in that direction.&lt;/p&gt;
-&lt;p&gt;Targeting got some love today as well. I had already implemented ranged weapons
-for enemies and their targeting arc was visible on the map when the player was
-moving, but the units did not engage the target even it if came into range. I
-changed that today. If an enemy detects a player unit in firing range it will
-drop it’s current target and go after the player unit. If it was committed to
-an attack when the player unit jumped into range, it will still carry out the
-committed attack then pursue the player unit. The adds a bit of variety to the
-AI units. It is still relatively easy to tip-toe around the firing arc of the
-enemies but may a smarter AI that guards choke points on the map (like a
-mountain passage with a single tile width way to access an area of the map)
-would make for some interesting tactics and game play.&lt;/p&gt;
-&lt;p&gt;Not all units in an army are there to engage and attack. Well at least not
-until it’s a last resort so I added a support unit that will increase the armor
-of the enemy units as long as it is alive. It will try to center itself
-relative to it’s team mates, but I may change this movement heuristic to a more
-evasion biased heuristic, like run away from the player.  I’m kind of worried
-if this will actually lead to all the support units grouping in one corner of
-the map while trying to stay away from the player. The logic behind trying to
-center them was to simulate an area of effect range for the armor boost.&lt;/p&gt;
-&lt;p&gt;The number of unit types are increasing so here is a a little info on the types
-so far with some of their stats:&lt;/p&gt;
-&lt;h2&gt;Basic enemy&lt;/h2&gt;
-&lt;p&gt;&lt;a href="/img/ittb-e1.png"&gt;/img/ittb-e1.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This guy only has melee attack with damage 1-3, armor 2 + X (based on level), speed 1 – 4&lt;/p&gt;
-&lt;h2&gt;Advanced enemy&lt;/h2&gt;
-&lt;p&gt;&lt;a href="/img/ittb-e2.png"&gt;/img/ittb-e2.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This guy has a melee weapon and a ranged weapon. These can get pretty dangerous as they can
-switch targets and start going after the player units if they can lock onto the player.&lt;/p&gt;
-&lt;h2&gt;Armor support enemy&lt;/h2&gt;
-&lt;p&gt;&lt;a href="/img/ittb-e3.png"&gt;/img/ittb-e3.png&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;These guys don’t attack the player, but provide an armor boost +1 to all enemy unit while
-they are alive.&lt;/p&gt;
 </content:encoded></item><item><title>Music discoveries</title><description>A list of songs I've discovered</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 23 Apr 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">music.html</guid><content:encoded>&lt;p&gt;I'm a spotify subscriber and I like to use the radio and the discovery feature of spotify quite a bit. 
 I guess one advantage of these types of services is their ability to aggregate data and give you a 
 recommendation.&lt;/p&gt;
@@ -4157,6 +4109,54 @@ recommendation.&lt;/p&gt;
 &lt;li&gt;Alteria - Fire and ice&lt;/li&gt;
 &lt;li&gt;Alteria - House of my soul&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>ITTB DevLog 2018-04-23</title><description>Firing arcs, support units and water flooding</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 23 Apr 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">ittb_devlog-2018-04-23.html</guid><content:encoded>&lt;h2&gt;summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;firing arcs&lt;/li&gt;
+&lt;li&gt;AI target selection&lt;/li&gt;
+&lt;li&gt;support units&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I put off working on indirect/direct firing weapons for a couple of days to get
+the basics of targeting and arc display going, but now that I have that down, I
+added types of different range selection. Indirect firing weapons don’t require
+a direct line of sight, these will be weapons like rockets, or attack drones.
+Direct fire weapons are your classical AC and laser type weapons. L.O.S is
+normally a tricky thing to implement when you are doing it for an arc F.O.V but
+the weapons in this game are simple, and only have effect on files and ranks.
+So no diagonals means easier L.O.S sigh implementation. Just keep looking at
+the next tile in the direction you are scanning in and if you hit a target or
+blocker stop progressing in that direction.&lt;/p&gt;
+&lt;p&gt;Targeting got some love today as well. I had already implemented ranged weapons
+for enemies and their targeting arc was visible on the map when the player was
+moving, but the units did not engage the target even it if came into range. I
+changed that today. If an enemy detects a player unit in firing range it will
+drop it’s current target and go after the player unit. If it was committed to
+an attack when the player unit jumped into range, it will still carry out the
+committed attack then pursue the player unit. The adds a bit of variety to the
+AI units. It is still relatively easy to tip-toe around the firing arc of the
+enemies but may a smarter AI that guards choke points on the map (like a
+mountain passage with a single tile width way to access an area of the map)
+would make for some interesting tactics and game play.&lt;/p&gt;
+&lt;p&gt;Not all units in an army are there to engage and attack. Well at least not
+until it’s a last resort so I added a support unit that will increase the armor
+of the enemy units as long as it is alive. It will try to center itself
+relative to it’s team mates, but I may change this movement heuristic to a more
+evasion biased heuristic, like run away from the player.  I’m kind of worried
+if this will actually lead to all the support units grouping in one corner of
+the map while trying to stay away from the player. The logic behind trying to
+center them was to simulate an area of effect range for the armor boost.&lt;/p&gt;
+&lt;p&gt;The number of unit types are increasing so here is a a little info on the types
+so far with some of their stats:&lt;/p&gt;
+&lt;h2&gt;Basic enemy&lt;/h2&gt;
+&lt;p&gt;&lt;a href="/img/ittb-e1.png"&gt;/img/ittb-e1.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This guy only has melee attack with damage 1-3, armor 2 + X (based on level), speed 1 – 4&lt;/p&gt;
+&lt;h2&gt;Advanced enemy&lt;/h2&gt;
+&lt;p&gt;&lt;a href="/img/ittb-e2.png"&gt;/img/ittb-e2.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This guy has a melee weapon and a ranged weapon. These can get pretty dangerous as they can
+switch targets and start going after the player units if they can lock onto the player.&lt;/p&gt;
+&lt;h2&gt;Armor support enemy&lt;/h2&gt;
+&lt;p&gt;&lt;a href="/img/ittb-e3.png"&gt;/img/ittb-e3.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These guys don’t attack the player, but provide an armor boost +1 to all enemy unit while
+they are alive.&lt;/p&gt;
 </content:encoded></item><item><title>ITTB DevLog 2018-04-22</title><description>AI, support units, targeting and weapons stuff</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sun, 22 Apr 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">ittb_devlog_2018-04-22.html</guid><content:encoded>&lt;h2&gt;summary&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;AI,&lt;/li&gt;
@@ -4214,21 +4214,6 @@ display for enemies that are equipped with a ranged weapon. I also changed the
 sprite they use for a visual distinction between the current 2 types of
 enemies.&lt;/p&gt;
 &lt;p&gt;&lt;a href="/img/ittb3.png"&gt;/img/ittb3.png&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Fooling the whatpulse.org client</title><description>a simple way of gaining ranking points for whatpulse.org</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 21 Apr 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">whatpulse-fooler.html</guid><content:encoded>&lt;p&gt;Whatpulse is a stats service that counts how many keys you have pressed, and how many times you have clicked your mouse etc.
-It is a pretty cool service, and I believe that they do not log the actual keys you press but just the numbers. I want to believe at least. They also have a ranking system with the leaders above 160M keys pressed. I'm not sure these are totally legit, as I do remember reading stuff about people replaying network packet they captured after a pulse to record fake stats. Anyways I always like cat/mouse challange so here is what I came up with to fool the client into thinking something was typed:&lt;/p&gt;
-&lt;pre&gt;
-activate application "MacVim"
-
-set letters to {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"}
-set listSize to count of letters
-repeat 100 times
-    set randomNumber to (random number from 1 to listSize)
-    set letter to item randomNumber of letters
-    tell application "System Events" to keystroke letter
-    delay 0.05
-end repeat
-&lt;/pre&gt;
-&lt;p&gt;This just selects random keys to send to a vim buffer. I might consider sending some fake keystokes to make up for the gap between the years that I did not use the client.&lt;/p&gt;
 </content:encoded></item><item><title>ITTB DevLog 2018-04-21</title><description>Enemy spawns, mechanics, turns, targeting, game difficulty</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 21 Apr 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">ittb_devlog_2018-04-21.html</guid><content:encoded>&lt;h2&gt;summary&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;enemy spawns&lt;/li&gt;
@@ -4274,6 +4259,21 @@ buildings placed on the level. Having 9 buildings on a level makes it easier to
 survive (think of buildings as player units). I added a pretty simple function
 that tries to adjust the number of buildings on the level based on the current
 level the player is at.&lt;/p&gt;
+</content:encoded></item><item><title>Fooling the whatpulse.org client</title><description>a simple way of gaining ranking points for whatpulse.org</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Sat, 21 Apr 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">whatpulse-fooler.html</guid><content:encoded>&lt;p&gt;Whatpulse is a stats service that counts how many keys you have pressed, and how many times you have clicked your mouse etc.
+It is a pretty cool service, and I believe that they do not log the actual keys you press but just the numbers. I want to believe at least. They also have a ranking system with the leaders above 160M keys pressed. I'm not sure these are totally legit, as I do remember reading stuff about people replaying network packet they captured after a pulse to record fake stats. Anyways I always like cat/mouse challange so here is what I came up with to fool the client into thinking something was typed:&lt;/p&gt;
+&lt;pre&gt;
+activate application "MacVim"
+
+set letters to {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"}
+set listSize to count of letters
+repeat 100 times
+    set randomNumber to (random number from 1 to listSize)
+    set letter to item randomNumber of letters
+    tell application "System Events" to keystroke letter
+    delay 0.05
+end repeat
+&lt;/pre&gt;
+&lt;p&gt;This just selects random keys to send to a vim buffer. I might consider sending some fake keystokes to make up for the gap between the years that I did not use the client.&lt;/p&gt;
 </content:encoded></item><item><title>ITTB DevLog 2018-04-20</title><description>Map generation</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Fri, 20 Apr 2018 00:00:00 GMT</pubDate><guid isPermaLink="true">ittb_devlog-2018-04-20.html</guid><content:encoded>&lt;h2&gt;summary&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;map generation&lt;/li&gt;
@@ -4914,14 +4914,6 @@ This is can be written as&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;f'(x) = -X*n^2 + C&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;if we say that this is equal to 0, then we can see that the equation is a quadratic equation with the optimal value being the square root of some value.&lt;/p&gt;
 &lt;p&gt;This was just a random thought that popped up in my head today.&lt;/p&gt;
-</content:encoded></item><item><title>TypeSafe config override</title><description>how to override configuration values</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Tue, 28 Mar 2017 00:00:00 GMT</pubDate><guid isPermaLink="true">typesafe-config-override.html</guid><content:encoded>&lt;p&gt;Every now and then you need to be able to define some default value in your configuration and be able to override them based on the environment you are running in. TypeSafe Config has a nice way of allowing this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;production {
-  service1: 172.0.0.1
-  service2: ${?SERV1}
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;when you define you config like this if your application start with &lt;code&gt;-DSERV1=10.0.0.1&lt;/code&gt; then the command line value will override the default in the configuration file.&lt;/p&gt;
 </content:encoded></item><item><title>Wikipedia word frequency</title><description>ever wonder what the most common words in wikipedia are? No? I thought so.</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Tue, 28 Mar 2017 00:00:00 GMT</pubDate><guid isPermaLink="true">wikipedia-word-frequency.html</guid><content:encoded>&lt;p&gt;Download a file that contains each word (with a length &amp;gt; 2) and its frequencies extract from the Wikipedia corpus in descending order.
 The format of the file is&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;(&amp;lt;freq&amp;gt;,&amp;lt;word&amp;gt;)&lt;/code&gt;&lt;/p&gt;
@@ -4939,6 +4931,14 @@ The format of the file is&lt;/p&gt;
 (6237633,were)
 (5892049,are)
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>TypeSafe config override</title><description>how to override configuration values</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Tue, 28 Mar 2017 00:00:00 GMT</pubDate><guid isPermaLink="true">typesafe-config-override.html</guid><content:encoded>&lt;p&gt;Every now and then you need to be able to define some default value in your configuration and be able to override them based on the environment you are running in. TypeSafe Config has a nice way of allowing this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;production {
+  service1: 172.0.0.1
+  service2: ${?SERV1}
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;when you define you config like this if your application start with &lt;code&gt;-DSERV1=10.0.0.1&lt;/code&gt; then the command line value will override the default in the configuration file.&lt;/p&gt;
 </content:encoded></item><item><title>Transparent Vertex Shader</title><description>some shader code to color a mesh with transparency</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Mon, 27 Mar 2017 00:00:00 GMT</pubDate><guid isPermaLink="true">transparent-vertex-shader.html</guid><content:encoded>&lt;p&gt;A game set in space should have a futuristic look and feel. And one of the most important factors in giving this sci-fi feel is the use of transparency. I would like the grid to have a transparent view, showing the beautiful stars in the horizon beneath  them. After rendering the surfaces the material on these surfaces will be responsible for this transparency. More specifically the shader. The OOB shader in unity doesn’t support vertex colors so I had to dive into the mysterious world of shaders. Here is what I came up with:&lt;/p&gt;
 &lt;pre&gt;
 Shader "Custom/Hex Surface Shader" {
@@ -5119,17 +5119,6 @@ of writing automated tests. The good is that you can be very confident in
 your refactors as you have tests to verify that you have not broken any 
 functionality the bad is that when you refactor you also have to refactor 
 some of the tests, especially when you change the interface of a class.&lt;/p&gt;
-</content:encoded></item><item><title>Epic4x: Devlog #6</title><description>GUI love</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 01 Mar 2017 00:00:00 GMT</pubDate><guid isPermaLink="true">epic4x-2017-03-01.html</guid><content:encoded>&lt;p&gt;Posted on March 1, 2017 by dendiz
-The gui got some love today with the addition of a button that says “+building” 
-that will start the construction of a building on a surface tile. I also 
-cleaned up some messy code on the server side that was related to storing 
-some definitions about building cost, maintenance, construction time etc. 
-With the construction of buildings comes the destruction of buildings too. 
-I also fixed an annoying bug where the population relocation box would be 
-populated with tiles that were already occupied. I’m thinking of a gui that 
-will allow the players to nagivate without using a galaxy map. I checked out
-some o-game screenshots and never saw a galactic map so I suspect that is
-possible but I’m not sure if it would have an adverse impact on playability.&lt;/p&gt;
 </content:encoded></item><item><title>PGN Parser with comments and recursive variations support</title><description>C# programm to parse and represent a PGN file</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 01 Mar 2017 00:00:00 GMT</pubDate><guid isPermaLink="true">pgn-parser-recursive.html</guid><content:encoded>&lt;p&gt;PGN files are the standard way chess games are transmitted across the net. So any chess program that needs to replay or process a game needs to be able to read the PGN format.
 There are very many different PGN parsers around in different programming languages. Most of them try to process the PGN using regexes, or just reduce the data to the main
 line moves, event discarding the comments and annotations. This may be OK if you are processing the game for purposes of machine consumption as the comments don't mean
@@ -5427,6 +5416,17 @@ that it self has an embedded variation (hence the name recursive variations). Th
 &lt;p&gt;&lt;a href="/img/1-XnoB3aI53wls76dH.png"&gt;image http://forum.dizman.org/assets/images/1-XnoB3aI53wls76dH.png&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;There the tree with embedded variations. The code I use actually takes care of further evaluating the tree into the chess model I use in the application by 
 checking if the move in the PGN is valid, and adding the comments to the move etc. But this is the basics of parsing the PGN file.&lt;/p&gt;
+</content:encoded></item><item><title>Epic4x: Devlog #6</title><description>GUI love</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Wed, 01 Mar 2017 00:00:00 GMT</pubDate><guid isPermaLink="true">epic4x-2017-03-01.html</guid><content:encoded>&lt;p&gt;Posted on March 1, 2017 by dendiz
+The gui got some love today with the addition of a button that says “+building” 
+that will start the construction of a building on a surface tile. I also 
+cleaned up some messy code on the server side that was related to storing 
+some definitions about building cost, maintenance, construction time etc. 
+With the construction of buildings comes the destruction of buildings too. 
+I also fixed an annoying bug where the population relocation box would be 
+populated with tiles that were already occupied. I’m thinking of a gui that 
+will allow the players to nagivate without using a galaxy map. I checked out
+some o-game screenshots and never saw a galactic map so I suspect that is
+possible but I’m not sure if it would have an adverse impact on playability.&lt;/p&gt;
 </content:encoded></item><item><title>Epic4x: Devlog #5</title><description>More test coverage, a birds eye look at the galaxy, more optimzations</description><author>Deniz Dizman &lt;deniz.dizman@gmail.com&gt;</author><pubDate>Tue, 28 Feb 2017 00:00:00 GMT</pubDate><guid isPermaLink="true">epic4x-2017-02-28.html</guid><content:encoded>&lt;p&gt;More tests were on my list today. Got the rest of service classes covered 
 with unit tests. Up to now I had generated all of the stars using tests and 
 some maths and had no idea what they would look like when laid out visually 
